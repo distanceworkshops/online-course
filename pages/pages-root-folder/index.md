@@ -15,6 +15,7 @@ widget1:
 widget2:
   title: "Take the online course"
   url: 'http://erex.github.io/feeling/chapters/'
+  image: unsplash_9.jpg
   text: 'The content of the workshop is divided into chapters. Each chapter will take several hours to complete.'
 #  video: '<a href="#" data-reveal-id="videoModal"><img src="http://erex.github.io/feeling/images/teaser-image2.png" width="302" height="182" alt=""/></a>'
 #        <video width="302" height="302" controls loop autoplay>
