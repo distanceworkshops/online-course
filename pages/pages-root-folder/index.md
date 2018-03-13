@@ -28,4 +28,5 @@ widget3:
   text: 'This online workshop does not include all material you will need to be proficient at designing, conducting and analysing a distance sampling project.  Here we show you where to acquire additional resources.'
 
 homepage: true
+
 ---
