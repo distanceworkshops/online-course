@@ -6,7 +6,7 @@
 #
 layout: frontpage
 header:
-  image_fullwidth: Presentation1.png
+  image_fullwidth: header_homepage_13.jpg
 widget1:
   title: "Prep for online course"
   url: 'http://erex.github.io/feeling/blog/'
