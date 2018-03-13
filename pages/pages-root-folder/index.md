@@ -16,7 +16,7 @@ widget2:
   title: "Take the online course"
   url: 'http://erex.github.io/feeling/chapters/'
   text: 'The content of the workshop is broken into chapters. Each chapter will take several hours to complete.'
-  video: '<a href="#" data-reveal-id="videoModal"><img src="http://phlow.github.io/feeling-responsive/images/start-video-feeling-responsive-302x182.jpg" width="302" height="182" alt=""/></a>'
+  video: '<a href="#" data-reveal-id="videoModal"><img src="http://erex.github.io/feeling/images/teaser-image2.png" width="302" height="182" alt=""/></a>'
 widget3:
   title: "Where to learn more"
   url: 'https://erex.github.io/feeling/more-resources/'
@@ -46,7 +46,7 @@ homepage: true
 
 <div id="videoModal" class="reveal-modal large" data-reveal="">
   <div class="flex-video widescreen vimeo" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/3b5zCFSmVvU" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/watch?v=fVTmRzpD9Aw" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
