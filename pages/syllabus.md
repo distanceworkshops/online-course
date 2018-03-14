@@ -13,9 +13,9 @@ The course is composed of six section.  Each icon below takes you to one of the 
 
 <div class="row">
     <div class="small-6 columns">
-        <a href="/syllabus/Chapter1/"><h3>Introduction</h3></a>
+        <a href="/Chapter1/Chapter1"><h3>Introduction</h3></a>
         <figure>
-            <a href="/syllabus/Chapter1/">
+            <a href="/Chapter1/Chapter1/">
             <img src="/images/Koala.jpg" alt="Scriptorium Monk at Work." />
             </a>
             <figcaption><a href="https://commons.wikimedia.org/wiki/File:Scriptorium-monk-at-work.jpg" target="_blank">Scriptorium Monk at Work via Wikimedia</a></figcaption>
