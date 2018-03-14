@@ -3,11 +3,11 @@ layout: page-fullwidth
 title: Syllabus
 permalink: /syllabus/
 header:
-  image_fullwidth: /images/Desertbanner.jpg
+  image_fullwidth: {{site.baseurl}}/images/Desertbanner.jpg
   caption_url: https://www.davidrumsey.com/luna/servlet/s/y763yx
 ---
 
-# Breakdown of the course
+# Composition of the course
 
 The course is composed of six section.  Each icon below takes you to one of the sections of the course; they build upon themselves, so it is best if you take them in order.
 
@@ -16,7 +16,7 @@ The course is composed of six section.  Each icon below takes you to one of the 
         <a href="/Chapter1/Chapter1"><h3>Introduction</h3></a>
         <figure>
             <a href="/Chapter1/Chapter1/">
-            <img src="/images/Koala.jpg" alt="Scriptorium Monk at Work." />
+            <img src="{{site.baseurl}}/images/Koala.jpg" alt="Scriptorium Monk at Work." />
             </a>
             <figcaption><a href="https://commons.wikimedia.org/wiki/File:Scriptorium-monk-at-work.jpg" target="_blank">Scriptorium Monk at Work via Wikimedia</a></figcaption>
         </figure>
@@ -25,7 +25,7 @@ The course is composed of six section.  Each icon below takes you to one of the 
         <a href="/syllabus/Chapter2/"><h3>Making it work</h3></a>
         <figure>
             <a href="/syllabus/Chapter2/">
-            <img src="/images/Penguins.jpg" alt="A field book standing on end"  />
+            <img src="{{site.baseurl}}/images/Penguins.jpg" alt="A field book standing on end"  />
             </a>
             <figcaption><a href="https://flic.kr/p/oKG72Y" target="_blank">Creative Commons licensed photograph "Field book, Raffles Lighthouse museum" by Flickr user Jnzl's Photos</a></figcaption>
         </figure>
@@ -36,7 +36,7 @@ The course is composed of six section.  Each icon below takes you to one of the 
         <a href="/syllabus/Chapter3/"><h3>Point transects</h3></a>
         <figure>
             <a href="/syllabus/Chapter3/">
-            <img src="/images/Tulips.jpg" alt="A messenger pigeon released from a British tank during World War I" />
+            <img src="{{sitebase.url}}/images/Tulips.jpg" alt="A messenger pigeon released from a British tank during World War I" />
             </a>
             <figcaption><a href="https://commons.wikimedia.org/wiki/File:Messenger_pigeon_released_from_British_tank_1918_IWM_Q_9247.jpg" target="_blank">Photo via Wikimedia</a></figcaption>
         </figure>
