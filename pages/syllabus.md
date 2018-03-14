@@ -3,7 +3,7 @@ layout: page-fullwidth
 title: syllabus
 permalink: /syllabus/
 header:
-  image_fullwidth: Desertbanner.jpg
+  image_fullwidth: /images/Desertbanner.jpg
   caption: Massachusetts by Harriet E. Baker (1819) via David Rumsey
   caption_url: https://www.davidrumsey.com/luna/servlet/s/y763yx
 ---
