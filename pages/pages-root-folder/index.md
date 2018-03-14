@@ -15,7 +15,7 @@ widget1:
 widget2:
   title: "Take the online course"
   url: 'http://erex.github.io/feeling/chapters/'
-  image: unsplash_9.jpg
+  image: widget-1-302x182.jpg
   text: 'The content of the workshop is divided into chapters. Each chapter will take several hours to complete.'
 widget3:
   title: "Where to learn more"
