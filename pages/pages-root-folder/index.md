@@ -15,12 +15,12 @@ widget1:
   text: 'This course will be a mix of lectures, exercises and computer practicals.'
 widget2:
   title: "Take the online course"
-  url: '/syllabus/'
+  url: '/syllabus'
   image: widget-1-302x182.jpg
   text: 'The content of the workshop is divided into chapters. Each chapter will take several hours to complete.'
 widget3:
   title: "Where to learn more"
-  url: 'https://erex.github.io/feeling/more-resources/'
+  url: '/more-resources'
   image: widget-github-303x182.jpg
   text: 'This online workshop does not include all material you will need to be proficient at designing, conducting and analysing a distance sampling project.  Here we show you where to acquire additional resources.'
 permalink: /index.html
