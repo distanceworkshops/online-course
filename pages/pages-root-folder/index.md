@@ -10,7 +10,7 @@ header:
   image_fullwidth: header_unsplash_12.jpg
 widget1:
   title: "Prep for online course"
-  url: 'prep'
+  url: '/prep'
   image: widget-1-302x182.jpg
   text: 'This course will be a mix of lectures, exercises and computer practicals.'
 widget2:
