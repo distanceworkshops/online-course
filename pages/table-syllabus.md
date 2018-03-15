@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: Course syllabus
-permalink: /syllabus/
+permalink: /table-syllabus/
 
 ---
 
