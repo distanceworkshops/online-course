@@ -1,11 +1,15 @@
 ---
 layout: page-fullwidth
 title: Introduction
-permalink: /Chapter1/
+permalink: /syllabus/Chapter1/
 
 ---
 
-#  This chapter introduces the basic concepts of distance sampling via lecture.  It also offers you the chance to sharpen your distance sampling skills with a pencil-and-paper exercise.  You are also introduced to the distance sampling software, Distance, to analyse ducknest data.
+This chapter introduces the basic concepts of distance sampling via lecture.  It also offers you the chance to sharpen your distance sampling skills with a pencil-and-paper exercise.  You are also introduced to the distance sampling software, Distance, to analyse ducknest data.
+
+***
+
+If you are unsure about how to do anything simply ask.
 
 
 * Lecture 1 [Workshop introduction]()
