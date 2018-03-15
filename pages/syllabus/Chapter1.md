@@ -13,7 +13,8 @@ If you are unsure about how to do anything simply ask.
 
 
 * Lecture 1 [Workshop introduction]()
-* Lecture 2 [Introduction to distance sampling](https://www.youtube.com/watch?v=e7ziGpN_-LM)
+* Lecture 2 [Introduction to distance sampling](
+<video><source src="https://www.youtube.com/e7ziGpN_-LM></video>)
     * [hardcopy]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf)
 * Exercise 1 [Ducknests by hand](https://www.youtube.com/watch?v=d072L2Go15M)
     * [exercise hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf)
