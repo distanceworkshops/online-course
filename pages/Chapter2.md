@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: Chapter 2 Making distance sampling work
-permalink: /Chapter1/
+permalink: /Chapter2/
 
 ---
 
