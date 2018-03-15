@@ -11,17 +11,17 @@ The course is composed of six section.  Each icon below takes you to one of the 
 
 <div class="row">
     <div class="small-6 columns">
-        <a href="/Chapter1/"><h3>Introduction</h3></a>
+        <a href="/syllabus/Chapter1/"><h3>Introduction</h3></a>
         <figure>
-            <a href="/Chapter1/">
+            <a href="/syllabus/Chapter1/">
             <img src="{{site.baseurl}}/images/Koala.jpg" alt="Scriptorium Monk at Work." />
             </a>
         </figure>
     </div>
     <div class="small-6 columns">
-        <a href="/Chapter2/"><h3>Making it work</h3></a>
+        <a href="/syllabus/Chapter2/"><h3>Making it work</h3></a>
         <figure>
-            <a href="/Chapter2/">
+            <a href="/syllabus/Chapter2/">
             <img src="{{site.baseurl}}/images/Penguins.jpg" alt="A field book standing on end"  />
             </a>
         </figure>
