@@ -19,9 +19,9 @@ The course is composed of six section.  Each icon below takes you to one of the 
         </figure>
     </div>
     <div class="small-6 columns">
-        <a href="/syllabus/Chapter2/"><h3>Making it work</h3></a>
+        <a href="{{site.baseurl}}/syllabus/Chapter2/"><h3>Making it work</h3></a>
         <figure>
-            <a href="/syllabus/Chapter2/">
+            <a href="{{site.baseurl}}/syllabus/Chapter2/">
             <img src="{{site.baseurl}}/images/Penguins.jpg" alt="A field book standing on end"  />
             </a>
         </figure>
