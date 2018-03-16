@@ -4,6 +4,8 @@ title: Introduction
 permalink: /syllabus/Chapter1/
 header:
   image_fullwidth: monte-vista-nwr06-lrg.jpg
+  caption: Monte Vista National Wildlife Refuge, Colorado, USA
+  caption_url: http://www.sangres.com/colorado/wildlife-refuges/monte-vistanwr.htm 
 ---
 
 This chapter introduces the basic concepts of distance sampling via lecture.  It also offers you the chance to sharpen your distance sampling skills with a pencil-and-paper exercise.  You are also introduced to the distance sampling software, Distance, to analyse ducknest data.
@@ -14,8 +16,7 @@ If you are unsure about how to do anything simply ask.
 
 
 * Lecture 1 [Workshop introduction]()
-* Lecture 2 [Introduction to distance sampling](
-<div><video><source src="https://www.youtube.com/e7ziGpN_-LM></video></div>)
+* Lecture 2 [Introduction to distance sampling](https://www.youtube.com/e7ziGpN_-LM)
     * [hardcopy]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf)
 * Exercise 1 [Ducknests by hand](https://www.youtube.com/watch?v=d072L2Go15M)
     * [exercise hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf)
