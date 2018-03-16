@@ -2,7 +2,8 @@
 layout: page-fullwidth
 title: Introduction
 permalink: /syllabus/Chapter1/
-
+header:
+  image_fullwidth: monte-vista-nwr06-lrg.jpg
 ---
 
 This chapter introduces the basic concepts of distance sampling via lecture.  It also offers you the chance to sharpen your distance sampling skills with a pencil-and-paper exercise.  You are also introduced to the distance sampling software, Distance, to analyse ducknest data.
