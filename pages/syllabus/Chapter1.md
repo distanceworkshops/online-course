@@ -15,7 +15,7 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
 If you are unsure about how to do anything simply ask.
 
 
-* Lecture 1 [Workshop introduction]()
+* Lecture 1 Workshop introduction _forthcoming_
 * Lecture 2 [Introduction to distance sampling](https://www.youtube.com/e7ziGpN_-LM)
     * [hardcopy]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf)
 * Exercise 1 [Ducknests by hand](https://www.youtube.com/watch?v=d072L2Go15M)
@@ -39,4 +39,4 @@ If you are unsure about how to do anything simply ask.
 	* [hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance.pdf)
 	* [Exercise 3 solution](https://www.youtube.com/watch?v=BF9BA7scjcQ)
 	* [solution hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance SOLUTION.pdf)
-* [sheet of useful notation]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)
+* [Sheet of useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)
