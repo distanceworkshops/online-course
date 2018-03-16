@@ -2,7 +2,8 @@
 layout: page-fullwidth
 title: Syllabus
 permalink: /syllabus/
-
+header:
+  image_fullwidth: header_unsplash_5.jpg
 ---
 
 # Composition of the course
