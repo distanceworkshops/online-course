@@ -51,7 +51,7 @@ The course is composed of six section.  Each icon below takes you to one of the 
 
 <div class="row">
     <div class="small-6 columns">
-        <a href="{{site.baseurl}}/syllabus/Chapter5/"><h3>5--Stratification, clusters and covariates</h3></a>
+        <a href="{{site.baseurl}}/syllabus/Chapter5/"><h3>5--Stratification/clusters/covariates</h3></a>
         <figure>
             <a href="{{site.baseurl}}/syllabus/Chapter5/">
             <img src="{{site.baseurl}}/images/Koala.jpg" alt="Scriptorium Monk at Work." />
