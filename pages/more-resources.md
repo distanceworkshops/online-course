@@ -2,9 +2,11 @@
 layout: page-fullwidth
 title: More resources
 permalink: /more-resources/
+header:
+  image_fullwidth: header_unsplash_8.jpg
 ---
 
-## Information about further resources regarding distance sampling
+## Further resources regarding distance sampling
 
 
 |---
