@@ -11,7 +11,7 @@ The course is composed of six section.  Each icon below takes you to one of the 
 
 <div class="row">
     <div class="small-6 columns">
-        <a href="{{site.baseurl}}/syllabus/Chapter1/"><h3>Introduction</h3></a>
+        <a href="{{site.baseurl}}/syllabus/Chapter1/"><h3>1--Introduction</h3></a>
         <figure>
             <a href="{{site.baseurl}}/syllabus/Chapter1/">
             <img src="{{site.baseurl}}/images/Koala.jpg" alt="Scriptorium Monk at Work." />
@@ -19,10 +19,50 @@ The course is composed of six section.  Each icon below takes you to one of the 
         </figure>
     </div>
     <div class="small-6 columns">
-        <a href="{{site.baseurl}}/syllabus/Chapter2/"><h3>Making it work</h3></a>
+        <a href="{{site.baseurl}}/syllabus/Chapter2/"><h3>2--Making distance sampling work</h3></a>
         <figure>
             <a href="{{site.baseurl}}/syllabus/Chapter2/">
             <img src="{{site.baseurl}}/images/Penguins.jpg" alt="A field book standing on end"  />
+            </a>
+        </figure>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="small-6 columns">
+        <a href="{{site.baseurl}}/syllabus/Chapter3/"><h3>3--Point transect sampling</h3></a>
+        <figure>
+            <a href="{{site.baseurl}}/syllabus/Chapter3/">
+            <img src="{{site.baseurl}}/images/Tulips.jpg" alt="Scriptorium Monk at Work." />
+            </a>
+        </figure>
+    </div>
+    <div class="small-6 columns">
+        <a href="{{site.baseurl}}/syllabus/Chapter4/"><h3>4--Survey design and field methods</h3></a>
+        <figure>
+            <a href="{{site.baseurl}}/syllabus/Chapter4/">
+            <img src="{{site.baseurl}}/images/Penguins.jpg" alt="A field book standing on end"  />
+            </a>
+        </figure>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="small-6 columns">
+        <a href="{{site.baseurl}}/syllabus/Chapter5/"><h3>5--Stratification, clusters and covariates</h3></a>
+        <figure>
+            <a href="{{site.baseurl}}/syllabus/Chapter5/">
+            <img src="{{site.baseurl}}/images/Koala.jpg" alt="Scriptorium Monk at Work." />
+            </a>
+        </figure>
+    </div>
+    <div class="small-6 columns">
+        <a href="{{site.baseurl}}/syllabus/Chapter6/"><h3>6--Other topics</h3></a>
+        <figure>
+            <a href="{{site.baseurl}}/syllabus/Chapter6/">
+            <img src="{{site.baseurl}}/images/Tulips.jpg" alt="A field book standing on end"  />
             </a>
         </figure>
     </div>
