@@ -41,4 +41,4 @@ If you are unsure about how to do anything simply ask.
 	* [hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance.pdf)
 	* [Exercise 3 solution](https://www.youtube.com/watch?v=BF9BA7scjcQ)
 	* [solution hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance SOLUTION.pdf)
-* [Sheet of useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)
+* [Useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)
