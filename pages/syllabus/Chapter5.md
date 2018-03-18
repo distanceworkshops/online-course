@@ -8,13 +8,13 @@ header:
 
 ### Future chapter 5
 
-<a href="#" data-reveal-id="videoModal">Solution to Exercise 1 <img src="{{site.baseurl}}/images/video32.png"></a>
+* <a href="#" data-reveal-id="videoModal">Solution to Exercise 1 <img src="{{site.baseurl}}/images/video32.png"></a>
 
-This is pdf32 <img src="{{site.baseurl}}/images/pdf32.png">
-This is pdf48 <img src="{{site.baseurl}}/images/pdf48.png">
+* This is pdf32 <img src="{{site.baseurl}}/images/pdf32.png">
+* This is pdf48 <img src="{{site.baseurl}}/images/pdf48.png">
 
-This is zip32 <img src="{{site.baseurl}}/images/zip32.png">
-This is zip48 <img src="{{site.baseurl}}/images/zip48.png">
+* This is zip32 <img src="{{site.baseurl}}/images/zip32.png">
+* This is zip48 <img src="{{site.baseurl}}/images/zip48.png">
 
 
 <div id="videoModal" class="reveal-modal large" data-reveal="">
