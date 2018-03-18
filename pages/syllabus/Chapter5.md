@@ -8,7 +8,7 @@ header:
 
 ### Future chapter 5
 
-<a href="#" data-reveal-id="videoModal">Solution to Exercise 1 <img src="{{base.siteurl}}/images/video48.png"></a>
+<a href="#" data-reveal-id="videoModal">Solution to Exercise 1 <img src="{{site.baseurl}}/images/video48.png"></a>
 
 
 <div id="videoModal" class="reveal-modal large" data-reveal="">
