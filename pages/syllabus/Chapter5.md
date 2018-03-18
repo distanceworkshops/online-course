@@ -8,7 +8,7 @@ header:
 
 ### Future chapter 5
 
-<a href="#" data-reveal-id="videoModal"><img src="http://phlow.github.io/feeling-responsive/images/start-video-feeling-responsive-302x182.jpg" width="302" height="182" alt=""/></a>
+<a href="#" data-reveal-id="videoModal">Solution to Exercise 1 (video)</a>
 
 
 <div id="videoModal" class="reveal-modal large" data-reveal="">
