@@ -14,40 +14,47 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
 
 ***
 
-If you are unsure about how to do anything simply ask.
 
 
 * Lecture 1 Workshop introduction _forthcoming_
 * Lecture 2 <a href="#" data-reveal-id="L2">Introduction to distance sampling <img src="{{site.baseurl}}/images/video32.png"></a>
     * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-* Exercise 1 [Ducknests by hand](https://www.youtube.com/watch?v=d072L2Go15M)
-    * [exercise hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf)
+* Exercise 1 <a href="#" data-reveal-id="E1">Ducknests by hand<img src="{{site.baseurl}}/images/video32.png"></a>
+    * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
     * <a href="#" data-reveal-id="E1soln">Solution to Exercise 1 <img src="{{site.baseurl}}/images/video32.png"></a>
-	* [solution hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand SOLUTION.pdf)
-* Lecture 3 [Types of distance sampling](https://www.youtube.com/watch?v=_EJPBMx0j1A)
-    * [hardcopy]()
-* Lecture 4 [Choosing a detection function](https://www.youtube.com/watch?v=c6pk7QzWIfo)
-    * [hardcopy]()
-* Lecture 5 [More ways to think about line transects](https://www.youtube.com/watch?v=kFERKxm9tWU&t=49s)
-	* [hardcopy]()
-* Exercise 2 [ducknests other ways](https://www.youtube.com/watch?v=FL2pGCoO49A)
-	* [hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways.pdf)
-	* [Exercise 2 solution](https://www.youtube.com/watch?v=qwdPij30GtI)
-	* [solution hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways - SOLUTION.pdf)
-* Lecture 6 [Introduction to Distance software](https://www.youtube.com/watch?v=WxsFhN-xoeo&t=185s)
-	* [hardcopy]()
-	* [Distance project]({{site.baseurl}}/distanceprojects/Ch1/)
-* Exercise 3 [Ducknest analysis using Distance](https://www.youtube.com/watch?v=D8B5aqAyZYA)
-	* [hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance.pdf)
-	* [Exercise 3 solution](https://www.youtube.com/watch?v=BF9BA7scjcQ)
-	* [solution hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance SOLUTION.pdf)
-* [Useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)
+	* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+* Lecture 3 <a href="#" data-reveal-id="L3"> Types of distance sampling <img src="{{site.baseurl}}/images/video32.png"></a>
+    * [Lecture slides]()<img src="{{site.baseurl}}/images/pdf32.png">
+* Lecture 4 <a href="#" data-reveal-id="L4">Choosing a detection function <img src="{{site.baseurl}}/images/video32.png"></a>
+    * [Lecture slides]()<img src="{{site.baseurl}}/images/pdf32.png">
+* Lecture 5 <a href="#" data-reveal-id="L5"> More ways to think about line transects <img src="{{site.baseurl}}/images/video32.png"></a>
+	* [Lecture slides]()<img src="{{site.baseurl}}/images/pdf32.png">
+* Exercise 2 <a href="#" data-reveal-id="E1"> ducknests other ways<img src="{{site.baseurl}}/images/video32.png"></a>
+	* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+	* <a href="#" data-reveal-id="E2soln"> Solution to Exercise 2<img src="{{site.baseurl}}/images/video32.png"></a>
+	* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways - SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+* Lecture 6 <a href="#" data-reveal-id="L6"> Introduction to Distance software <img src="{{site.baseurl}}/images/video32.png"></a>
+	* [Lecture slides]()<img src="{{site.baseurl}}/images/pdf32.png">
+* Exercise 3 <a href="#" data-reveal-id="E1"> Ducknest analysis using Distance<img src="{{site.baseurl}}/images/video32.png"></a>
+	* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+	* [Distance project]({{site.baseurl}}/distanceprojects/Ch1/)<img src="{{site.baseurl}}/images/zip32.png">	
+	* <a href="#" data-reveal-id="E3soln"> Solution to Exercise 3<img src="{{site.baseurl}}/images/video32.png"></a>
+	* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+* [Useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
 
 <div id="L2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 2 - introduction to distance sampling</h3>
   <div class="flex-video widescreen" style="display: block;">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/e7ziGpN_-LM?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Exercise 1 - histogram of ducknest data</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/d072L2Go15M?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -60,3 +67,66 @@ If you are unsure about how to do anything simply ask.
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
+<div id="L3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Lecture 3 - types of distance sampling</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/_EJPBMx0j1A?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="L4" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Lecture 4 - choosing a detection function</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/c6pk7QzWIfo?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="L5" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Lecture 5 - more ways to think about line transects</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/kFERKxm9tWU?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Exercise 2 - Other parameters estimated from ducknests</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/FL2pGCoO49A?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E2soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Solution to Exercise 2 - Other parameters estimated from ducknests</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/qwdPij30GtI?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="L6" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Lecture 6 - introduction to Distance software</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/WxsFhN-xoeo?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Exercise 3 - Ducknest analysis using Distance</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/D8B5aqAyZYA?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E3soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Solution to Exercise 3 - Ducknest analysis using Distance</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/BF9BA7scjcQ?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
