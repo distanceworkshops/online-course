@@ -18,11 +18,11 @@ If you are unsure about how to do anything simply ask.
 
 
 * Lecture 1 Workshop introduction _forthcoming_
-* Lecture 2 [Introduction to distance sampling](https://www.youtube.com/watch?v=e7ziGpN_-LM)
-    * [hardcopy]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf)
+* Lecture 2 <a href="#" data-reveal-id="L2">Introduction to distance sampling <img src="{{site.baseurl}}/images/video32.png"></a>
+    * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 * Exercise 1 [Ducknests by hand](https://www.youtube.com/watch?v=d072L2Go15M)
     * [exercise hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf)
-    * Exercise 1 solution [ducknests](https://www.youtube.com/watch?v=mSVPvLeGawU)
+    * <a href="#" data-reveal-id="E1soln">Solution to Exercise 1 <img src="{{site.baseurl}}/images/video32.png"></a>
 	* [solution hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand SOLUTION.pdf)
 * Lecture 3 [Types of distance sampling](https://www.youtube.com/watch?v=_EJPBMx0j1A)
     * [hardcopy]()
@@ -42,3 +42,21 @@ If you are unsure about how to do anything simply ask.
 	* [Exercise 3 solution](https://www.youtube.com/watch?v=BF9BA7scjcQ)
 	* [solution hardcopy]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance SOLUTION.pdf)
 * [Useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)
+
+
+<div id="L2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Lecture 2 - introduction to distance sampling</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/e7ziGpN_-LM?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E1soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Solution to Exercise 1 - histogram of ducknest data</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/mSVPvLeGawU?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
