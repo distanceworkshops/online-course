@@ -2,6 +2,7 @@
 layout: page
 sidebar: right
 subheadline: This is what I really think
+tawkto: true
 title: Chapter 6 Other topics
 permalink: /syllabus/Chapter6/
 header:

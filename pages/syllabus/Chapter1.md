@@ -3,6 +3,7 @@ layout: page
 sidebar: right
 title: Introduction
 subheadline: Analysing line transect data three times
+tawkto: true
 permalink: /syllabus/Chapter1/
 header:
   image_fullwidth: monte-vista-nwr06-lrg.jpg

@@ -1,6 +1,7 @@
 ---
 layout: page-fullwidth
 title: Preparation
+tawkto: true
 permalink: /prep/
 ---
 
