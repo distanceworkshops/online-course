@@ -245,4 +245,4 @@ sass:
 #
 # used in _includes/footer_scripts
 
-tawkto_embed_uri:'https://embed.tawk.to/5ab129884b401e45400de49c/default';
+tawkto_embed_uri: 'https://embed.tawk.to/5ab129884b401e45400de49c/default';
