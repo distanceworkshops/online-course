@@ -22,6 +22,7 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
     * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 * Exercise 1 <a href="#" data-reveal-id="E1">Ducknests by hand<img src="{{site.baseurl}}/images/video32.png"></a>
     * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+		    * [Graph paper use with exercise](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
     * <a href="#" data-reveal-id="E1soln">Solution to Exercise 1 <img src="{{site.baseurl}}/images/video32.png"></a>
 	* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 * Lecture 3 <a href="#" data-reveal-id="L3"> Types of distance sampling <img src="{{site.baseurl}}/images/video32.png"></a>
