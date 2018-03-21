@@ -6,8 +6,9 @@ tawkto: true
 title: Chapter 6 Other topics
 permalink: /syllabus/Chapter6/
 header:
-  image_fullwidth: header_unsplash_6.jpg
-
+  image_fullwidth: ales-krivec-22058-unsplash.jpg
+  caption: Photo by Ales Krivec on Unsplash.com
+  caption_url: http://Unsplash.com
 ---
 
 ### Future chapter 6
