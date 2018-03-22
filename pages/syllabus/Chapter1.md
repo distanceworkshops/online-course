@@ -26,9 +26,9 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
 * Lecture 3 <a href="#" data-reveal-id="L3"> Types of distance sampling <img src="{{site.baseurl}}/images/video32.png"></a>
   * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 * Lecture 4 <a href="#" data-reveal-id="L4">Choosing a detection function <img src="{{site.baseurl}}/images/video32.png"></a>
-  * [Lecture slides](({{site.baseurl}}/lecturepdfs/Ch1/L1-4 Choosing a Detection Function.pdf))<img src="{{site.baseurl}}/images/pdf32.png">
+  * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-4 Choosing a Detection Function.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 * Lecture 5 <a href="#" data-reveal-id="L5"> More ways to think about line transects <img src="{{site.baseurl}}/images/video32.png"></a>
-	* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-Three More Ways.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+	* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-5 Three More Ways.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 * Exercise 2 <a href="#" data-reveal-id="E1"> ducknests other ways<img src="{{site.baseurl}}/images/video32.png"></a>
 	* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 	* <a href="#" data-reveal-id="E2soln"> Solution to Exercise 2<img src="{{site.baseurl}}/images/video32.png"></a>
