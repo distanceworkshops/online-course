@@ -19,7 +19,7 @@ In this chapter you will learn about ...
 	* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 * <a href="#" data-reveal-id="L3"> __Types of distance sampling__ <img src="{{site.baseurl}}/images/video32.png"></a>
   * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
--->  
+
   
 <div class="panel radius" markdown="1">
 **Table of Contents**
@@ -27,6 +27,10 @@ In this chapter you will learn about ...
 *  TOC
 {:toc}
 </div>  
+
+-->  
+
+## Version 1 using headers
   
 ##### Introduction to this course
 * Lecture
@@ -46,6 +50,8 @@ In this chapter you will learn about ...
 * <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
+
+## Version 2 using alerts
 
 {% include alert info='Introduction to this course' %}
 * Lecture
