@@ -6,9 +6,9 @@ header:
   image_fullwidth: header_unsplash_leaf.jpg
 ---
 
-experiment with list formatting
+In this chapter you will learn about ...
 
-
+<!--
 * Workshop introduction _forthcoming_
 * <a href="#" data-reveal-id="L2"> __Introduction to distance sampling__ <img src="{{site.baseurl}}/images/video32.png"></a>
   * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
@@ -19,7 +19,7 @@ experiment with list formatting
 	* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 * <a href="#" data-reveal-id="L3"> __Types of distance sampling__ <img src="{{site.baseurl}}/images/video32.png"></a>
   * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  
+-->  
   
 ##### Introduction to this course
 * Lecture
@@ -29,7 +29,7 @@ experiment with list formatting
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Ducknest density analysis (manually)
-* <a href="#" data-reveal-id="E1"> Exercise narrative <img src="{{site.baseurl}}/images/video32.png"></a>
+* <a href="#" data-reveal-id="E1"> Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
   - [Graph paper for use with exercise](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 * <a href="#" data-reveal-id="E1soln">Narrative solution to manual ducknest analysis <img src="{{site.baseurl}}/images/video32.png"></a>
