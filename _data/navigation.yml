@@ -26,11 +26,6 @@
 - title: "Additional resources"
   url: "/more-resources/"
   side: left
-  dropdown:
-  - title: "Changelog"
-    url: "/changelog/"
-  - title: "Roadmap"
-    url: "/roadmap/"
 
 - title: News and updates
   url: "/blog/"
