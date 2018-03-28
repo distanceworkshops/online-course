@@ -38,3 +38,22 @@ In this chapter you will learn about ...
 ##### Types of distance sampling
 * <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+
+
+{% include alert info='Introduction to this course' %}
+* Lecture
+
+{% include alert info='Introduction to distance sampling' %}
+* <a href="#" data-reveal-id="L2"> Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+
+{% include alert warning='Ducknest density analysis (manually)' %}
+* <a href="#" data-reveal-id="E1"> Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+  - [Graph paper for use with exercise](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* <a href="#" data-reveal-id="E1soln">Narrative solution to manual ducknest analysis <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+  
+{% include alert info='Types of distance sampling' %}
+* <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
