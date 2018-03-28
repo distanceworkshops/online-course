@@ -21,6 +21,13 @@ In this chapter you will learn about ...
   * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 -->  
   
+<div class="panel radius" markdown="1">
+**Table of Contents**
+{: #toc }
+*  TOC
+{:toc}
+</div>  
+  
 ##### Introduction to this course
 * Lecture
 
