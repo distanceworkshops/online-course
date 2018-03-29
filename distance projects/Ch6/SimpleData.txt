@@ -1,0 +1,11 @@
+Stratum A;100;Line 1A;10;14
+Stratum A;100;Line 1A;10;8
+Stratum A;100;Line 1A;10;22
+Stratum A;100;Line 2A;10.3;7
+Stratum A;100;Line 2A;10.3;37
+Stratum A;100;Line 2A;10.3;13
+Stratum B;123;Line 1B;5.7;
+Stratum B;123;Line 2B;8.4;27
+Stratum B;123;Line 2B;8.4;76
+Stratum B;123;Line 2B;8.4;44
+Stratum B;123;Line 2B;8.4;7

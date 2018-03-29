@@ -1,0 +1,10 @@
+transect label; distance
+Line 1A;8
+Line 1A;22
+Line 2A;7
+Line 2A;37
+Line 2A;13
+Line 2B;27
+Line 2B;76
+Line 2B;44
+Line 2B;7

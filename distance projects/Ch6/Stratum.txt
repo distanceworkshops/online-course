@@ -1,0 +1,3 @@
+stratum label; area
+Stratum A;100
+Stratum B;200

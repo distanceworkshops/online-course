@@ -1,0 +1,12 @@
+Region*Label;Region*Area;Line transect*Label;Line transect*Line length;Observation*Perp distance;Observation*Species
+Stratum A;100;Line 1A;10;14;Ele
+Stratum A;100;Line 1A;10;8;Ele
+Stratum A;100;Line 1A;10;22;Deer
+Stratum A;100;Line 2A;10.3;7;Deer
+Stratum A;100;Line 2A;10.3;37;Deer
+Stratum A;100;Line 2A;10.3;13;Deer
+Stratum B;123;Line 1B;5.7;;
+Stratum B;123;Line 2B;8.4;27;Deer
+Stratum B;123;Line 2B;8.4;76;Ele
+Stratum B;123;Line 2B;8.4;44;Ele
+Stratum B;123;Line 2B;8.4;7;Ele

@@ -1,0 +1,5 @@
+stratum label; transect label; transect length
+Stratum A;Line 1A;10
+Stratum A;Line 2A;10.3
+Stratum B;Line 1B;5.7
+Stratum B;Line 2B;8.4
