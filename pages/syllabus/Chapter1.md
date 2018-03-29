@@ -15,31 +15,50 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
 
 ***
 
-* Lecture 1 Workshop introduction _forthcoming_
-* Lecture 2 <a href="#" data-reveal-id="L2">Introduction to distance sampling <img src="{{site.baseurl}}/images/video32.png"></a>
-  * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-* Exercise 1 <a href="#" data-reveal-id="E1">Ducknests by hand<img src="{{site.baseurl}}/images/video32.png"></a>
-  * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-    - [Graph paper for use with exercise](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  * <a href="#" data-reveal-id="E1soln">Solution to Exercise 1 <img src="{{site.baseurl}}/images/video32.png"></a>
-	* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
-* Lecture 3 <a href="#" data-reveal-id="L3"> Types of distance sampling <img src="{{site.baseurl}}/images/video32.png"></a>
-  * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-* Lecture 4 <a href="#" data-reveal-id="L4">Choosing a detection function <img src="{{site.baseurl}}/images/video32.png"></a>
-  * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-4 Choosing a Detection Function.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-* Lecture 5 <a href="#" data-reveal-id="L5"> More ways to think about line transects <img src="{{site.baseurl}}/images/video32.png"></a>
-	* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-5 Three More Ways.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-* Exercise 2 <a href="#" data-reveal-id="E1"> ducknests other ways<img src="{{site.baseurl}}/images/video32.png"></a>
-	* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
-	* <a href="#" data-reveal-id="E2soln"> Solution to Exercise 2<img src="{{site.baseurl}}/images/video32.png"></a>
-	* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways - SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
-* Lecture 6 <a href="#" data-reveal-id="L6"> Introduction to Distance software <img src="{{site.baseurl}}/images/video32.png"></a>
-	* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-6 Distance.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-* Exercise 3 <a href="#" data-reveal-id="E1"> Ducknest analysis using Distance<img src="{{site.baseurl}}/images/video32.png"></a>
-	* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-	* [Distance project]({{site.baseurl}}/distanceprojects/Ch1/) <img src="{{site.baseurl}}/images/zip32.png">	
-	* <a href="#" data-reveal-id="E3soln"> Solution to Exercise 3<img src="{{site.baseurl}}/images/video32.png"></a>
-	* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+##### Introduction to this course
+* Lecture
+
+##### Introduction to distance sampling
+* <a href="#" data-reveal-id="L2">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+
+##### Ducknest density analysis (manually)
+* <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+  - [Graph paper for use with exercise](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* <a href="#" data-reveal-id="E1soln">Narrative solution to manual ducknest analysis <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.2 ducknests by hand SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+  
+##### Types of distance sampling
+* <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+
+##### Choosing a detection function
+* <a href="#" data-reveal-id="L4">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-4 Choosing a Detection Function.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+
+##### Additional mathemaatical ways to think about line transects
+* <a href="#" data-reveal-id="L5">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-5 Three More Ways.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+
+##### Further manual calculations with ducknest data
+* <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+* <a href="#" data-reveal-id="E2soln">Narrative solution to additional ducknest calculations<img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways - SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+
+##### Introduction to Distance software 
+* <a href="#" data-reveal-id="L6">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-6 Distance.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+
+##### Ducknest analysis using Distance software
+* <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+  * [Distance project zip file]({{site.baseurl}}/distanceprojects/Ch1/) <img src="{{site.baseurl}}/images/zip32.png">	
+* <a href="#" data-reveal-id="E3soln">Narrative solution to computer analysis of duck nests<img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+
+##### Reference guide of terms and notation for distance sampling
 * [Useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
 
