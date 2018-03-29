@@ -1,5 +1,6 @@
 ---
-layout: page-fullwidth
+layout: page
+sidebar: right
 title: Chapter 2 Making distance sampling work
 subheadline: Ducknest data and a simulated line transect data set
 permalink: /syllabus/Chapter2/
@@ -9,6 +10,7 @@ header:
 
 In this chapter you will learn about ...
 
+***
 
 ##### Assessing model performance
 * <a href="#" data-reveal-id="L1">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
