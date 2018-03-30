@@ -43,22 +43,6 @@ In this chapter you will learn about ...
 * <a href="#" data-reveal-id="E2soln">Narrative solution to simulated line transect data <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch2/E2.2 Other line transect examples SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
-<!-- below here are the links to video clips of lectures and exercise setup and solutions
-     Particularly note that youtube video identifiers need to be specified for each clip 
-	 
-Chapter 2			
-	Lectures		
-		L1	NEbvpEP1axY
-		L3	rqFrszn7uaQ
-		L4	SK6szGLynvc
-		L5	Xm0zacE-upg
-	Exercises		
-		E1Q	RTa9kTDHYdQ
-		E1S	ayAB-TXoLUE
-		E2Q	EFu0_TsWxpE
-		E2S	T9PDbwdI7Iw
-
--->		
 
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - assessing model performance</h3>
@@ -123,3 +107,20 @@ Chapter 2
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
+
+<!-- below here are the links to video clips of lectures and exercise setup and solutions
+     Particularly note that youtube video identifiers need to be specified for each clip 
+	 
+Chapter 2			
+	Lectures		
+		L1	NEbvpEP1axY
+		L3	rqFrszn7uaQ
+		L4	SK6szGLynvc
+		L5	Xm0zacE-upg
+	Exercises		
+		E1Q	RTa9kTDHYdQ
+		E1S	ayAB-TXoLUE
+		E2Q	EFu0_TsWxpE
+		E2S	T9PDbwdI7Iw
+
+-->		
