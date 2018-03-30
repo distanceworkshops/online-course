@@ -7,14 +7,14 @@
 #
 layout: frontpage
 header:
-  image_fullwidth: header_unsplash_12.jpg
+  image_fullwidth: three birds cloud.jpg
 widget1:
-  title: "Prep for online course"
+  title: "Prepare for course"
   url: '/prep'
-  image: widget-1-302x182.jpg
+  image: aspen grove.jpg
   text: 'This course will be a mix of lectures, exercises and computer practicals.'
 widget2:
-  title: "Take the online course"
+  title: "Take the course"
   url: '/syllabus'
   image: helloquence-61189-unsplash.jpg
   text: 'The content of the workshop is divided into chapters. Each chapter will take several hours to complete.'

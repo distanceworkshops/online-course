@@ -5,7 +5,7 @@ title: "Chapter 5 Stratification, clusters and covariates"
 subheadline: "More sophisticated analysis tools"
 permalink: /syllabus/Chapter5/
 header:
-  image_fullwidth: header_unsplash_7.jpg
+  image_fullwidth: single bird cloud.jpg
 ---
 
 In this chapter ...
@@ -60,16 +60,16 @@ In this chapter ...
 * <a href="#" data-reveal-id="E4">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch5/E5.4 covariates in the detection function.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
   - Exercise section 1
-  - Simulated whale survey with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/CovarWhaleSim.zip) <img src="{{site.baseurl}}/images/zip32.png">
+    - Simulated whale survey with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/CovarWhaleSim.zip) <img src="{{site.baseurl}}/images/zip32.png">
   - Exercise section 2
       - Survey of golf tees with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/GolfteesExercise.zip) <img src="{{site.baseurl}}/images/zip32.png">
   - Exercise section 3
-      - Eastern tropical pacific dolphin survey with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Dolphin.zip) <img src="{{site.baseurl}}/images/zip32.png">
+      - Eastern tropical Pacific dolphin survey [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Dolphin.zip) <img src="{{site.baseurl}}/images/zip32.png">
   - Exercise section 4
-      - Hawaiian amakihi point transect survey with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/fTAMAUK07.zip) <img src="{{site.baseurl}}/images/zip32.png">
+      - Hawaiian amakihi point transect survey [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/fTAMAUK07.zip) <img src="{{site.baseurl}}/images/zip32.png">
 * <a href="#" data-reveal-id="E4soln">Narrative solution to covariates in detection functions <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch5/E5.4 covariates in the detection function SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
-  - Completed project for simulated whale survey with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/CovarWhaleSim-solutions.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Completed project for simulated whale survey [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/CovarWhaleSim-solutions.zip) <img src="{{site.baseurl}}/images/zip32.png">
 
 
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">

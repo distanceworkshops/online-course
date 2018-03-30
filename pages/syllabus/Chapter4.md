@@ -4,7 +4,7 @@ sidebar: right
 title: Chapter 4 Survey design and field methods
 permalink: /syllabus/Chapter4/
 header:
-  image_fullwidth: header_roadmap_2.jpg
+  image_fullwidth: dew on grass.jpg
 ---
 
 In this chapter you will learn about ...
