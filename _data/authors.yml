@@ -12,3 +12,9 @@ phlow: # replace this with your info
   email:
   twitter: "@phlow"
 # you can add more authors here
+Eric: # replace this with your info
+  name: "Eric"
+  siterole: "webmaster, developer, copywriter, designer"
+  uri: https://erex.github.io/
+  email: eric.rexstad@st-andrews.ac.uk
+  twitter: 
