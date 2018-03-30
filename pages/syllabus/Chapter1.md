@@ -1,8 +1,8 @@
 ---
 layout: page
 sidebar: right
-title: Introduction
-subheadline: Analysing line transect data three times
+title: "Chapter 1 - Introduction"
+subheadline: "Analysing line transect data three times"
 permalink: /syllabus/Chapter1/
 header:
   image_fullwidth: monte-vista-nwr06-lrg.jpg

@@ -1,11 +1,11 @@
 ---
 layout: page
 sidebar: right
-title: Chapter 3 Point transect sampling
-subheadline: Observer remains stationary rather than walking a transect
+title: "Chapter 3 - Point transect sampling"
+subheadline: "Observer remains stationary rather than walking a transect"
 permalink: /syllabus/Chapter3/
-header:
-  image_fullwidth: header_roadmap_3.jpg
+image:
+  title: header_roadmap_3.jpg
 ---
 
 This chapter describes methods associated with point transect sampling.

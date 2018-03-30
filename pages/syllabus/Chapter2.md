@@ -1,8 +1,8 @@
 ---
 layout: page
 sidebar: right
-title: Chapter 2 Making distance sampling work
-subheadline: Ducknest data and a simulated line transect data set
+title: "Chapter 2 Making distance sampling work"
+subheadline: "Ducknest data and a simulated line transect data set"
 permalink: /syllabus/Chapter2/
 header:
   image_fullwidth: header_unsplash_leaf.jpg
