@@ -10,7 +10,7 @@ header:
   caption_url: http://www.sangres.com/colorado/wildlife-refuges/monte-vistanwr.htm 
 ---
 
-This chapter introduces the basic concepts of distance sampling via lecture.  It also offers you the chance to sharpen your distance sampling skills with a pencil-and-paper exercise.  You are also introduced to the distance sampling software, Distance, to analyse ducknest data.
+This chapter introduces the basic concepts of distance sampling via lecture.  It also offers you the chance to sharpen your distance sampling skills with a pencil-and-paper exercise.  You are also introduced to the distance sampling software, **Distance**, to analyse ducknest data.
 
 ***
 

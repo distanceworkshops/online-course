@@ -1,11 +1,10 @@
 ---
 layout: page
-sidebar: right
 title: "Chapter 3 - Point transect sampling"
 subheadline: "Observer remains stationary rather than walking a transect"
 permalink: /syllabus/Chapter3/
-image:
-  title: header_roadmap_3.jpg
+header:
+  image_fullwidth: header_roadmap_3.jpg
 ---
 
 This chapter describes methods associated with point transect sampling.
@@ -23,8 +22,14 @@ This chapter describes methods associated with point transect sampling.
 ##### Analysis of point transect data
 * <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch3/E3.1 point transects.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - [Distance project zip file](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png"> link not prepared
-* <a href="#" data-reveal-id="E1soln">Narrative solution to manual ducknest analysis <img src="{{site.baseurl}}/images/video32.png"></a>
+  - Simulated data [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/PTExercise1.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Montrave wrens 5-minute counts [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Wren1.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Montrave wrens snapshot  [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Wren2.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Montrave wrens cue count (5 minutes)  [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Wren3.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Montrave wrens line transect method  [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Wren4.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Song sparrow 1980 [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Savannah sparrow 1980.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Song sparrow 1981 [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Savannah sparrow 1981.zip) <img src="{{site.baseurl}}/images/zip32.png">
+* <a href="#" data-reveal-id="E1soln">Narrative discussion of point transect analyses <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch3/E3.1 point transects SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
   
 
