@@ -12,7 +12,7 @@
   dropdown:
   - title: "Introduction"
     url: "/syllabus/Chapter1"
-  - title: "Assumptions"
+  - title: "Assumptions and precision"
     url: "/syllabus/Chapter2"
   - title: "Point transects"
     url: "/syllabus/Chapter3"
@@ -30,9 +30,7 @@
 - title: News and updates
   url: "/blog/"
   side: left
-  dropdown:
-  - title: "Blog Archive"
-    url: "/blog/archive/"
+
 
 - title: "Search"
   url: "/search/"
