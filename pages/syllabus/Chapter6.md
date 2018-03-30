@@ -1,6 +1,5 @@
 ---
-layout: page
-sidebar: right
+layout: page-fullwidth
 subheadline: This is what I really think
 title: Chapter 6 Other topics
 permalink: /syllabus/Chapter6/
@@ -23,6 +22,7 @@ In this chapter ...
     - [Stratum.txt]({{site.baseurl}}/distance projects/Ch6/Stratum.txt) <img src="{{site.baseurl}}/images/txt32.png">
     - [transect.txt]({{site.baseurl}}/distance projects/Ch6/transect.txt) <img src="{{site.baseurl}}/images/txt32.png">
     - [Observation.txt]({{site.baseurl}}/distance projects/Ch6/Observation.txt) <img src="{{site.baseurl}}/images/txt32.png">	
+	
 ##### Multipliers
 * <a href="#" data-reveal-id="L2">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch6/L6-2 Multipliers.pdf) <img src="{{site.baseurl}}/images/pdf32.png">

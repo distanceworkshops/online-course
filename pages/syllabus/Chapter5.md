@@ -1,6 +1,5 @@
 ---
-layout: page
-sidebar: right
+layout: page-fullwidth
 title: "Chapter 5 Stratification, clusters and covariates"
 subheadline: "More sophisticated analysis tools"
 permalink: /syllabus/Chapter5/

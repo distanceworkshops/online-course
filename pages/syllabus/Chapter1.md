@@ -1,6 +1,5 @@
 ---
-layout: page
-sidebar: right
+layout: page-fullwidth
 title: "Chapter 1 - Introduction"
 subheadline: "Analysing line transect data three times"
 permalink: /syllabus/Chapter1/
@@ -36,7 +35,7 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
 * <a href="#" data-reveal-id="L4">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-4 Choosing a Detection Function.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
-##### Additional mathemaatical ways to think about line transects
+##### Additional mathematical ways to think about line transects
 * <a href="#" data-reveal-id="L5">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-5 Three More Ways.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 

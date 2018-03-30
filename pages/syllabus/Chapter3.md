@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-fullwidth
 title: "Chapter 3 - Point transect sampling"
 subheadline: "Observer remains stationary rather than walking a transect"
 permalink: /syllabus/Chapter3/

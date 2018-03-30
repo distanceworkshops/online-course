@@ -1,11 +1,10 @@
 ---
-layout: page
-sidebar: right
+layout: page-fullwidth
 title: "Chapter 2 Making distance sampling work"
 subheadline: "Ducknest data and a simulated line transect data set"
 permalink: /syllabus/Chapter2/
 header:
-  image_fullwidth: header_unsplash_leaf.jpg
+  image_fullwidth: foggy landscape.jpg
 ---
 
 In this chapter you will learn about ...
@@ -41,7 +40,7 @@ In this chapter you will learn about ...
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch2/E2.2 Other line transect examples.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
   - Simulated line transect data [Distance project zip file]({{site.baseurl}}/distance projects/Ch2/Exercise3.zip) <img src="{{site.baseurl}}/images/zip32.png">
   - Question 2 of exercise: import data into a new project.  May wish to view [import demonstration video]({{site.baseurl}}/syllabus/Chapter6/#demonstration-of-data-import-to-Distance) before attempting
-    - Capercaillie line transect data [Distance project zip file]({{site.baseurl}}/distance projects/Ch2/capercaillie.txt) <img src="{{site.baseurl}}/images/txt32.png">  
+    - Capercaillie line transect data [text file to import]({{site.baseurl}}/distance projects/Ch2/capercaillie.txt) <img src="{{site.baseurl}}/images/txt32.png">  
 * <a href="#" data-reveal-id="E2soln">Narrative solution to simulated line transect data <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch2/E2.2 Other line transect examples SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
