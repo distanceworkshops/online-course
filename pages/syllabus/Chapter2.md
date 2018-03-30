@@ -19,8 +19,8 @@ In this chapter you will learn about ...
 ##### Model selection with ducknest dataset
 * <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch2/E2.1 ducknests model selection.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - the data you need is in the Distance project you used in Chapter 1, if you need to download it again, follow the link below
-  - [Distance project zip file](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">  not yet complete
+  - the data are in the Distance project used in Chapter 1, if you need to download it again, follow the link below
+  - Monte Vista Refuge ducknests [Distance project zip file]({{site.baseurl}}/distance projects/Ch1/Ducknest exercise.zip) <img src="{{site.baseurl}}/images/zip32.png">
 * <a href="#" data-reveal-id="E1soln">Narrative solution to ducknest model selection <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch2/E2.1 ducknests model selection solution.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
   
@@ -39,7 +39,9 @@ In this chapter you will learn about ...
 ##### Analysing simulated line transect data, where true density is known
 * <a href="#" data-reveal-id="E2"> Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch2/E2.2 Other line transect examples.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - [Distance project zip file]({{site.baseurl}}/distanceprojects/Ch2/) <img src="{{site.baseurl}}/images/pdf32.png"> link not yet complete
+  - Simulated line transect data [Distance project zip file]({{site.baseurl}}/distance projects/Ch2/Exercise3.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Question 2 of exercise: import data into a new project.  May wish to view [import demonstration video]({{site.baseurl}}/syllabus/Chapter6/#demonstration-of-data-import-to-Distance) before attempting
+    - Capercaillie line transect data [Distance project zip file]({{site.baseurl}}/distance projects/Ch2/capercaillie.txt) <img src="{{site.baseurl}}/images/txt32.png">  
 * <a href="#" data-reveal-id="E2soln">Narrative solution to simulated line transect data <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch2/E2.2 Other line transect examples SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 

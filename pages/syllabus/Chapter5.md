@@ -19,9 +19,9 @@ In this chapter ...
 ##### Estimating variance under systematic survey designs
 * <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch5/E5.1 systematic variance estimation.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - the data you need is in the Distance project you used in Chapter 1, if you need to download it again, follow the link below
-  - [Distance project zip file](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">  not yet complete
-* <a href="#" data-reveal-id="E1soln">Narrative solution to ducknest model selection <img src="{{site.baseurl}}/images/video32.png"></a>
+  - Systematic survey design data [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Systematic_variance_2.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Systematic survey design data (without animal gradient), page 4 of exercise [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Systematic_variance_1.zip) <img src="{{site.baseurl}}/images/zip32.png">  
+* <a href="#" data-reveal-id="E1soln">Narrative solution of variance estimation with systematic survey design <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch5/E5.1 systematic variance estimation SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Stratification
@@ -31,10 +31,10 @@ In this chapter ...
 ##### Stratification exercise
 * <a href="#" data-reveal-id="E2">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch5/E5.2 stratification.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - the data you need is in the Distance project you used in Chapter 1, if you need to download it again, follow the link below
-  - [Distance project zip file](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">  not yet complete
-* <a href="#" data-reveal-id="E2soln">Narrative solution to ducknest model selection <img src="{{site.baseurl}}/images/video32.png"></a>
+  - Antarctic minke whales, stratification [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Stratify exercise.zip) <img src="{{site.baseurl}}/images/zip32.png">
+* <a href="#" data-reveal-id="E2soln">Narrative solution to stratification exercise <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch5/E5.2 stratification SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+  - Completed minke whale project [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Stratify solutions.zip) <img src="{{site.baseurl}}/images/zip32.png">
 
 ##### Bias associated with group size estimation
 * <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
@@ -43,11 +43,11 @@ In this chapter ...
 ##### Bias in group size exercise
 * <a href="#" data-reveal-id="E3">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch5/E5.3 cluster size.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - the data you need is in the Distance project you used in Chapter 1, if you need to download it again, follow the link below
-  - [Distance project zip file](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">  not yet complete
-* <a href="#" data-reveal-id="E3soln">Narrative solution to ducknest model selection <img src="{{site.baseurl}}/images/video32.png"></a>
+  - Animals detected in clusters [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Cluster exercise.zip) <img src="{{site.baseurl}}/images/zip32.png">
+* <a href="#" data-reveal-id="E3soln">Narrative solution to size-bias exercise <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch5/E5.3 cluster size SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
-
+  - Completed project for size bias correction [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Cluster solutions.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  
 ##### Covariates in the detection function
 * <a href="#" data-reveal-id="L4">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch5/L5-4 MCDS.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
@@ -59,11 +59,17 @@ In this chapter ...
 ##### Covariate detection function exercise
 * <a href="#" data-reveal-id="E4">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch5/E5.4 covariates in the detection function.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - the data you need is in the Distance project you used in Chapter 1, if you need to download it again, follow the link below
-  - [Distance project zip file](https://www.hand2mind.com/pdf/gridpaper.pdf) <img src="{{site.baseurl}}/images/pdf32.png">  not yet complete
-* <a href="#" data-reveal-id="E4soln">Narrative solution to ducknest model selection <img src="{{site.baseurl}}/images/video32.png"></a>
+  - Exercise section 1
+  - Simulated whale survey with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/CovarWhaleSim.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Exercise section 2
+      - Survey of golf tees with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/GolfteesExercise.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Exercise section 3
+      - Eastern tropical pacific dolphin survey with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Dolphin.zip) <img src="{{site.baseurl}}/images/zip32.png">
+  - Exercise section 4
+      - Hawaiian amakihi point transect survey with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/fTAMAUK07.zip) <img src="{{site.baseurl}}/images/zip32.png">
+* <a href="#" data-reveal-id="E4soln">Narrative solution to covariates in detection functions <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch5/E5.4 covariates in the detection function SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
-
+  - Completed project for simulated whale survey with covariates [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/CovarWhaleSim-solutions.zip) <img src="{{site.baseurl}}/images/zip32.png">
 
 
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
