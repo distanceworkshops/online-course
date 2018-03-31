@@ -49,18 +49,18 @@ In this chapter you will learn about the assumptions that underlie distance samp
 
      below here are the links to video clips of lectures and exercise setup and solutions
      Particularly note that youtube video identifiers need to be specified for each clip 
-	 
-		Chapter 2			
-			Lectures		
-				L1	NEbvpEP1axY
-				L3	rqFrszn7uaQ
-				L4	SK6szGLynvc
-				L5	Xm0zacE-upg
-			Exercises		
-				E1Q	RTa9kTDHYdQ
-				E1S	ayAB-TXoLUE
-				E2Q	EFu0_TsWxpE
-				E2S	T9PDbwdI7Iw
+ 
+	Chapter 2			
+		Lectures		
+			L1	NEbvpEP1axY
+			L3	rqFrszn7uaQ
+			L4	SK6szGLynvc
+			L5	Xm0zacE-upg
+		Exercises		
+			E1Q	RTa9kTDHYdQ
+			E1S	ayAB-TXoLUE
+			E2Q	EFu0_TsWxpE
+			E2S	T9PDbwdI7Iw
 
 {{% endcomment %}}
 

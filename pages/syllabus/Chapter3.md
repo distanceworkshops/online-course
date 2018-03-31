@@ -40,13 +40,13 @@ This chapter describes methods associated with point transect sampling.  Analyse
      below here are the links to video clips of lectures and exercise setup and solutions
      Particularly note that youtube video identifiers need to be specified for each clip 
 
-		Chapter 3			
-			Lectures		
-				L1	_gmxRDXUGJ8
-				L2	YqqiTfrqkOw
-			Exercises		
-				E1Q	2v8g5K9eWmk
-				E1S	-KKb7nJJ5b4
+	Chapter 3			
+		Lectures		
+			L1	_gmxRDXUGJ8
+			L2	YqqiTfrqkOw
+		Exercises		
+			E1Q	2v8g5K9eWmk
+			E1S	-KKb7nJJ5b4
 
 {{% endcomment %}}
 

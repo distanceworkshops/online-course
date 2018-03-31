@@ -32,16 +32,15 @@ In this chapter you will learn about work conducted prior to data collection--in
 
     below here are the links to video clips of lectures and exercise setup and solutions
      Particularly note that youtube video identifiers need to be specified for each clip 
-	 
-	  Chapter 4			
-		Lectures		
-			L1	bgpb1kdregw
-			L2	GVy0-dM0hg8
-			L3	UEOCouKJTSU
-			L6	xQdWeQpWW78
-		Exercises		
-			--	
-			--	
+	Chapter 4			
+	Lectures		
+		L1	bgpb1kdregw
+		L2	GVy0-dM0hg8
+		L3	UEOCouKJTSU
+		L6	xQdWeQpWW78
+	Exercises		
+		--	
+		--	
 
 {{% endcomment %}}
 
