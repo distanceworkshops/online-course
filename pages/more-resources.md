@@ -1,5 +1,6 @@
 ---
-layout: page-fullwidth
+layout: page
+sidebar: left
 title: More resources
 permalink: /more-resources/
 header:
