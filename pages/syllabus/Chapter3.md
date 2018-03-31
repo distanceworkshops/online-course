@@ -8,7 +8,7 @@ header:
   image_fullwidth: birds sunset.jpg
 ---
 
-This chapter describes methods associated with point transect sampling.
+This chapter describes methods associated with point transect sampling.  Analyses of this type of data is inherently more difficult, for reasons explained in this material. A comparative study of songbird density estimated is presented, describing the advantages of the *snapshot* field procedure to minimise the effect of animal movement upon estimates.
 
 ***
 

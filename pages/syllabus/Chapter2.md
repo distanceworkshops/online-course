@@ -8,7 +8,7 @@ header:
   image_fullwidth: foggy landscape.jpg
 ---
 
-In this chapter you will learn about ...
+In this chapter you will learn about the assumptions that underlie distance sampling.  As density/abundance metrics produced by distance sampling are *estimates*, measures of uncertainty (or precision) need to be associated with them. Finally, a few suggestions regarding how a distance sampling analysis might be conducted: beginning, middle and conclusion.
 
 ***
 

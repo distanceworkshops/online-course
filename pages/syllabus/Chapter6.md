@@ -6,17 +6,15 @@ title: Chapter 6 Other topics
 permalink: /syllabus/Chapter6/
 header:
   image_fullwidth: ales-krivec-22058-unsplash.jpg
-  caption: Photo by Ales Krivec on Unsplash.com
-  caption_url: http://Unsplash.com
 ---
 
-In this chapter ...
+In this chapter we provide an extended demonstration of importing data in programme **Distance**, as well as the files so you can try importing.  Multiplier are useful when you wish to compute density of inanimate objects (such as dung piles or nests) and convert these densities into animal density (by incorporating estimates of production and decay rates).  We present a short overview of other extensions of distance sampling that can be performed with programme **Distance**.  
 
 ***
 
 ##### Demonstration of data import to Distance
 * <a href="#" data-reveal-id="L1">Demonstration video <img src="{{site.baseurl}}/images/video32.png"></a>
-  - Plain file data sets used in demonstration
+  - Text files containing data used in demonstration
     - [SimpleData.txt]({{site.baseurl}}/distance projects/Ch6/SimpleData.txt) <img src="{{site.baseurl}}/images/txt32.png">
     - [SimpleDataSpp.txt]({{site.baseurl}}/distance projects/Ch6/SimpleDataSpp.txt) <img src="{{site.baseurl}}/images/txt32.png">
     - [SimpleDataSppLabel.txt]({{site.baseurl}}/distance projects/Ch6/SimpleDataSppLabel.txt) <img src="{{site.baseurl}}/images/txt32.png">	

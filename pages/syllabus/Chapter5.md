@@ -8,7 +8,7 @@ header:
   image_fullwidth: single bird cloud.jpg
 ---
 
-In this chapter ...
+In this chapter we introduce more challenging designs and analyses.  The study area may be subdivided into smaller regions (strata) and density/abundance estimated within each strata.  Animals may be detected in groups (clusters).  In this situation, cluster density is estimated and individual density is derived by multiplying by expected group size.  However estimating expected group size requires some careful analysis.  Lastly, we can incorporate the effect of factors that might affect detectability into our estimated detection function.
 
 ***
 
