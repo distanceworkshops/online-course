@@ -1,5 +1,6 @@
 ---
-layout: page-fullwidth
+layout: page
+sidebar: left
 title: "Chapter 1 - Introduction"
 subheadline: "Analysing line transect data three times"
 permalink: /syllabus/Chapter1/
