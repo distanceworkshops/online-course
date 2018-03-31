@@ -1,6 +1,7 @@
 ---
-layout: page-fullwidth
-subheadline: This is what I really think
+layout: page
+sidebar: right
+subheadline: We couldn't cover everything, but before you go..
 title: Chapter 6 Other topics
 permalink: /syllabus/Chapter6/
 header:
@@ -40,6 +41,20 @@ In this chapter ...
 * <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch6/L4-1 Survey Design.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
+{% comment %}
+
+    below here are the links to video clips of lectures and exercise setup and solutions
+     Particularly note that youtube video identifiers need to be specified for each clip 
+	Chapter 6			
+	Lectures		
+		L1	5RAkrFq7sUA
+		L2	wMI-F6qsi30
+		L3	
+	Exercises		
+		E1Q	F71J2cRnAlk
+		E1S	RnEAHnAl5aY
+
+{% endcomment %}
 
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - demonstration of data import to Distance</h3>
@@ -74,14 +89,3 @@ In this chapter ...
 </div>
 
 
-<!-- below here are the links to video clips of lectures and exercise setup and solutions
-     Particularly note that youtube video identifiers need to be specified for each clip 
-	Chapter 6			
-	Lectures		
-		L1	5RAkrFq7sUA
-		L2	wMI-F6qsi30
-		L3	
-	Exercises		
-		E1Q	F71J2cRnAlk
-		E1S	RnEAHnAl5aY
--->

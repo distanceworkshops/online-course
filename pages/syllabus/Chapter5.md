@@ -1,5 +1,6 @@
 ---
-layout: page-fullwidth
+layout: page
+sidebar: right
 title: "Chapter 5 Stratification, clusters and covariates"
 subheadline: "More sophisticated analysis tools"
 permalink: /syllabus/Chapter5/
@@ -70,6 +71,27 @@ In this chapter ...
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch5/E5.4 covariates in the detection function SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
   - Completed project for simulated whale survey [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/CovarWhaleSim-solutions.zip) <img src="{{site.baseurl}}/images/zip32.png">
 
+{% comment %}	
+     below here are the links to video clips of lectures and exercise setup and solutions
+     Particularly note that youtube video identifiers need to be specified for each clip 
+	 
+	 Chapter 5			
+	Lectures		
+		L1	TlNgDFYh_7c
+		L2	xzBgwUQtPJQ
+		L3	bTcLnQddVSo
+		L4	gD11jLtlF-w
+		L5	ySMVAuIV8x8
+	Exercises		
+		E1Q	4NY1nwhf64A
+		E1S	Wr6RslBQu5M
+		E2Q	oKIzmLQQWO8
+		E2S	lAEgJsNHeYs
+		E3Q	-ubiLuJUvNo
+		E3S	Ewl_8Y_Vgo4
+		E4Q	XyZ8apcvsZI
+		E4S	eAR1l8oITLI
+{% endcomment %}
 
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - assessing model performance</h3>
@@ -174,25 +196,3 @@ In this chapter ...
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
-
-
-<!-- below here are the links to video clips of lectures and exercise setup and solutions
-     Particularly note that youtube video identifiers need to be specified for each clip 
-	 
-	 Chapter 5			
-	Lectures		
-		L1	TlNgDFYh_7c
-		L2	xzBgwUQtPJQ
-		L3	bTcLnQddVSo
-		L4	gD11jLtlF-w
-		L5	ySMVAuIV8x8
-	Exercises		
-		E1Q	4NY1nwhf64A
-		E1S	Wr6RslBQu5M
-		E2Q	oKIzmLQQWO8
-		E2S	lAEgJsNHeYs
-		E3Q	-ubiLuJUvNo
-		E3S	Ewl_8Y_Vgo4
-		E4Q	XyZ8apcvsZI
-		E4S	eAR1l8oITLI
--->

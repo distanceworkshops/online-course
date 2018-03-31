@@ -1,5 +1,6 @@
 ---
-layout: page-fullwidth
+layout: page
+sidebar: right
 title: "Chapter 3 - Point transect sampling"
 subheadline: "Observer remains stationary rather than walking a transect"
 permalink: /syllabus/Chapter3/
@@ -33,7 +34,21 @@ This chapter describes methods associated with point transect sampling.
     - Song sparrow 1981 [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Savannah sparrow 1981.zip) <img src="{{site.baseurl}}/images/zip32.png">
 * <a href="#" data-reveal-id="E1soln">Narrative discussion of point transect analyses <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch3/E3.1 point transects SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
-  
+ 
+{{% comment %}}
+
+     below here are the links to video clips of lectures and exercise setup and solutions
+     Particularly note that youtube video identifiers need to be specified for each clip 
+
+Chapter 3			
+	Lectures		
+		L1	_gmxRDXUGJ8
+		L2	YqqiTfrqkOw
+	Exercises		
+		E1Q	2v8g5K9eWmk
+		E1S	-KKb7nJJ5b4
+
+{{% endcomment %}}
 
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - point transect sampling</h3>
@@ -67,17 +82,3 @@ This chapter describes methods associated with point transect sampling.
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
-
-
-<!-- below here are the links to video clips of lectures and exercise setup and solutions
-     Particularly note that youtube video identifiers need to be specified for each clip 
-
-Chapter 3			
-	Lectures		
-		L1	_gmxRDXUGJ8
-		L2	YqqiTfrqkOw
-	Exercises		
-		E1Q	2v8g5K9eWmk
-		E1S	-KKb7nJJ5b4
-
--->
