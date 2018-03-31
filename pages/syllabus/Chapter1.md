@@ -1,6 +1,6 @@
 ---
 layout: page
-sidebar: left
+sidebar: right
 title: "Chapter 1 - Introduction"
 subheadline: "Analysing line transect data three times"
 permalink: /syllabus/Chapter1/
@@ -60,7 +60,28 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
 ##### Reference guide of terms and notation for distance sampling
 * [Useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
-	
+
+{% comment %}
+    below here are the links to video clips of lectures and exercise setup and solutions
+     Particularly note that youtube video identifiers need to be specified for each clip 
+	 
+Chapter 1			
+	Lectures		
+		L1	
+		L2	e7ziGpN_-LM
+		L3	_EJPBMx0j1A
+		L4	c6pk7QzWIfo
+		L5	kFERKxm9tWU
+		L6	WxsFhN-xoeo
+	Exercises		
+		E2Q	d072L2Go15M
+		E2S	mSVPvLeGawU
+		E3Q	FL2pGCoO49A
+		E3S	qwdPij30GtI
+		E4Q	D8B5aqAyZYA
+		E4S	BF9BA7scjcQ
+
+{% endcomment %}	
 
 <div id="L2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 2 - introduction to distance sampling</h3>
