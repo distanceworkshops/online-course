@@ -37,7 +37,7 @@ This chapter describes methods associated with point transect sampling.  Analyse
  
 {{% comment %}}
 
-     below here are the links to video clips of lectures and exercise setup and solutions
+    below here are the links to video clips of lectures and exercise setup and solutions
      Particularly note that youtube video identifiers need to be specified for each clip 
 
 	Chapter 3			

@@ -47,7 +47,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 
 {{% comment %}}
 
-     below here are the links to video clips of lectures and exercise setup and solutions
+    below here are the links to video clips of lectures and exercise setup and solutions
      Particularly note that youtube video identifiers need to be specified for each clip 
  
 	Chapter 2			
