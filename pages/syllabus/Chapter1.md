@@ -149,25 +149,3 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
-
-
-<!-- below here are the links to video clips of lectures and exercise setup and solutions
-     Particularly note that youtube video identifiers need to be specified for each clip 
-	 
-Chapter 1			
-	Lectures		
-		L1	
-		L2	e7ziGpN_-LM
-		L3	_EJPBMx0j1A
-		L4	c6pk7QzWIfo
-		L5	kFERKxm9tWU
-		L6	WxsFhN-xoeo
-	Exercises		
-		E2Q	d072L2Go15M
-		E2S	mSVPvLeGawU
-		E3Q	FL2pGCoO49A
-		E3S	qwdPij30GtI
-		E4Q	D8B5aqAyZYA
-		E4S	BF9BA7scjcQ
-
--->	
