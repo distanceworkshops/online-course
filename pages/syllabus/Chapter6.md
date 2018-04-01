@@ -35,9 +35,8 @@ In this chapter we provide an extended demonstration of importing data in progra
   - Completed deer pellet project [Distance project zip file]({{site.baseurl}}/distance projects/Ch6/Deer pellets solution.zip) <img src="{{site.baseurl}}/images/zip32.png">
 
 ##### Where to go next?  
-* this lecture not yet prepared
 * <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch6/L4-1 Survey Design.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch6/L6-3 whats next-ER.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 {% comment %}
 
@@ -47,7 +46,7 @@ In this chapter we provide an extended demonstration of importing data in progra
 	Lectures		
 		L1	5RAkrFq7sUA
 		L2	wMI-F6qsi30
-		L3	
+		L3	8KWHu2Hj7Ys
 	Exercises		
 		E1Q	F71J2cRnAlk
 		E1S	RnEAHnAl5aY
@@ -86,4 +85,11 @@ In this chapter we provide an extended demonstration of importing data in progra
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
+<div id="L3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Lecture 3 - advance distance sampling analysis methods</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/8KWHu2Hj7Ys?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
 
