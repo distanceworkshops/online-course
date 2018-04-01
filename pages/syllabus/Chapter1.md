@@ -14,8 +14,8 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
 
 ***
 
-##### Introduction to this course
-* Lecture
+##### Welcome to this course
+* <a href="#" data-reveal-id="L1">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 
 ##### Introduction to distance sampling
 * <a href="#" data-reveal-id="L2">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
@@ -67,7 +67,7 @@ This chapter introduces the basic concepts of distance sampling via lecture.  It
 	 
 Chapter 1			
 	Lectures		
-		L1	
+		L1	guFUcjb3Fi4
 		L2	e7ziGpN_-LM
 		L3	_EJPBMx0j1A
 		L4	c6pk7QzWIfo
@@ -82,6 +82,14 @@ Chapter 1
 		E4S	BF9BA7scjcQ
 
 {% endcomment %}	
+
+<div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Lecture 1 - welcome to online distance sampling course</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/guFUcjb3Fi4?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
 
 <div id="L2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 2 - introduction to distance sampling</h3>
