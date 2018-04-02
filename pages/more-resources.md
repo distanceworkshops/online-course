@@ -25,17 +25,22 @@ There is an vast amount of printed material about distance sampling. We did not 
   
 ####  Website
   
-* A website dedicated to all things distance sampling is [distancesampling.org](http://distancesampling.org).  Here you can read about software enhancements, workshop offerings and other tips and tricks.  In particularly, we recommend a [searchable bibliography](distancesampling.org/dbib.html) of distance sampling related publications in the scientific literature.  
+* A website dedicated to all things distance sampling is [distancesampling.org](http://distancesampling.org).  Here you can read about software enhancements, workshop offerings and other tips and tricks.  In particularly, we recommend a [searchable bibliography](http://distancesampling.org/dbib.html) of distance sampling related publications in the scientific literature.  
 
 ####  Papers mentioned in specific lectures
 
-* Lecture 3 of Chapter 2 Point transect case studies  Buckland 2006
-* Lecture 1 of Chapter 5 Variance estimation of systematic surveys Fewster et al. 2009
-* Lecture 4 of Chapter 5 Covariates in detection function Marques et al. 2007
+* Lecture 3 of Chapter 2 Point transect case studies  
+  - Buckland, ST 2006. Point-transect surveys for songbirds: robust methodologies. The Auk 123:345-357.
+* Lecture 1 of Chapter 5 Variance estimation of systematic surveys 
+  - Fewster, RM, ST Buckland, KP Burnham,  DL Borchers, PE Jupp, JL Laake and L Thomas.
+2009. Estimating the encounter rate in distance sampling. Biometrics 65:225-236.
+* Lecture 4 of Chapter 5 Covariates in detection function
+  - Marques, TA, L Thomas, SG Fancy and ST Buckland . 2007. Improving estimates of bird density using multiple covariate distance
+sampling. The Auk 127:1229-1243.
 * Lecture 2 of Chapter 6 Use of multipliers 
-  - Buckland, S.T., Summers, R.W., Borchers, D.L. and Thomas, L. 2006. Point transect
-sampling with traps or lures. Journal of Applied Ecology 43, 377-384
-  - Potts, J.M., S.T. Buckland, L. Thomas and A. Savage. 2012. Estimating abundance of cryptic but
+  - Buckland, ST, RW Summers, DL Borchers and L Thomas. 2006. Point transect
+sampling with traps or lures. Journal of Applied Ecology 43:377-384
+  - Potts, JM, ST Buckland, L Thomas and A Savage. 2012. Estimating abundance of cryptic but
 trappable animals using trapping point transects: a case study for Key Largo woodrats. Meth. Ecol.
 and Evol. 3:695-703.
 
