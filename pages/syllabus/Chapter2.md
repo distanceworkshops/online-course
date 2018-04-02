@@ -45,7 +45,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 * <a href="#" data-reveal-id="E2soln">Narrative solution to simulated line transect data <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch2/E2.2 Other line transect examples SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
-{{% comment %}}
+{% comment %}
 
     below here are the links to video clips of lectures and exercise setup and solutions
      Particularly note that youtube video identifiers need to be specified for each clip 
@@ -62,7 +62,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 			E2Q	EFu0_TsWxpE
 			E2S	T9PDbwdI7Iw
 
-{{% endcomment %}}
+{% endcomment %}
 
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - assessing model performance</h3>

@@ -28,7 +28,7 @@ In this chapter you will learn about work conducted prior to data collection--in
 * <a href="#" data-reveal-id="L6">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch4/L4-6 Field Methods.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
-{{% comment %}}
+{% comment %}
 
     below here are the links to video clips of lectures and exercise setup and solutions
      Particularly note that youtube video identifiers need to be specified for each clip 
@@ -42,7 +42,7 @@ In this chapter you will learn about work conducted prior to data collection--in
 		--	
 		--	
 
-{{% endcomment %}}
+{% endcomment %}
 
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - design of distance sampling surveys</h3>
