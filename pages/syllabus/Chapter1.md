@@ -12,7 +12,7 @@ header:
 
 This chapter introduces the basic concepts of distance sampling via lecture.  It also offers you the chance to sharpen your distance sampling skills with a pencil-and-paper exercise.  You are also introduced to the distance sampling software, **Distance**, to analyse ducknest data.
 
-You should give a thorough read of the [preparation for course]({{site.baseurl}}/prep) page, if you have not yet done so.  This gives an overview of how to work with the material presented on this, and following pages.
+You should give a thorough read of the [preparation for course](prep) page, if you have not yet done so.  This gives an overview of how to work with the material presented on this, and following pages.
 
 ***
 
