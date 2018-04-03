@@ -26,7 +26,7 @@ author: Eric
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
 url: 'https://erex.github.io'
-baseurl: '/feeling'
+baseurl: '/online-course-2018'
 
 # This is for the editing function in _/includes/improve_content
 # Leave it empty if your site is not on GitHub/GitHub Pages
@@ -38,7 +38,7 @@ baseurl: '/feeling'
 # Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
 #
-urlimg: 'https://erex.github.io/feeling/images/'
+urlimg: 'https://erex.github.io/online-course-2018/images/'
 
 
 # Logo size is 600x80 pixels
@@ -194,7 +194,7 @@ socialmedia:
 #
 # used in _includes/comments
 
-#disqus_shortname: feelingresponsive
+disqus_shortname: erex.github.io/online-course-2018
 
 
 #      _____
