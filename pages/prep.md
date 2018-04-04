@@ -33,7 +33,8 @@ Written descriptions of exercises are supplemented with short oral introductions
 <div id="welcome" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Welcome to online distance sampling course</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/bgpb1kdregw?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/guFUcjb3Fi4
+?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
