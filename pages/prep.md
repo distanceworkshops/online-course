@@ -26,6 +26,10 @@ Audio and video of lectures have been recorded and will be presented when a visi
 
 Written descriptions of exercises are supplemented with short oral introductions describing the main features of each exercise.  There is also a video associated with the solution to each exercise.  These range from short summaries of the main points of exercises, to detailed demonstrations of analyses conducted in Distance along with interpretations.  The description and solution files are in PDF format.
 
+#### Making comments and questions
+
+At the bottom of each of the *chapter* pages, we have a facility for you to provide questions or comments using **Disqus**.  You can provide feedback to us using this system.  You will need to register to use this service (to reduce chances of spam on the site).  However, registration is simple, and can be accomplished with your Google/Facebook/Twitter accounts.  You can also make comments as a *guest*, but we prefer that you register.  Give *Disqus* a try.
+
 
 #### Short welcome video 
 <a href="#" data-reveal-id="welcome">Welcome video <img src="{{site.baseurl}}/images/video32.png"></a>
