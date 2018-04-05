@@ -16,9 +16,6 @@ You should give a thorough read of the [preparation for course](../../alt-prep) 
 
 ***
 
-##### Welcome to this course
-* <a href="#" data-reveal-id="L1">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
-
 ##### Introduction to distance sampling
 * <a href="#" data-reveal-id="L2">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">

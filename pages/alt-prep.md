@@ -55,12 +55,15 @@ To perform all of the exercises, except the first two, you will need to use the 
     </div>
     <div class="small-6 columns">
       <h3>Welcome video</h3>
+			<figure>
+            <img src="{{site.baseurl}}/images/welcome.png" alt="polar bear" />
+      </figure>
 			<a href="#" data-reveal-id="welcome">Welcome video <img src="{{site.baseurl}}/images/video32.png"></a>
 
 			<div id="welcome" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
 				<h3 id="modalTitle">Welcome to online distance sampling course</h3>
 				<div class="flex-video widescreen" style="display: block;">
-					<iframe width="1280" height="720" src="https://www.youtube.com/embed/guFUcjb3Fi4?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+					<iframe width="1280" height="720" src="https://www.youtube.com/embed/RyBEgUzhGpk?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<a class="close-reveal-modal">&#215;</a>
 			</div>
