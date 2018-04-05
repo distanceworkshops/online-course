@@ -15,7 +15,7 @@ To perform all of the exercises, except the first two, you will need to use the 
         <figure>
             <img src="{{site.baseurl}}/images/deer-unsplash-smaller.jpg" alt="deer" />
         </figure>
-		The Distance programme is free to download and use.  Following [this link](http://distancesampling.org/Distance/index.html) will take you to a page where, after completing a brief questionnaire, you can download the setup programme and install it onto your computer.  If you are accessing this page from People's Republic of China, you will not be able to download the software from the link provided, please contact us to receive download instructions.		
+		The Distance programme is free to download and use.  Following <a href=http://distancesampling.org/Distance/index.html>this link]</a> will take you to a page where, after completing a brief questionnaire, you can download the setup programme and install it onto your computer.  If you are accessing this page from People's Republic of China, you will not be able to download the software from the link provided, please contact us to receive download instructions.		
     </div>
     <div class="small-6 columns">
         <h3>Data</h3>
@@ -50,7 +50,7 @@ To perform all of the exercises, except the first two, you will need to use the 
         <figure>
             <img src="{{site.baseurl}}/images/polar-bear-unsplash.jpg" alt="polar bear" />
         </figure>
-		At the bottom of each of the *chapter* pages, we have a facility for you to provide questions or comments using **Disqus**.  You can provide feedback to us using this system.  You will need to register to use this service (to reduce chances of spam on the site).  However, registration is simple, and can be accomplished with your Google/Facebook/Twitter accounts.  You can also make comments as a *guest*, but we prefer that you register.  Give *Disqus* a try.
+		At the bottom of each of the <i>chapter</i> pages, we have a facility for you to provide questions or comments using <b>Disqus</b>.  You can provide feedback to us using this system.  You will need to register to use this service (to reduce chances of spam on the site).  However, registration is simple, and can be accomplished with your Google/Facebook/Twitter accounts.  You can also make comments as a <i>guest</i>, but we prefer that you register.  Give <i>Disqus</i> a try.
     </div>
     <div class="small-6 columns">
       <h3>Welcome video</h3>
