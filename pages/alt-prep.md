@@ -15,14 +15,14 @@ To perform all of the exercises, except the first two, you will need to use the 
         <figure>
             <img src="{{site.baseurl}}/images/deer-unsplash-smaller.jpg" alt="deer" />
         </figure>
-		The Distance programme is free to download and use.  Following <a href=http://distancesampling.org/Distance/index.html>this link]</a> will take you to a page where, after completing a brief questionnaire, you can download the setup programme and install it onto your computer.  If you are accessing this page from People's Republic of China, you will not be able to download the software from the link provided, please contact us to receive download instructions.		
+		The Distance programme is free to download and use.  Following <a href="http://distancesampling.org/Distance/index.html">this link</a> will take you to a page where, after completing a brief questionnaire, you can download the setup programme and install it onto your computer.  If you are accessing this page from People's Republic of China, you will not be able to download the software from the link provided, please contact us to receive download instructions.		
     </div>
     <div class="small-6 columns">
         <h3>Data</h3>
         <figure>
             <img src="{{site.baseurl}}/images/dolphins-unsplash.jpg" alt="dolphins"  />
         </figure>
-		Data to be analysed for each of the computer exercises will be in the form of .zip archive files.  These files can be opened by the Distance programme, but are not directly readable by you.  Links will be provided throughout the course materials for downloading data sets associated with each exercise.
+		Data to be analysed for each of the computer exercises will be in the form of <b>.zip</b> archive files.  These files can be opened by the Distance programme, but are not directly readable by you.  Links will be provided throughout the course materials for downloading data sets associated with each exercise.
     </div>
 </div>
 
@@ -37,6 +37,7 @@ To perform all of the exercises, except the first two, you will need to use the 
     </div>
     <div class="small-6 columns">
         <h3>Exercises</h3>
+				<figure>
             <img src="{{site.baseurl}}/images/antelope-unsplash.jpg" alt="antelope"  />
         </figure>
 		Written descriptions of exercises are supplemented with short oral introductions describing the main features of each exercise.  There is also a video associated with the solution to each exercise.  These range from short summaries of the main points of exercises, to detailed demonstrations of analyses conducted in Distance along with interpretations.  The description and solution files are in PDF format.
