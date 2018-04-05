@@ -37,7 +37,6 @@ To perform all of the exercises, except the first two, you will need to use the 
     </div>
     <div class="small-6 columns">
         <h3>Exercises</h3>
-            <a href="{{site.baseurl}}/syllabus/Chapter4/">
             <img src="{{site.baseurl}}/images/antelope-unsplash.jpg" alt="antelope"  />
         </figure>
 		Written descriptions of exercises are supplemented with short oral introductions describing the main features of each exercise.  There is also a video associated with the solution to each exercise.  These range from short summaries of the main points of exercises, to detailed demonstrations of analyses conducted in Distance along with interpretations.  The description and solution files are in PDF format.
