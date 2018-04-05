@@ -10,7 +10,7 @@ header:
   image_fullwidth: three birds cloud.jpg
 widget1:
   title: "Prepare for course"
-  url: '/prep'
+  url: '/alt-prep'
   image: aspen grove.jpg
   text: 'This course will be a mix of lectures, exercises and computer practicals.'
 widget2:
