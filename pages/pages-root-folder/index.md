@@ -17,7 +17,7 @@ widget2:
   title: "Take the course"
   url: '/syllabus'
   image: helloquence-61189-unsplash.jpg
-  text: 'The content of the workshop is divided into chapters. Each chapter will take several hours to complete.'
+  text: 'The content of the workshop is divided into sections. Each section focuses upon an aspect of distance sampling and can be completed in several hours.'
 widget3:
   title: "Where to learn more"
   url: '/more-resources'
