@@ -11,7 +11,7 @@ header:
 widget1:
   title: "Prepare for course"
   url: '/alt-prep'
-  video: <a href="#" data-reveal-id="welcome"><img src="{{site.baseurl}}/images/welcome-unsplash.jpg"></a>
+  video: <a href="#" data-reveal-id="welcome"><img src="http://workshops.distancesampling.org/online-course/images/welcome-unsplash.jpg"></a>
   text: 'Watch welcome video by clicking on welcome image above. This course will be a mix of lectures, exercises and computer practicals.'
 widget2:
   title: "Take the course"
