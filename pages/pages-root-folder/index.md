@@ -12,17 +12,17 @@ widget1:
   title: "Prepare for course"
   url: '/alt-prep'
   video: <a href="#" data-reveal-id="welcome"><img src="http://workshops.distancesampling.org/online-course/images/welcome-unsplash.jpg"></a>
-  text: 'Watch welcome video by clicking on <em>Please come in</em> image. This course will be a mix of lectures, exercises and computer practicals.  Click on <em>more</em> below to explore resources that will help you prepare to take the course.'
+  text: 'Watch welcome video by clicking on <em>Please come in</em> image. This course will be a mix of lectures, exercises and computer practicals.  <p>Click on <em>more</em> below to explore resources that will help you prepare to take the course.'
 widget2:
   title: "Take the course"
   url: '/syllabus'
   image: helloquence-61189-unsplash.jpg
-  text: 'The content of the workshop is divided into sections. Each section focuses upon an aspect of distance sampling and can be completed in several hours.'
+  text: 'The content of the workshop is divided into sections. Each section focuses upon an aspect of distance sampling and can be completed in several hours. <p>Click on this section to reveal an outline of the section you can follow to begin your studies.'
 widget3:
   title: "Where to learn more"
   url: '/more-resources'
   image: oldbooks.jpg
-  text: 'This online course could not include all material you will need to be proficient at designing, conducting and analysing a distance sampling survey.  Click here to find additional resources.'
+  text: 'This online course could not include all material you will need to be proficient at designing, conducting and analysing a distance sampling survey.  Click on this section to find additional resources.'
 permalink: /index.html
 homepage: true
 ---
