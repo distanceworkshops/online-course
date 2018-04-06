@@ -22,7 +22,7 @@ widget3:
   title: "Where to learn more"
   url: '/more-resources'
   image: oldbooks.jpg
-  text: 'This online workshop does not include all material you will need to be proficient at designing, conducting and analysing a distance sampling project.  Here we show you where to acquire additional resources.'
+  text: 'This online workshop could not include all material you will need to be proficient at designing, conducting and analysing a distance sampling project.  Click here to find additional resources.'
 permalink: /index.html
 homepage: true
 ---
