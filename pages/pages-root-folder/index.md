@@ -12,7 +12,7 @@ widget1:
   title: "Prepare for course"
   url: '/alt-prep'
   video: <a href="#" data-reveal-id="welcome"><img src="http://workshops.distancesampling.org/online-course/images/welcome-unsplash.jpg"></a>
-  text: 'Watch welcome video by clicking on <em>Please come in</em> image. This course will be a mix of lectures, exercises and computer practicals.  <p>Click on <em>more</em> below to explore resources that will help you prepare to take the course.'
+  text: 'Watch welcome video by clicking on <em>Please come in</em> image. The video describes what we hope you can achieve by taking this course. The course is a mix of lectures, exercises and computer practicals intended to provide an introduction to distance sampling.  <p>Click on <em>more</em> below to explore resources that will help you prepare to take the course.'
 widget2:
   title: "Take the course"
   url: '/syllabus'
