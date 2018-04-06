@@ -12,7 +12,7 @@ widget1:
   title: "Prepare for course"
   url: '/alt-prep'
   video: <a href="#" data-reveal-id="welcome"><img src="http://workshops.distancesampling.org/online-course/images/welcome-unsplash.jpg"></a>
-  text: 'Watch welcome video by clicking on <em>Please come in</em> image. This course will be a mix of lectures, exercises and computer practicals.'
+  text: 'Watch welcome video by clicking on <em>Please come in</em> image. This course will be a mix of lectures, exercises and computer practicals.  Click on <em>more</em> below to explore resources that will help you prepare to take the course.'
 widget2:
   title: "Take the course"
   url: '/syllabus'
@@ -22,7 +22,7 @@ widget3:
   title: "Where to learn more"
   url: '/more-resources'
   image: oldbooks.jpg
-  text: 'This online workshop could not include all material you will need to be proficient at designing, conducting and analysing a distance sampling project.  Click here to find additional resources.'
+  text: 'This online course could not include all material you will need to be proficient at designing, conducting and analysing a distance sampling survey.  Click here to find additional resources.'
 permalink: /index.html
 homepage: true
 ---
