@@ -1,9 +1,9 @@
 - menu_name: "Website development"
 
-- name: "Icons by Daniel Bruce"
-  url: "http://entypo.com/"
+- name: "Icons from iconfinder"
+  url: "https://www.iconfinder.com/"
   class: "network-entypo"
-  title: "Icons by Daniel Bruce"
+  title: "Icons from iconfinder"
 
 - name: "Built on Foundation"
   url: "http://foundation.zurb.com/"
