@@ -14,7 +14,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 
 ##### Assessing model performance
 * <a href="#" data-reveal-id="L1">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch2/L2-1 Assessment of Model Performance.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Model selection with ducknest dataset
 * <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
@@ -26,15 +26,15 @@ In this chapter you will learn about the assumptions that underlie distance samp
   
 ##### Making distance sampling work (assumptions of the methods)
 * <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch2/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch2/L2-3 Making Distance Sampling Work.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Measures of precision
 * <a href="#" data-reveal-id="L4">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch2/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch2/L2-4 Measures of Precision.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Hints regarding performing distance sampling analyses
 * <a href="#" data-reveal-id="L5">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch2/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch2/L2-5 Analysis Hints.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Analysing simulated line transect data, where true density is known
 * <a href="#" data-reveal-id="E2"> Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
