@@ -29,7 +29,7 @@ You should give a thorough read of the [preparation for course](../../alt-prep) 
   
 ##### Types of distance sampling
 * <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap-no arial.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-3 Types of Distance Sampling and Recap.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Choosing a detection function
 * <a href="#" data-reveal-id="L4">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
