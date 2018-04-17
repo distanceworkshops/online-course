@@ -14,7 +14,7 @@ In this chapter you will learn about work conducted prior to data collection--in
 
 ##### Design of distance sampling surveys
 * <a href="#" data-reveal-id="L1">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch4/L4-1 Survey Design-no hidden.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch4/L4-1 Survey Design.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Issues arising at edges of study areas
 * <a href="#" data-reveal-id="L2">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
