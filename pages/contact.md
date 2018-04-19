@@ -2,7 +2,6 @@
 layout: page
 title: "Contact"
 meta_title: "Online distance sampling course team"
-teaser: "Get in touch with me? Use the contact form."
 permalink: "/contact/"
 ---
 
