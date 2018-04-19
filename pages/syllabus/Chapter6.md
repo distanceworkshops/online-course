@@ -8,7 +8,7 @@ header:
   image_fullwidth: ales-krivec-22058-unsplash.jpg
 ---
 
-In this chapter we provide an extended demonstration of importing data in programme **Distance**, as well as the files so you can try importing.  Multiplier are useful when you wish to compute density of inanimate objects (such as dung piles or nests) and convert these densities into animal density (by incorporating estimates of production and decay rates).  We present a short overview of other extensions of distance sampling that can be performed with programme **Distance**.  
+In this chapter we provide an extended demonstration of importing data in program **Distance**, as well as the files so you can try importing.  Multipliers are useful when you wish to compute density of inanimate objects (such as dung piles, ape nests or sounds such as bird calls or whale vocalisations) and convert these densities into animal density (by incorporating estimates of production and decay rates).  We present a short overview of other extensions of distance sampling that can be performed with program **Distance**.  
 
 ***
 

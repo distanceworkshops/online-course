@@ -8,15 +8,15 @@ header:
 ---
 
 
-To perform all of the exercises, except the first two, you will need to use the Distance programme.  This software works with the Windows operating system.  If you are working on a Mac or Linux machine, you will need to use emulation software to run Distance on your computer.  Hints for use of emulators can be found [on this page](http://distancesampling.org/distanceextras.html).
+To perform all of the exercises, except the first two, you will need to use the Distance program.  This software works with the Windows operating system.  If you are working on a Mac or Linux machine, you will need to use emulation software to run Distance on your computer.  Hints for use of emulators can be found [on this page](http://distancesampling.org/distanceextras.html).
 
 #### Software
 
-The Distance programme is free to download and use.  Following [this link](http://distancesampling.org/Distance/index.html) will take you to a page where, after completing a brief questionnaire, you can download the setup programme and install it onto your computer.  If you are accessing this page from People's Republic of China, you will not be able to download the software from the link provided, please contact us to receive download instructions.
+The Distance program is free to download and use.  Following [this link](http://distancesampling.org/Distance/index.html) will take you to a page where, after completing a brief questionnaire, you can download the setup program and install it onto your computer.  If you are accessing this page from People's Republic of China, you will not be able to download the software from the link provided, please contact us to receive download instructions.
 
 #### Data
 
-Data to be analysed for each of the computer exercises will be in the form of .zip archive files.  These files can be opened by the Distance programme, but are not directly readable by you.  Links will be provided throughout the course materials for downloading data sets associated with each exercise.
+Data to be analysed for each of the computer exercises will be in the form of .zip archive files.  These files can be opened by the Distance program, but are not directly readable by you.  Links will be provided throughout the course materials for downloading data sets associated with each exercise.
 
 #### Lectures
 

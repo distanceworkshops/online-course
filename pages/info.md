@@ -1,10 +1,8 @@
 ---
 layout: page
-title: "About"
+title: "About the website"
 subheadline: "Behind this online distance sampling course"
-teaser: "The who, what and why of the course"
 permalink: "/info/"
-tawkto: true
 header:
     image_fullwidth: "header_drop.jpg"
 ---

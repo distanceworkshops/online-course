@@ -1,14 +1,12 @@
 ---
 layout: page-fullwidth
-title: Syllabus
+title: Syllabus of the course
 permalink: /syllabus/
 header:
   image_fullwidth: header_unsplash_5.jpg
 ---
 
-# Course composition
-
-The course is composed of six section.  Each icon below takes you to one of the sections; they build upon themselves, so it is best if you take them in order.
+The course is composed of six sections.  Each icon below takes you to one of the sections; they build upon previous sections, so it is best if you take them in order.
 
 <div class="row">
     <div class="small-6 columns">
