@@ -8,7 +8,7 @@
 layout: frontpage
 header:
   image_fullwidth: three birds cloud.jpg
-  text: Distance sampling is a survey method for estimating density and abundance of wildlife populations.  This is a free course to provide an introduction to distance sampling concepts, design of surveys, methods of data collection and data analysis.
+  text: 'Distance sampling is a survey method for estimating density and abundance of wildlife populations.  This is a free course to provide an introduction to distance sampling concepts, design of surveys, methods of data collection and data analysis.'
 widget1:
   title: "Prepare for course"
   url: '/alt-prep'
