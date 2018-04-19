@@ -32,6 +32,7 @@ At the bottom of each of the *chapter* pages, we have a facility for you to prov
 
 
 #### Short welcome video 
+
 <a href="#" data-reveal-id="welcome">Welcome video <img src="{{site.baseurl}}/images/video32.png"></a>
 
 <div id="welcome" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
