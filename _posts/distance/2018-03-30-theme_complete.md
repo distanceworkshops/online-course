@@ -3,9 +3,9 @@ layout: page
 #
 # Content
 #
-subheadline: "Bring on the content"
+subheadline: "First iteration of online course is ready"
 title: "Web course syllabus of six chapters"
-teaser: "Material we have delivered in St Andrews now becoming available online"
+teaser: "Material we have delivered in St Andrews now available online"
 categories:
   - distance
 tags:
