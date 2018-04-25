@@ -63,7 +63,7 @@ To perform all of the exercises, except the first two, you will need to use the 
 			<div id="welcome" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
 				<h3 id="modalTitle">Welcome to online distance sampling course</h3>
 				<div class="flex-video widescreen" style="display: block;">
-					<iframe width="1280" height="720" src="https://www.youtube.com/embed/RyBEgUzhGpk?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+					<iframe width="1280" height="720" src="https://www.youtube.com/embed/RyBEgUzhGpk?vq=hd720&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<a class="close-reveal-modal">&#215;</a>
 			</div>

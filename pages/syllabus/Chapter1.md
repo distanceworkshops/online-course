@@ -85,7 +85,7 @@ Chapter 1
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - welcome to online distance sampling course</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/guFUcjb3Fi4?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/guFUcjb3Fi4?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -93,7 +93,7 @@ Chapter 1
 <div id="L2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 2 - introduction to distance sampling</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/e7ziGpN_-LM?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/e7ziGpN_-LM?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -101,7 +101,7 @@ Chapter 1
 <div id="E1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Exercise 1 - histogram of ducknest data</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/d072L2Go15M?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/d072L2Go15M?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -109,7 +109,7 @@ Chapter 1
 <div id="E1soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Solution to Exercise 1 - histogram of ducknest data</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/mSVPvLeGawU?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/mSVPvLeGawU?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -117,7 +117,7 @@ Chapter 1
 <div id="L3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 3 - types of distance sampling</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/_EJPBMx0j1A?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/_EJPBMx0j1A?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -125,7 +125,7 @@ Chapter 1
 <div id="L4" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 4 - choosing a detection function</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/c6pk7QzWIfo?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/c6pk7QzWIfo?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -133,7 +133,7 @@ Chapter 1
 <div id="L5" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 5 - more ways to think about line transects</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/kFERKxm9tWU?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/kFERKxm9tWU?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -141,7 +141,7 @@ Chapter 1
 <div id="E2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Exercise 2 - Other parameters estimated from ducknests</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/FL2pGCoO49A?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/FL2pGCoO49A?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -149,7 +149,7 @@ Chapter 1
 <div id="E2soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Solution to Exercise 2 - Other parameters estimated from ducknests</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/qwdPij30GtI?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/qwdPij30GtI?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -157,7 +157,7 @@ Chapter 1
 <div id="L6" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 6 - introduction to Distance software</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/WxsFhN-xoeo?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/WxsFhN-xoeo?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -165,7 +165,7 @@ Chapter 1
 <div id="E3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Exercise 3 - Ducknest analysis using Distance</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/D8B5aqAyZYA?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/D8B5aqAyZYA?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -173,7 +173,7 @@ Chapter 1
 <div id="E3soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Solution to Exercise 3 - Ducknest analysis using Distance</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/BF9BA7scjcQ?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/BF9BA7scjcQ?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>

@@ -67,7 +67,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - assessing model performance</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/NEbvpEP1axY?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/NEbvpEP1axY?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -75,7 +75,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 <div id="E1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Exercise 1 - model selection with ducknest data</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/RTa9kTDHYdQ?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/RTa9kTDHYdQ?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -83,7 +83,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 <div id="E1soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Solution to Exercise 1 - model selection with ducknest data</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/ayAB-TXoLUE?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/ayAB-TXoLUE?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -91,7 +91,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 <div id="L3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 3 - making distance sampling work</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/rqFrszn7uaQ?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/rqFrszn7uaQ?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -99,7 +99,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 <div id="L4" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 4 - measures of precision</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/SK6szGLynvc?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/SK6szGLynvc?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -107,7 +107,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 <div id="L5" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 5 - analysis hints</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/Xm0zacE-upg?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/Xm0zacE-upg?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -115,7 +115,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 <div id="E2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Exercise 2 - other line transect datasets</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/EFu0_TsWxpE?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/EFu0_TsWxpE?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -123,7 +123,7 @@ In this chapter you will learn about the assumptions that underlie distance samp
 <div id="E2soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Solution to Exercise 2 - other line transect datasets</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/T9PDbwdI7Iw?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/T9PDbwdI7Iw?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>

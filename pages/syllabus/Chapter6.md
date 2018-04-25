@@ -56,7 +56,7 @@ In this chapter we provide an extended demonstration of importing data in progra
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - demonstration of data import to Distance</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/5RAkrFq7sUA?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/5RAkrFq7sUA?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -64,7 +64,7 @@ In this chapter we provide an extended demonstration of importing data in progra
 <div id="L2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 2 - multipliers</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/wMI-F6qsi30?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/wMI-F6qsi30?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -72,7 +72,7 @@ In this chapter we provide an extended demonstration of importing data in progra
 <div id="E1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Exercise 1 - multipliers for deer pellet analysis</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/F71J2cRnAlk?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/F71J2cRnAlk?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -80,7 +80,7 @@ In this chapter we provide an extended demonstration of importing data in progra
 <div id="E1soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Solution to Exercise 1 - multipliers for deer pellet analysis</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/RnEAHnAl5aY?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/RnEAHnAl5aY?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -88,7 +88,7 @@ In this chapter we provide an extended demonstration of importing data in progra
 <div id="L3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 3 - advance distance sampling analysis methods</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/8KWHu2Hj7Ys?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/8KWHu2Hj7Ys?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>

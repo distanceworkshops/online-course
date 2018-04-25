@@ -47,7 +47,7 @@ In this chapter you will learn about work conducted prior to data collection--in
 <div id="L1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 1 - design of distance sampling surveys</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/bgpb1kdregw?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/bgpb1kdregw?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -55,7 +55,7 @@ In this chapter you will learn about work conducted prior to data collection--in
 <div id="L2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 2 - issues arising at edges of study areas</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/GVy0-dM0hg8?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/GVy0-dM0hg8?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -63,7 +63,7 @@ In this chapter you will learn about work conducted prior to data collection--in
 <div id="L3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 3 - determination of adequate sample size</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/UEOCouKJTSU?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/UEOCouKJTSU?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
@@ -71,7 +71,7 @@ In this chapter you will learn about work conducted prior to data collection--in
 <div id="L6" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
   <h3 id="modalTitle">Lecture 6 - field methods</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/xQdWeQpWW78?vq=hd720&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/xQdWeQpWW78?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
