@@ -15,7 +15,7 @@ To perform all of the exercises, except the first two, you will need to use the 
         <figure>
             <img src="{{site.baseurl}}/images/deer-unsplash-smaller.jpg" alt="deer" />
         </figure>
-		The Distance program is free to download and use.  Following <a href="http://distancesampling.org/Distance/index.html">this link</a> will take you to a page where, after completing a brief questionnaire, you can download the setup program and install it onto your computer.  If you are accessing this page from People's Republic of China, you will not be able to download the software from the link provided, please contact us to receive download instructions.		
+		The Distance program is free to download and use.  Following <a href="http://distancesampling.org/Distance/index.html">this link</a> will take you to a page where, after completing a brief questionnaire, you can download the setup program and install it onto your computer.  If you have difficulty in downloading the software, please contact us using the <em>Contact</em> page accessed from the navigation bar..		
     </div>
     <div class="small-6 columns">
         <h3>Data</h3>
