@@ -11,7 +11,7 @@ widget1:
   title: "Prepare for course"
   url: '/alt-prep'
   video: <a href="#" data-reveal-id="welcome"><img src="http://workshops.distancesampling.org/online-course/images/beach-sunrise-tube.jpg"></a>
-  text: 'Click on the image to watch welcome video. The video describes what we hope you can achieve by taking this free course. The course is a mix of lectures, exercises and computer practicals providing an introduction to distance sampling.  <em>Note: videos currently do not work well with Microsoft Edge browser.  Please use a browser different to Edge.</em> <p>Click on <em>more</em> below to explore resources that will help you prepare to take the course.'
+  text: 'Click on the image to watch welcome video. The video describes what we hope you can achieve by taking this free course. The course is a mix of lectures, exercises and computer practicals providing an introduction to distance sampling.  <em>Note: videos currently do not work well in the Microsoft Edge and Safari browsers.  Please use alternative browsers.</em> <p>Click on <em>more</em> below to explore resources that will help you prepare to take the course.'
 widget2:
   title: "Take the course"
   url: '/syllabus'
