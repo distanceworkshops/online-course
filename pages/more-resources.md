@@ -13,10 +13,11 @@ There is an vast amount of printed material about distance sampling. We did not 
 
 * [Buckland, S.T., Rexstad, E., Marques, T.A. and Oedekoven, C.S. 2015.](http://www.springer.com/us/book/9783319192185) Distance Sampling: Methods and Applications. Springer, Heidelberg.
   - If you are affiliated with a university, check to see if your library is a member of SpringerLink, in which case, you may be able to download a PDF of the book at no charge.
+  - [A companion website](https://synergy.st-andrews.ac.uk/ds-manda/) for this book includes data and analysis using program Distance and R for case studies described in the book. 
 
 * [Buckland, S.T., Anderson, D.R., Burnham, K.P., Laake, J.L., Borchers, D.L. and Thomas, L. 2001.](https://www.amazon.co.uk/Introduction-Distance-Sampling-Estimating-Populations/dp/0198509278/ref=sr_1_5?ie=UTF8&qid=1496840490&sr=8-5&keywords=buckland+s.t.#reader_0198509278) Introduction to Distance Sampling: Estimating Abundance of Biological Populations. Oxford University Press, Oxford, UK.
 * Buckland, S.T., Anderson, D.R., Burnham, K.P. and Laake, J.L. 1993. Distance Sampling: Estimating Abundance of Biological Populations. Chapman and Hall, London.
-  - This book has been superseded by the two listed above, but chapters of it can be downloaded [at this link](http://distancesampling.org/downloads/distancebook1993/index.html)
+  - This book has been superseded by the two listed above, but chapters of it can be downloaded [at this link](http://distancesampling.org/downloads/distancebook1993/index.html).
 
 #### Paper
 
@@ -30,19 +31,18 @@ There is an vast amount of printed material about distance sampling. We did not 
 ####  Papers mentioned in specific lectures
 
 * Lecture 3 of Chapter 2 Point transect case studies  
-  - Buckland, ST 2006. Point-transect surveys for songbirds: robust methodologies. The Auk 123:345-357.
+  - Buckland, S.T. 2006. Point-transect surveys for songbirds: robust methodologies. The Auk 123:345-357.
 * Lecture 1 of Chapter 5 Variance estimation of systematic surveys 
-  - Fewster, RM, ST Buckland, KP Burnham,  DL Borchers, PE Jupp, JL Laake and L Thomas.
-2009. Estimating the encounter rate in distance sampling. Biometrics 65:225-236.
+  - Fewster, R.M., S.T. Buckland, K.P. Burnham,  D.L. Borchers, P.E. Jupp, J.L. Laake and L. Thomas. 2009. Estimating the encounter rate in distance sampling. Biometrics 65:225-236.
 * Lecture 4 of Chapter 5 Covariates in detection function
-  - Marques, TA, L Thomas, SG Fancy and ST Buckland . 2007. Improving estimates of bird density using multiple covariate distance
-sampling. The Auk 127:1229-1243.
+  - Marques, T.A., L. Thomas, S.G. Fancy and S.T. Buckland. 2007. Improving estimates of bird density using multiple covariate distance sampling. The Auk 127:1229-1243.
 * Lecture 2 of Chapter 6 Use of multipliers 
-  - Buckland, ST, RW Summers, DL Borchers and L Thomas. 2006. Point transect
-sampling with traps or lures. Journal of Applied Ecology 43:377-384
-  - Potts, JM, ST Buckland, L Thomas and A Savage. 2012. Estimating abundance of cryptic but
-trappable animals using trapping point transects: a case study for Key Largo woodrats. Meth. Ecol.
-and Evol. 3:695-703.
+  - Buckland, S.T., R.W. Summers, D.L. Borchers and L. Thomas. 2006. Point transect sampling with traps or lures. Journal of Applied Ecology 43:377-384
+  - Potts, J.M., S.T. Buckland, L. Thomas and A. Savage. 2012. Estimating abundance of cryptic but trappable animals using trapping point transects: a case study for Key Largo woodrats. Methods in Ecology and Evolution 3:695-703.
+
+#### Example line transect application
+
+The Wildlife Conservation Society (WCS) in India attempts to monitor the size of the tiger population.  This also involves monitoring the size of the populations of tiger prey.  A video prepared by the WCS available both on the [Conservation India website](http://www.conservationindia.org/videos/monitoring-tigers-and-their-prey) and [the WCS India website](http://wcsindia.org/home/media-library/) includes a description of line transect sampling of tiger prey in India. 
 
 {% comment %}
 
