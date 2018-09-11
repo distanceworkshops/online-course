@@ -40,7 +40,7 @@ You should give a thorough read of the [preparation for course](../../alt-prep) 
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-5 Three More Ways.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Further manual calculations with ducknest data
-* <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* <a href="#" data-reveal-id="E2">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 * <a href="#" data-reveal-id="E2soln">Narrative solution to additional ducknest calculations<img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.3 ducknests by hand - other ways - SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
@@ -50,7 +50,7 @@ You should give a thorough read of the [preparation for course](../../alt-prep) 
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch1/L1-6 Distance.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ##### Ducknest analysis using Distance software
-* <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* <a href="#" data-reveal-id="E3">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
   * Monte Vista Refuge ducknests [Distance project zip file]({{site.baseurl}}/distance projects/Ch1/Ducknest exercise.zip) <img src="{{site.baseurl}}/images/zip32.png">	
 * <a href="#" data-reveal-id="E3soln">Narrative solution to computer analysis of duck nests<img src="{{site.baseurl}}/images/video32.png"></a>
