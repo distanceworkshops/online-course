@@ -5,7 +5,7 @@ title: Chapter 4 Survey design and field methods
 subheadline: "Careful thinking is required to design a distance sampling study"
 permalink: /syllabus/Chapter4/
 header:
-  image_fullwidth: dew on grass.jpg
+  image_fullwidth: vincent-birds-eleph-unsplash.jpg
 ---
 
 In this chapter you will learn about work conducted prior to data collection--in designing surveys.  The lecture on field procedures describes how data collection protocols can be crafted to match the assumptions of distance sampling.
