@@ -23,6 +23,7 @@ In this course, you will hear lectures and exercises presented by
 * Prof David Borchers
 * Louise Burt
 * Danielle Harris
-* Cornelia Oedekoven
 * Tiago Marques
+* Laura Marshall
+* Cornelia Oedekoven
 * Eric Rexstad
