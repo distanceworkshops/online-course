@@ -1,0 +1,306 @@
+---
+output: pdf_document
+fontsize: 12pt
+title: Introduction to R for distance sampling
+author: Centre for Research into Ecological and Environmental Modelling
+subtitle: Workshop, 26 August 2018
+header-includes: \usepackage{color}
+---
+
+# 1.2 Using real data
+
+In this practical, we use some real data to fit different detection function models and estimate density and abundance. The data were collected during a line transect survey of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA. Transects were of length 128.75km and a distance out to 2.4m was searched. Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
+
++ Study.Area - name of the study region (Monte Vista NWR)
+
++ Region.Label - identifier of regions (in this case there is only one region and it is set to 'Default')
+
++ Sample.Label - line transect identifier
+
++ distance - perpendicular distances (m).
+
+The distances allow different key functions/adjustments to be fitted in the detection function model and, by including the transect lengths and area of the region, density and abundance can be estimated. 
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Specify whether answers are shown 
+#answer <- TRUE
+answer <- FALSE
+
+# Load library
+library(Distance)
+```
+## Objectives of the practical
+
+1. Import a text file
+
+2. Understand the structure of a data frame
+
+3. Fit different key functions/adjustments in the detection function model
+
+4. Explore the model object i.e. `ddf` and `dht`  
+
+5. Create a data frame
+
+6. Estimate density and abundance using `ds`.
+
+## Importing the data
+
+```{r, echo=F}
+# Commands used to extract the data (in R 32bit)
+#library(readdst)
+#ducknest <- convert_project("C:/workshops/2018/Ducknest exercise")
+#temp <- (ducknest$"Half normal with no adjustments"$env$data)
+```
+
+To let R know where to look for files (and also where to save the R workspace and '.Rmd' files) we can set the 'working directory'; from the menu along the top of the `RStudio` window click on 'Session > Set Working Directory > Choose Directory' and select your chosen directory, for example 'C:/workshop'.  
+
+Load the data into `R` with the following command:
+
+```{r, echo=TRUE}
+nests <- read.csv(file="ducknests.csv", header=TRUE)
+```
+
+This command is made up of several components:
+
++ `read.csv` is an in-built `R` function which reads in a data file of type 'csv',
+
++ the function has two arguments specified; `file` specifies the name of the data file and `header=TRUE` specifies that the first row of the data file contains the names of the data columns. If the columns had not been named in the data file, then `header=FALSE` should be specified and the columns would have been called `X1`, `X2`, etc. automatically. They can be subsequently renamed. 
+
++ the `<-` symbol has assigned the data set to an object called `nests`. Note that there is now an object called `nests` listed on the 'Environment' tab. 
+
+To check that the data file has been read into `R` correctly, use the `head` and `tail` 'functions' to look at the top and bottom rows of the data, respectively. To look at the first few rows of `nests` type the following command. 
+
+\color{blue}
+```{r,echo=TRUE, eval=answer}
+head(nests)
+```
+\color{black}
+
+The `head` function as used above displays the first 6 records of the named object. By default, `head` and `tail` display 6 rows of data but this can be changed by specifying a value for the function argument which controls this action. To display the last 2 records in the data, type the command:
+
+\color{blue}
+```{r,echo=TRUE, eval=answer}
+tail(nests, n=2)
+```
+\color{black}
+
+In this function, `n` is the argument which controls the number of rows to display.
+
+The object `nests` is a dataframe object made up of rows and columns. Use the function `dim` to find out the dimensions of the data set (i.e. the total number of rows and columns):
+
+```{r, echo=TRUE, eval=FALSE}
+dim(nests)
+```
+
+How many rows and columns are there in `nests`?
+
+\color{blue}
+```{r, echo=FALSE, eval=answer}
+  cat('Number of rows',dim(nests)[1],' Number of columns ',dim(nests)[2])
+```
+\color{black}
+
+Another way to look at a data frame is to move to the 'Environment tab' and click on the rectangle (with the grid); this opens a new tab showing the data.
+
+## Summarising the perpendicular distances
+
+To access an individual column within a data frame we use the `$` symbol, for example to summarise the distances, then the following command is used:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+summary(nests$distance)
+```
+\color{black}
+
+Similarly to plot the histogram of distances, the command is:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5}
+hist(nests$distance, xlab="Distance (m)")
+```
+\color{black}
+
+## Fitting different models
+
+To use the `ds` function, first ensure that the `Distance` package (Miller 2017) has been loaded - see practical 1.1 for help on this. 
+
+The function `ds` requires a data frame to have a column called `distance` - since we have this in our `nests` data, we can simply specify the name of the data frame as follows: 
+
+```{r, echo=TRUE, eval=answer}
+nest.model1 <- ds(nests, key="hn", adjustment=NULL)
+```
+
+In this command, a half-normal key function is selected with no adjustment terms. Summarise the model:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+summary(nest.model1)
+```
+\color{black}
+
+Plot the detection function with the histogram having 12 bins:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer, message=F, fig.width=3.5, fig.height=3.5}
+plot(nest.model1, nc=12)
+```
+\color{black}
+
+To fit different detection function shapes, we can change the `key` and `adjustment` arguments. For example to fit a half-normal key function with cosine adjustment terms, then use the command:
+
+```{r, echo=TRUE, eval=answer, message=F}
+nest.model2 <- ds(nests, key="hn", adjustment="cos")
+```
+
+By default, AIC selection will be used to fit adjustment terms of up to order 5. Have any adjustment terms been selected?  
+
+\color{blue}
+```{r, echo=FALSE, eval=answer, message=F}
+cat('No adjustment terms have been selected.','\n')
+summary(nest.model2)
+```
+\color{black}
+
+To fit a hazard rate key function with hermite polynomial adjustment terms, then use the command:
+
+```{r, echo=TRUE, eval=answer, message=F}
+nest.model3 <- ds(nests, key="hr", adjustment="herm")
+```
+
+\color{blue}
+```{r, echo=TRUE, eval=answer, message=F}
+summary(nest.model3)
+```
+\color{black}
+
+Use the `help` command to find out what other key functions and adjustment terms are available. 
+
+## The `ds` object
+
+The objects created with `ds` (e.g. `nest.model1`) are made up of several parts. We can list them using the `names` function as below:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+names(nest.model1)
+```
+\color{black}
+
+The detection function information is in the `ddf` part and the density and abundance estimates would be stored in the `dht` part. To access each part, then the `$` can be used (as with columns in a data frame). For example to see what information is stored in the `ddf` part, we can use the `names` function again:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+names(nest.model1$ddf)
+```
+\color{black}
+
+The `dht` part is essentially empty because we haven't included the necessary information to calculate density. We will do this later. 
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+nest.model1$dht
+```
+\color{black}
+
+## Goodness of fit
+
+The usual tools for checking goodness of fit are available, for example:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5}
+ddf.gof(nest.model1$ddf, nc=12)
+```
+\color{black}
+
+Note that the `ddf` part of the object is passed to the `ddf.gof` function. In this command, the number of bins has been set to 12 for the chi-squared goodness of fit test. 
+
+## Estimating density and abundance
+
+So far, we have concentrated on the detection function but, with more information such as transect lengths and the area of the region, we can estimate density and abundance. This information can be included in the text file along with the distances but this would involve repeating some information and so `Distance` also uses a series of linked tables. Even though it is a bit more work, we will use the latter approach and illustrate a few more R commands along the way.
+
+The tables are linked with columns that have reserved names: the column called `distance` is the reserved name for the perpendicular distances. The other columns (e.g. `Region.Label`, `Sample.Label`) are also reserved names and these are used to link to other tables. 
+
+`Sample.Label` contains the transect identifier, the values can be listed using the `unique` function:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+unique(nests$Sample.Label)
+```
+\color{black}
+
+We can create a data frame containing the names of the transects (sample) and search effort and also the name of the region. In this example, there was only one region and the effort was the same for all transects (128.75km) and so this information gets repeated. 
+
+```{r, echo=TRUE, eval=TRUE}
+nests.sample <- data.frame(Region.Label=rep("Default", times=20),
+                           Sample.Label=1:20, Effort=rep(128.75, times=20))
+```
+
+Let's see what has this done:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+head(nests.sample)
+```
+\color{black}
+
+There is only one region and so the region table is trivial - for the purposes of this practical, we assume that the area of the region was 50km$^2$. 
+
+```{r, echo=TRUE, eval=TRUE}
+nests.region <- data.frame(Region.Label="Default", Area=50)
+```
+Let's look at this data frame:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+nests.region
+```
+\color{black}
+
+The final table required is for the observations: some of the necessary information is in `nests` and so we can select these columns from `nests` and add a unique identifier for each detected nest as follows:
+
+```{r, echo=TRUE, eval=TRUE}
+# Select necessary columns
+nests.obs <- nests[ ,2:3]
+# Create unique identifier
+nests.obs$object <- 1:534
+```
+
+Check what this has done. Why does `object` go from 1 to 534? 
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+head(nests.obs)
+```
+\color{black}
+
+Now we have all the necessary information to estimate density and abundance, therefore, we can include these tables in the `ds` function:
+
+```{r, echo=TRUE, eval=answer, message=F}
+nest.model4 <- ds(nests, key="hn", adjustment=NULL, region.table=nests.region,
+                  sample.table=nests.sample, obs.table=nests.obs,
+                  convert.units=0.001)
+```
+
+The `convert.units` argument ensures that the correct units are specified - in this example, distances are in metres, lengths in km and the area in km$^2$.
+
+Having run the function, the estimates are stored in the `dht` part of the object:
+
+\color{blue}
+```{r, echo=TRUE, eval=answer}
+# Print out estimates
+nest.model4$dht
+```
+\color{black}
+
+
+### References
+
+Buckland ST, Rexstad EA, Marques TA and Oedekoven CS (2015) Distance Sampling: Methods and Applications. Springer 277 pp. ISBN: 978-3-319-19218-5 (Print) 978-3-319-19219-2 (Online) 
+
+Miller DL (2017). Distance: Distance Sampling Detection Function and Abundance Estimation. R package version 0.9.7. https://CRAN.R-project.org/package=Distance
+
+R Core Team (2017) R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL   https://www.R-project.org/
+
+
+
