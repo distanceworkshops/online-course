@@ -17,9 +17,7 @@ fontsize: 10pt
 knitr::opts_chunk$set(echo = TRUE)
 
 # Specify whether answers are shown
-#answer <- TRUE
-answer <- FALSE
-question <- FALSE
+answer <- TRUE
 
 # Load libraries
 library(Distance)
@@ -33,7 +31,7 @@ set.seed(321)
 ```{marginfigure}
 \includegraphics []{images/bigeyes.jpg}
 ```
-This tutorial is the first in a series that were created as an introduction for those wishing to undertake distance sampling and related methods in R (R Core Team, 2017). The basics of R and RStudio are explored in this tutorial. Data are generated resembling a set of perpendicular distances collected from a track line and basic R commands are used to summarise and analysis it.
+This tutorial is the first in a series that were created as an introduction for those wishing to undertake distance sampling and related methods in R \citep{r_language}. The basics of R and RStudio are explored in this tutorial. Data are generated resembling a set of perpendicular distances collected from a track line and basic R commands are used to summarise and analysis it.
 
 This practical is divided into three; the first part is a basic introduction to `R` and `RStudio`, the second part is an introduction to R commands and the final part is an introduction to the distance sampling package.
 
@@ -210,6 +208,7 @@ setbrks <- seq(from=0, to=8, by=0.5)
 hist(posdists, breaks=setbrks, xlab="Distance")
 ```
 
+<!--
 ## R as a calculator
 
 R is a powerful calculator and we will use some of the available functions to estimate the probability of detection for our pretend distance sampling data.
@@ -276,35 +275,37 @@ truncdists <- posdists[posdists <= 6]
 
 How does this affect the probability of detection? Note that your $N$ will also change.
 
-```{r, echo=F, eval=answer, fig.margin=TRUE, fig.width=3.5, fig.width=3.5}
-cat('truncn <- length(truncdists)','\n\n')
+```{r, echo=FALSE, eval=answer, fig.margin=TRUE, fig.width=3.5, fig.width=3.5}
+#cat('truncn <- length(truncdists)','\n\n')
 #  cat('truncn','\n')
 
 # Number of objects seen within truncation distance
 truncn <- length(truncdists)
-cat('The number of distances <=6 is ',truncn,'\n')
+#cat('The number of distances <=6 is ',truncn,'\n')
 # How many objects if detection was certain
 setbrks <- seq(0,6,0.5)
-cat('hist(truncdists, breaks=seq(0, 6, 0.5), xlab="Distance", main="")','\n')
-temp <- hist(truncdists, breaks=setbrks, plot=F)
+#cat('hist(truncdists, breaks=seq(0, 6, 0.5), xlab="Distance", main="")','\n')
+temp <- hist(truncdists, breaks=setbrks, plot=FALSE)
 maxy <- max(temp$counts)
 maxx <- 6
 hist(truncdists, breaks=setbrks, density=5, xlab="Distance", main="")
 abline(v=maxx, col=4, lwd=2)
 abline(h=maxy, col=4, lwd=2)  
 truncN <- 9 * 12
-cat('truncN <- 9 * 12','\n')
+#cat('truncN <- 9 * 12','\n')
 # Probability of detection
-cat('truncp <- truncn/truncN','\n')
+#cat('truncp <- truncn/truncN','\n')
 truncp <- truncn/truncN
-cat('The prob. of detection with truncation is ',format(truncp),'.')
+cat('The prob. of detection with truncation is ',round(truncp,4))
 ```
+
+-->
 
 ## Using `Distance` to fit a detection function model
 
-Above we have calculated a naive estimate of the detection probability, however, we can use the `Distance` package (Miller 2017) to obtain a more robust estimate.
+We can use the `Distance` package \citep{distance_pkg} to fit a detection function and estimate the probability of detecting objects given they are within the truncation distance of the transect.
 
-There are hundreds of R packages and so for efficiency the more specialised packages are not installed as standard when R is downloaded onto your computer. To check whether the `Distance` package is installed on your laptop, click on the 'Packages' tab (lower right pane) and see if it is listed. If so, then either click in the tick box or load it using the command
+There are hundreds of R packages and so for efficiency the more specialised packages are not installed as standard when R is downloaded onto your computer. To check whether the `Distance` package is installed, click on the 'Packages' tab (lower right pane) and see if it is listed. If so, then either click in the tick box or load it using the command
 
 ```{r, echo=TRUE, message=FALSE}
 # Load R library for distance sampling
@@ -333,7 +334,6 @@ To examine the detection function, use the `summary` function. The `summary` fun
 summary(dsmodel)
 ```
 
-Was your crude estimate for $p$ close to the model estimate?
 
 The function `plot` is a generic function which can be used to plot the detection function:
 
@@ -342,7 +342,7 @@ The function `plot` is a generic function which can be used to plot the detectio
 plot(dsmodel)
 ```
 
-To truncate the distances, then the `truncation` argument in `ds` can be used:
+To truncate the distances, the `truncation` argument in `ds` can be used:
 
 ```{r, echo=TRUE, eval=answer, message=FALSE}
 # Fit HN model with truncation at 6
@@ -362,8 +362,5 @@ plot(dstrunc)
 
 Is this similar to your crude estimate when you used truncation?
 
-### References
+***
 
-Miller DL (2017). Distance: Distance Sampling Detection Function and Abundance Estimation. R package version 0.9.7. https://CRAN.R-project.org/package=Distance
-
-R Core Team (2017) R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.

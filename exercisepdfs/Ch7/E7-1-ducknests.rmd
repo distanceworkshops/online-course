@@ -14,12 +14,12 @@ fontsize: 10pt
 # Using real data
 
 ```{marginfigure}
-\includegraphcs [] {images/monte-vista-nwr02.jpg}
+\includegraphics [] {images/monte-vista-nwr02.jpg}
 ```
 In this practical, we use some real data to fit different detection function models and estimate density and abundance. The data were collected during a line transect survey of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA. Transects were of length 128.75km and a distance out to 2.4m was searched. Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
 
 + Study.Area - name of the study region (Monte Vista NWR)
-+ Region.Label - identifier of regions (in this case there is only one region and it is set to 'Default')
++ Region.Label - identifier of regions or strata (in this case there is only one region and it is set to 'Default')
 + Sample.Label - line transect identifier
 + distance - perpendicular distances (m).
 
@@ -45,12 +45,12 @@ library(Distance)
 
 ## Importing the data
 
-To let R know where to look for files (and also where to save the R workspace and '.Rmd' files) we can set the 'working directory'; from the menu along the top of the `RStudio` window click on 'Session > Set Working Directory > Choose Directory' and select your chosen directory, for example 'C:/workshop'.  
+To let R \citep{r_language} know where to look for files (and also where to save the R workspace and '.Rmd' files) we can set the 'working directory'; from the menu along the top of the `RStudio` window click on 'Session > Set Working Directory > Choose Directory' and select your chosen directory, for example 'C:/workshop'.  
 
 Load the data into `R` with the following command:
 
 ```{r, echo=TRUE}
-nests <- read.csv(file="ducknests.csv", header=TRUE)
+nests <- read.csv(file="datasets/ducknests.csv", header=TRUE)
 ```
 
 This command is made up of several components:
@@ -105,9 +105,9 @@ hist(nests$distance, xlab="Distance (m)")
 
 ## Fitting different models
 
-To use the `ds` function, first ensure that the `Distance` package (Miller 2017) has been loaded - see practical 1.1 for help on this.
+To use the `ds` function, first ensure that the `Distance` package \citep{distance_pkg} has been loaded.
 
-The function `ds` requires a data frame to have a column called `distance` - since we have this in our `nests` data, we can simply specify the name of the data frame as follows:
+The function `ds` requires a data frame to have a column called `distance` - because we have this in our `nests` data, we can simply specify the name of the data frame as follows:
 
 ```{r, echo=TRUE, eval=answer}
 nest.model1 <- ds(nests, key="hn", adjustment=NULL)
@@ -134,7 +134,7 @@ nest.model2 <- ds(nests, key="hn", adjustment="cos")
 By default, AIC selection will be used to fit adjustment terms of up to order 5. Have any adjustment terms been selected?  
 
 ```{r, echo=FALSE, eval=answer, fig.margin=TRUE, message=FALSE}
-cat('No adjustment terms have been selected.','\n')
+# cat('No adjustment terms have been selected.','\n')
 summary(nest.model2)
 ```
 
@@ -164,7 +164,7 @@ The detection function information is in the `ddf` part and the density and abun
 names(nest.model1$ddf)
 ```
 
-The `dht` part is essentially empty because we haven't included the necessary information to calculate density. We will do this later.
+The `dht` part is essentially empty because we have not included size of the study area to calculate density. We will do this later.**not true  fix**
 
 ```{r, echo=TRUE, eval=answer}
 nest.model1$dht
@@ -175,12 +175,15 @@ nest.model1$dht
 The usual tools for checking goodness of fit are available, for example:
 
 ```{r, echo=TRUE, eval=answer, fig.margin=TRUE, fig.width=3.5, fig.height=3.5}
-ddf.gof(nest.model1$ddf, nc=12)
+gof_ds(nest.model1)
 ```
 
-Note that the `ddf` part of the object is passed to the `ddf.gof` function. In this command, the number of bins has been set to 12 for the chi-squared goodness of fit test.
+
+**Interpretation of qq plot as well as CvM test results**
 
 ## Estimating density and abundance
+
+**this is overly complicated, simply provide ducknests.csv with area and transect lengths from the outset--practicioners will have this information in their own data**
 
 So far, we have concentrated on the detection function but, with more information such as transect lengths and the area of the region, we can estimate density and abundance. This information can be included in the text file along with the distances but this would involve repeating some information and so `Distance` also uses a series of linked tables. Even though it is a bit more work, we will use the latter approach and illustrate a few more R commands along the way.
 
@@ -247,10 +250,6 @@ Having run the function, the estimates are stored in the `dht` part of the objec
 nest.model4$dht
 ```
 
-### References
+\nocite{buckland_2015}
 
-Buckland ST, Rexstad EA, Marques TA and Oedekoven CS (2015) Distance Sampling: Methods and Applications. Springer 277 pp. ISBN: 978-3-319-19218-5 (Print) 978-3-319-19219-2 (Online)
 
-Miller DL (2017). Distance: Distance Sampling Detection Function and Abundance Estimation. R package version 0.9.7. https://CRAN.R-project.org/package=Distance
-
-R Core Team (2017) R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL   https://www.R-project.org/
