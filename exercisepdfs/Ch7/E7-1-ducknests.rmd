@@ -250,6 +250,6 @@ Having run the function, the estimates are stored in the `dht` part of the objec
 nest.model4$dht
 ```
 
-\nocite{buckland_2015}
+\nocite{buckland_distance_2015}
 
 
