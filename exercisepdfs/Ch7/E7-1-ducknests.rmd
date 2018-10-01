@@ -116,7 +116,7 @@ nest.model1 <- ds(nests, key="hn", adjustment=NULL)
 In this command, a half-normal key function is selected with no adjustment terms. Summarise the model:
 
 ```{r, echo=TRUE, eval=answer}
-summary(nest.model1)
+summary(nest.model1$ddf)
 ```
 
 Plot the detection function with the histogram having 12 bins:
@@ -135,7 +135,7 @@ By default, AIC selection will be used to fit adjustment terms of up to order 5.
 
 ```{r, echo=FALSE, eval=answer, fig.margin=TRUE, message=FALSE}
 # cat('No adjustment terms have been selected.','\n')
-summary(nest.model2)
+summary(nest.model2$ddf)
 ```
 
 To fit a hazard rate key function with Hermite polynomial adjustment terms, then use the command:
@@ -145,7 +145,7 @@ nest.model3 <- ds(nests, key="hr", adjustment="herm")
 ```
 
 ```{r, echo=TRUE, eval=answer, message=FALSE}
-summary(nest.model3)
+summary(nest.model3$ddf)
 ```
 
 Use the `help` command to find out what other key functions and adjustment terms are available.
@@ -164,12 +164,6 @@ The detection function information is in the `ddf` part and the density and abun
 names(nest.model1$ddf)
 ```
 
-The `dht` part is essentially empty because we have not included size of the study area to calculate density. We will do this later.**not true  fix**
-
-```{r, echo=TRUE, eval=answer}
-nest.model1$dht
-```
-
 ## Goodness of fit
 
 The usual tools for checking goodness of fit are available, for example:
@@ -184,6 +178,8 @@ gof_ds(nest.model1)
 ## Estimating density and abundance
 
 **this is overly complicated, simply provide ducknests.csv with area and transect lengths from the outset--practicioners will have this information in their own data**
+
+**No need to refit the model, the results already exist, simply need to be described**
 
 So far, we have concentrated on the detection function but, with more information such as transect lengths and the area of the region, we can estimate density and abundance. 
 <!--
@@ -236,6 +232,13 @@ head(nests.obs)
 ```
 
 -->
+
+
+
+```{r, echo=TRUE, eval=answer}
+nest.model1$dht
+```
+
 
 Now we have all the necessary information to estimate density and abundance, therefore, we can include these tables in the `ds` function:
 
