@@ -16,7 +16,7 @@ fontsize: 10pt
 ```{marginfigure}
 \includegraphics [] {images/monte-vista-nwr02.jpg}
 ```
-In this practical, we use some real data to fit different detection function models and estimate density and abundance. The data were collected during a line transect survey of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA. Transects were of length 128.75km and a distance out to 2.4m was searched. Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
+In this practical, we use some real data to fit different detection function models and estimate density and abundance. The data were collected during a line transect survey of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA. Transects were of length 128.75km and a distance out to 2.4m was searched.  Consult \citet{anderson_posphala} for a description of the survey.  Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
 
 + Study.Area - name of the study region (Monte Vista NWR)
 + Region.Label - identifier of regions or strata (in this case there is only one region and it is set to 'Default')
@@ -29,7 +29,7 @@ The distances allow different key functions/adjustments to be fitted in the dete
 knitr::opts_chunk$set(echo = TRUE)
 
 # Specify whether answers are shown
-answer <- FALSE
+answer <- TRUE
 
 # Load library
 library(Distance)
@@ -50,7 +50,7 @@ To let R \citep{r_language} know where to look for files (and also where to save
 Load the data into `R` with the following command:
 
 ```{r, echo=TRUE}
-nests <- read.csv(file="datasets/ducknests.csv", header=TRUE)
+nests <- read.csv(file="datasets/ducks-area-effort.csv", header=TRUE)
 ```
 
 This command is made up of several components:
@@ -185,7 +185,9 @@ gof_ds(nest.model1)
 
 **this is overly complicated, simply provide ducknests.csv with area and transect lengths from the outset--practicioners will have this information in their own data**
 
-So far, we have concentrated on the detection function but, with more information such as transect lengths and the area of the region, we can estimate density and abundance. This information can be included in the text file along with the distances but this would involve repeating some information and so `Distance` also uses a series of linked tables. Even though it is a bit more work, we will use the latter approach and illustrate a few more R commands along the way.
+So far, we have concentrated on the detection function but, with more information such as transect lengths and the area of the region, we can estimate density and abundance. 
+<!--
+This information can be included in the text file along with the distances but this would involve repeating some information and so `Distance` also uses a series of linked tables. Even though it is a bit more work, we will use the latter approach and illustrate a few more R commands along the way.
 
 The tables are linked with columns that have reserved names: the column called `distance` is the reserved name for the perpendicular distances. The other columns (e.g. `Region.Label`, `Sample.Label`) are also reserved names and these are used to link to other tables.
 
@@ -233,11 +235,12 @@ Check what this has done. Why does `object` go from 1 to 534?
 head(nests.obs)
 ```
 
+-->
+
 Now we have all the necessary information to estimate density and abundance, therefore, we can include these tables in the `ds` function:
 
-```{r, echo=TRUE, eval=answer, message=F}
-nest.model4 <- ds(nests, key="hn", adjustment=NULL, region.table=nests.region,
-                  sample.table=nests.sample, obs.table=nests.obs,
+```{r, echo=TRUE, eval=answer, message=FALSE}
+nest.model4 <- ds(nests, key="hn", adjustment=NULL, 
                   convert.units=0.001)
 ```
 
@@ -248,6 +251,12 @@ Having run the function, the estimates are stored in the `dht` part of the objec
 ```{r, echo=TRUE, eval=answer}
 # Print out estimates
 nest.model4$dht
+```
+
+_describe each component table of output_
+
+```{r, echo=TRUE, eval=answer, fig.margin=TRUE}
+plot(nest.model4)
 ```
 
 \nocite{buckland_distance_2015}
