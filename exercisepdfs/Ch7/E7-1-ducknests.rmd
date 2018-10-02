@@ -11,17 +11,19 @@ biblio-style: biblio/ecology    # bst rather than csl finally worked
 fontsize: 10pt
 ---
 
-# Using real data
+# Using survey data
 
 ```{marginfigure}
 \includegraphics [] {images/monte-vista-nwr02.jpg}
 ```
-In this practical, we use some real data to fit different detection function models and estimate density and abundance. The data were collected during a line transect survey of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA. Transects were of length 128.75km and a distance out to 2.4m was searched.  Consult \citet{anderson_posphala} for a description of the survey.  Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
+In this practical, we use some real data to fit different detection function models and estimate density and abundance. The data were collected during line transect surveys of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA in 1967 and 1968. Twenty transects, each 25.75km in length were walked 5 times over the two years.  Total transect length of 128.75km (25.75 $\times$ 5) and a distance out to 2.4m was searched.  Consult \citet{anderson_posphala} for a description of the survey.  Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
 
-+ Study.Area - name of the study region (Monte Vista NWR)
-+ Region.Label - identifier of regions or strata (in this case there is only one region and it is set to 'Default')
-+ Sample.Label - line transect identifier
-+ distance - perpendicular distances (m).
+- Study.Area - name of the study region (Monte Vista NWR)
+- Region.Label - identifier of regions or strata (in this case there is only one region and it is set to 'Default')
+- Area - size of the stratum
+- Sample.Label - line transect identifier
+- Effort - length of each transect
+- distance - perpendicular distances (m).
 
 The distances allow different key functions/adjustments to be fitted in the detection function model and, by including the transect lengths and area of the region, density and abundance can be estimated.
 
@@ -55,9 +57,9 @@ nests <- read.csv(file="datasets/ducks-area-effort.csv", header=TRUE)
 
 This command is made up of several components:
 
-+ `read.csv` is an in-built `R` function which reads in a data file of type 'csv',
-+ the function has two arguments specified; `file` specifies the name of the data file and `header=TRUE` specifies that the first row of the data file contains the names of the data columns. If the columns had not been named in the data file, then `header=FALSE` should be specified and the columns would have been called `X1`, `X2`, etc. automatically. They can be subsequently renamed.
-+ the `<-` symbol has assigned the data set to an object called `nests`. Note that there is now an object called `nests` listed on the 'Environment' tab.
+- `read.csv` is a function to read data files of type 'csv' (comma-separated values),
+- the function has two arguments specified; `file` specifies the name of the data file and `header=TRUE` specifies that the first row of the data file contains the names of the data columns. 
+- the `<-` symbol has assigned the data set to an object called `nests`. Note that there is now an object called `nests` listed on the 'Environment' tab.
 
 To check that the data file has been read into `R` correctly, use the `head` and `tail` 'functions' to look at the top and bottom rows of the data, respectively. To look at the first few rows of `nests` type the following command.
 
@@ -107,13 +109,13 @@ hist(nests$distance, xlab="Distance (m)")
 
 To use the `ds` function, first ensure that the `Distance` package \citep{distance_pkg} has been loaded.
 
-The function `ds` requires a data frame to have a column called `distance` - because we have this in our `nests` data, we can simply specify the name of the data frame as follows:
+The function `ds` requires a data frame to have a column called `distance`, we   specify the name of the data frame as follows:
 
 ```{r, echo=TRUE, eval=answer}
 nest.model1 <- ds(nests, key="hn", adjustment=NULL)
 ```
 
-In this command, a half-normal key function is selected with no adjustment terms. Summarise the model:
+In this command, a half-normal key function is selected with no adjustment terms. Summarise the fitted model:
 
 ```{r, echo=TRUE, eval=answer}
 summary(nest.model1$ddf)
@@ -149,6 +151,14 @@ summary(nest.model3$ddf)
 ```
 
 Use the `help` command to find out what other key functions and adjustment terms are available.
+
+```{marginfigure, echo=!answer}
+Is there much difference in the probability of detecting a nest given it is within the maximum detection distance between the three models fitted to the duck nest data?
+```
+
+```{marginfigure, echo=answer}
+No, there is barely any difference between the estimated probability of detection.  For the first two models, P_a_= `r round(nest.model1$ddf$fitted[1],3)` and for the hazard rate model, P_a_ = `r round(nest.model3$ddf$fitted[1],3)`.
+```
 
 ## The `ds` object
 
