@@ -157,7 +157,7 @@ Is there much difference in the probability of detecting a nest given it is with
 ```
 
 ```{marginfigure, echo=answer}
-No, there is barely any difference between the estimated probability of detection.  For the first two models, P_a_= `r round(nest.model1$ddf$fitted[1],3)` and for the hazard rate model, P_a_ = `r round(nest.model3$ddf$fitted[1],3)`.
+No, there is barely any difference between the estimated probability of detection.  For the first two models, P_a= 0.869 and for the hazard rate model, P_a = 0.889.
 ```
 
 ## The `ds` object
