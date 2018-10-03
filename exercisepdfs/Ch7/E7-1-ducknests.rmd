@@ -5,6 +5,7 @@ date: "CREEM, Univ of St Andrews -- `r format(Sys.Date(), '%B %Y')`"
 output:  
   tint::tintPdf:
     number_sections: true
+classoption: a4paper
 bibliography: biblio/workshopreprints.bib
 link-citations: yes
 biblio-style: biblio/ecology    # bst rather than csl finally worked
@@ -15,6 +16,8 @@ fontsize: 10pt
 
 ```{marginfigure}
 \includegraphics [] {images/monte-vista-nwr02.jpg}
+
+The Monte Vista National Wildlife Refuge.
 ```
 In this practical, we use some real data to fit different detection function models and estimate density and abundance. The data were collected during line transect surveys of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA in 1967 and 1968. Twenty transects, each 25.75km in length were walked 5 times over the two years.  Total transect length of 128.75km (25.75 $\times$ 5) and a distance out to 2.4m was searched.  Consult \citet{anderson_posphala} for a description of the survey.  Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
 
@@ -64,16 +67,14 @@ This command is made up of several components:
 To check that the data file has been read into `R` correctly, use the `head` and `tail` 'functions' to look at the top and bottom rows of the data, respectively. To look at the first few rows of `nests` type the following command.
 
 ```{r,echo=TRUE, eval=answer}
-head(nests)
+head(nests, n=2)
 ```
 
-The `head` function as used above displays the first 6 records of the named object. By default, `head` and `tail` display 6 rows of data but this can be changed by specifying a value for the function argument which controls this action. To display the last 2 records in the data, type the command:
+The `head` function as used above displays the first 6 records of the named object. The argument `n` controls the number of rows to display. To display the _last_ 2 records in the data, type the command:
 
 ```{r,echo=TRUE, eval=answer}
 tail(nests, n=2)
 ```
-
-In this function, `n` is the argument which controls the number of rows to display.
 
 The object `nests` is a dataframe object made up of rows and columns. Use the function `dim` to find out the dimensions of the data set (i.e. the total number of rows and columns):
 
@@ -85,17 +86,17 @@ dim(nests)
 __Question:__  How many rows and columns are there in the dataframe `nests`?
 ```
 
-```{r, echo=FALSE, eval=answer, fig.margin=TRUE}
-  cat('Number of rows',dim(nests)[1],' Number of columns ',dim(nests)[2])
+```{r, echo=FALSE, eval=answer}
+dim(nests)
 ```
 
-Another way to look at a data frame is to move to the 'Environment tab' and click on the rectangle (with the grid); this opens a new tab showing the data.
+Another way to look at a data frame is to move to the 'Environment tab' in R-Studio and click on the rectangle (with the grid); this opens a new tab showing the data.
 
 ## Summarising the perpendicular distances
 
-To access an individual column within a data frame we use the `$` symbol, for example to summarise the distances, then the following command is used:
+To access an individual column within a data frame use the `$` symbol, for example to summarise the distances:
 
-```{r, echo=TRUE, eval=answer, fig.margin=TRUE}
+```{r, echo=TRUE, eval=answer}
 summary(nests$distance)
 ```
 
@@ -107,15 +108,17 @@ hist(nests$distance, xlab="Distance (m)")
 
 ## Fitting different models
 
-To use the `ds` function, first ensure that the `Distance` package \citep{distance_pkg} has been loaded.
+To use the `ds` function, load the `Distance` package \citep{distance_pkg}.
 
 The function `ds` requires a data frame to have a column called `distance`, we   specify the name of the data frame as follows:
 
 ```{r, echo=TRUE, eval=answer}
-nest.model1 <- ds(nests, key="hn", adjustment=NULL)
+nest.model1 <- ds(nests, key="hn", adjustment=NULL, convert.units = 0.001)
 ```
 
-In this command, a half-normal key function is selected with no adjustment terms. Summarise the fitted model:
+The `convert.units` argument ensures that the correct units are specified - in this example, distances are in metres, lengths in km and the area in km$^2$.  Think of this argument as a divider used to transform units of transect effort into units of perpendicular distance (e.g., 5km / 0.001 = 5000m).
+
+This call to `ds` fits a half-normal key function with no adjustment terms. Summarise the fitted model:
 
 ```{r, echo=TRUE, eval=answer}
 summary(nest.model1$ddf)
@@ -127,17 +130,24 @@ Plot the detection function with the histogram having 12 bins:
 plot(nest.model1, nc=12)
 ```
 
-To fit different detection function shapes, we can change the `key` and `adjustment` arguments. For example to fit a half-normal key function with cosine adjustment terms, then use the command:
+To fit different detection functions, change the `key` and `adjustment` arguments. For example to fit a half-normal key function with cosine adjustment terms, use the command:
 
 ```{r, echo=TRUE, eval=answer, message=FALSE}
 nest.model2 <- ds(nests, key="hn", adjustment="cos")
 ```
 
-By default, AIC selection will be used to fit adjustment terms of up to order 5. Have any adjustment terms been selected?  
+By default, AIC selection will be used to fit adjustment terms of up to order 5. 
 
-```{r, echo=FALSE, eval=answer, fig.margin=TRUE, message=FALSE}
-# cat('No adjustment terms have been selected.','\n')
+```{marginfigure}
+__Question:__ Have any adjustment terms been selected?  
+```
+
+```{r, echo=FALSE, eval=answer, message=FALSE}
 summary(nest.model2$ddf)
+```
+
+```{marginfigure, echo=answer}
+__Answer:__ No adjustment terms have been included in the preferred model, because there is only a single row in the list of `Detection function parameters`.
 ```
 
 To fit a hazard rate key function with Hermite polynomial adjustment terms, then use the command:
@@ -152,23 +162,23 @@ summary(nest.model3$ddf)
 
 Use the `help` command to find out what other key functions and adjustment terms are available.
 
-```{marginfigure, echo=!answer}
-Is there much difference in the probability of detecting a nest given it is within the maximum detection distance between the three models fitted to the duck nest data?
+```{marginfigure}
+__Question:__ Is there much difference in the probability of detecting a nest given it is within the maximum detection distance between the three models fitted to the duck nest data?
 ```
 
 ```{marginfigure, echo=answer}
-No, there is barely any difference between the estimated probability of detection.  For the first two models, P_a= 0.869 and for the hazard rate model, P_a = 0.889.
+__Answer:__ No, there is barely any difference between the estimated probability of detection.  For the first two models, P_a= 0.869 and for the hazard rate model, P_a = 0.889.
 ```
 
 ## The `ds` object
 
-The objects created with `ds` (e.g. `nest.model1`) are made up of several parts. We can list them using the `names` function as below:
+The objects created with `ds` (e.g. `nest.model1`) are made up of two parts. We can list them using the `names` function as below:
 
 ```{r, echo=TRUE, eval=answer}
 names(nest.model1)
 ```
 
-The detection function information is in the `ddf` part and the density and abundance estimates would be stored in the `dht` part. To access each part, then the `$` can be used (as with columns in a data frame). For example to see what information is stored in the `ddf` part, we can use the `names` function again:
+The detection function information is in the `ddf` part and the density and abundance estimates are stored in the `dht` part. To access each part, then the `$` can be used (as with columns in a data frame). For example to see what information is stored in the `ddf` part, we can use the `names` function again:
 
 ```{r, echo=TRUE, eval=answer}
 names(nest.model1$ddf)
@@ -176,102 +186,82 @@ names(nest.model1$ddf)
 
 ## Goodness of fit
 
-The usual tools for checking goodness of fit are available, for example:
+Before making inference from the detection function we have fitted, we should evaluate the model.  First assessment is goodness of fit, accomplished using the function `gof_ds`:
 
 ```{r, echo=TRUE, eval=answer, fig.margin=TRUE, fig.width=3.5, fig.height=3.5}
 gof_ds(nest.model1)
 ```
 
+Calling the function `gof_ds` with the default arguments and exact distance data, a _q-q_ plot is produced along with the unweighted Cramer-von Mises goodness of fit test.  
 
-**Interpretation of qq plot as well as CvM test results**
+```{marginfigure}
+__Question:__ Interpret the q-q plot and CvM test results for the duck nest data.
+```
+
+```{marginfigure, echo=answer}
+__Answer:__ The half-normal detection function fits the duck nest data very well.  All points of the q-q plot fall on the diagonal line and the p-value associated with the CvM test statisic is very large (>> 0.05) indicating a good fit of the model to the data.
+```
 
 ## Estimating density and abundance
 
-**this is overly complicated, simply provide ducknests.csv with area and transect lengths from the outset--practicioners will have this information in their own data**
-
-**No need to refit the model, the results already exist, simply need to be described**
-
-So far, we have concentrated on the detection function but, with more information such as transect lengths and the area of the region, we can estimate density and abundance. 
-<!--
-This information can be included in the text file along with the distances but this would involve repeating some information and so `Distance` also uses a series of linked tables. Even though it is a bit more work, we will use the latter approach and illustrate a few more R commands along the way.
-
-The tables are linked with columns that have reserved names: the column called `distance` is the reserved name for the perpendicular distances. The other columns (e.g. `Region.Label`, `Sample.Label`) are also reserved names and these are used to link to other tables.
-
-`Sample.Label` contains the transect identifier, the values can be listed using the `unique` function:
+So far, we have concentrated on the detection function but, with more information such as transect lengths and the area of the region, we can estimate density and abundance.  The second component of a `ds` object, contains this additional information.  This information can be viewed with:
 
 ```{r, echo=TRUE, eval=answer}
-unique(nests$Sample.Label)
+str(nest.model1$dht$individuals, max=1)
 ```
 
-We can create a data frame containing the names of the transects (sample) and search effort and also the name of the region. In this example, there was only one region and the effort was the same for all transects (128.75km) and so this information gets repeated.
+This `dht` object contains considerable information.  However, focus upon three tables generated by the `summary()` function: summary, abundance and density.  Dig more deeply into the content of these tables.
 
-```{r, echo=TRUE, eval=TRUE}
-nests.sample <- data.frame(Region.Label=rep("Default", times=20),
-                           Sample.Label=1:20, Effort=rep(128.75, times=20))
+__Summary information__
+
+This provides information about the survey:
+
+- size of study area,
+- area covered by sampling effort
+- length of all transects
+- number of detections
+- number of transects
+- encounter rate (ER) number of detections per unit transect length and its associated variability
+
+```{r echo=TRUE, eval=FALSE}
+nest.model1$dht$individuals$summary
 ```
 
-Let's see what has this done:
-
-```{r, echo=TRUE, eval=answer}
-head(nests.sample)
-```
-There is only one region and so the region table is trivial - for the purposes of this practical, we assume that the area of the region was 50km$^2$.
-
-```{r, echo=TRUE, eval=TRUE}
-nests.region <- data.frame(Region.Label="Default", Area=50)
-```
-Let's look at this data frame:
-
-```{r, echo=TRUE, eval=answer}
-nests.region
+```{r fig.margin=TRUE, eval=answer, echo=FALSE}
+knitr::kable(nest.model1$dht$individuals$summary)
 ```
 
-The final table required is for the observations: some of the necessary information is in `nests` and so we can select these columns from `nests` and add a unique identifier for each detected nest as follows:
+__Abundance estimates__
 
-```{r, echo=TRUE, eval=TRUE}
-# Select necessary columns
-nests.obs <- nests[ ,2:3]
-# Create unique identifier
-nests.obs$object <- 1:534
+Estimated density multiplied by the size of the study area.
+
+```{r echo=TRUE, eval=FALSE}
+nest.model1$dht$individuals$N
 ```
 
-Check what this has done. Why does `object` go from 1 to 534?
-
-```{r, echo=TRUE, eval=answer}
-head(nests.obs)
+```{r fig.margin=TRUE, eval=answer, echo=FALSE}
+knitr::kable(nest.model1$dht$individuals$N)
 ```
 
--->
+__Density estimates__
 
+Density estimated using the formula
 
+$$
+\hat{D} = \frac{n}{a \hat{P_a}}
+$$
 
-```{r, echo=TRUE, eval=answer}
-nest.model1$dht
+where n (number of nests)=`r nest.model1$dht$individuals$summary$n`, a (covered area)=`r nest.model1$dht$individuals$summary$CoveredArea` and $\hat{P_a}$ (probability of detection)=`r round(nest.model1$dht$individuals$average.p,4)`
+
+```{r echo=TRUE, eval=FALSE}
+nest.model1$dht$individuals$D
 ```
 
-
-Now we have all the necessary information to estimate density and abundance, therefore, we can include these tables in the `ds` function:
-
-```{r, echo=TRUE, eval=answer, message=FALSE}
-nest.model4 <- ds(nests, key="hn", adjustment=NULL, 
-                  convert.units=0.001)
+```{r fig.margin=TRUE, eval=answer, echo=FALSE}
+knitr::kable(nest.model1$dht$individuals$D)
 ```
 
-The `convert.units` argument ensures that the correct units are specified - in this example, distances are in metres, lengths in km and the area in km$^2$.
-
-Having run the function, the estimates are stored in the `dht` part of the object:
-
-```{r, echo=TRUE, eval=answer}
-# Print out estimates
-nest.model4$dht
-```
-
-_describe each component table of output_
-
-```{r, echo=TRUE, eval=answer, fig.margin=TRUE}
-plot(nest.model4)
-```
-
+<!-- the 2015 book is not cited in the narrative, but I want it in the bibliography -->
 \nocite{buckland_distance_2015}
 
 
