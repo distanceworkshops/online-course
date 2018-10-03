@@ -116,7 +116,7 @@ The function `ds` requires a data frame to have a column called `distance`, we  
 nest.model1 <- ds(nests, key="hn", adjustment=NULL, convert.units = 0.001)
 ```
 
-The `convert.units` argument ensures that the correct units are specified - in this example, distances are in metres, lengths in km and the area in km$^2$.  Think of this argument as a divider used to transform units of transect effort into units of perpendicular distance (e.g., 5km / 0.001 = 5000m).
+The `convert.units` argument ensures that the correct units are specified - in this example, distances are in metres, lengths in km and the area in km$^2$.  Think of this argument as a divider used to transform units of transect effort into units of perpendicular distance (e.g., 1km / 0.001 = 1000m).
 
 This call to `ds` fits a half-normal key function with no adjustment terms. Summarise the fitted model:
 
