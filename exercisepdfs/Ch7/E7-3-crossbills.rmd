@@ -1,102 +1,80 @@
 ---
-output: pdf_document
-title: Introduction to R for distance sampling
-author: Centre for Research into Ecological and Environmental Modelling
-subtitle: Workshop, 26 August 2018
-header-includes: \usepackage{color}
-fontsize: 12pt
+title: "Distance sampling online workshop"
+author: "Analysis in R: Lure point transects"
+date: "CREEM, Univ of St Andrews -- `r format(Sys.Date(), '%B %Y')`"
+output:  
+  tint::tintPdf:
+    number_sections: true
+classoption: a4paper
+bibliography: biblio/workshopreprints.bib
+link-citations: yes
+biblio-style: biblio/ecology    # bst rather than csl finally worked
+fontsize: 10pt
 ---
 
 ```{r, echo=FALSE, warning=FALSE}
 library(knitr)
-
-# Specify whether answers are shown 
-#answer <- TRUE
-answer <- FALSE
+answer <- TRUE
 ```
-# 1.4 Fitting GLMs, prediction and bootstrapping
+# Fitting GLMs, prediction and bootstrapping
 
-This practical is based on the lure point transect case study in Buckland \textit{et al}. (2015), Section 10.2.1, which is a simplified version of the analysis in Summers and Buckland (2011). Generalised linear models (GLMs) are used to model the response of Scottish crossbills to a lure in order to estimate their probability of response and hence estimate the density and abundance. To provide a measure of precision for the abundance estimate, 95\% confidence intervals are obtained by bootstrapping. 
+This practical is based on the lure point transect case study in \citet{buckland_distance_2015}, Section 10.2.1, which is a simplified version of the analysis in \citet{SUMMERS_2010}. Generalised linear models (GLMs) are used to model the response of Scottish crossbills to a lure in order to estimate their probability of response and hence estimate the density and abundance. To provide a measure of precision for the abundance estimate, 95% confidence intervals are obtained by bootstrapping. 
 
-The Scottish crossbill (\textit{Loxia scotica}) is Britain's only endemic bird species. A point transect study was conducted to obtain the number of birds within each point after responding to an audible lure. The probability of responding to the lure was estimated by recording the response of previously detected birds to the lure at different distances (Summers and Buckland 2011). 
+The Scottish crossbill _(Loxia scotica)_ is Britain's only endemic bird species. A point transect study was conducted to obtain the number of birds within each point after responding to an audible lure. The probability of responding to the lure was estimated by recording the response of previously detected birds to the lure at different distances \citet{SUMMERS_2010}. 
 
 ## Objectives of the practical
 
 1. Fit a GLM
-
-2. Obtain predicted values from GLM
-
-3. Calculate abundance
-
-4. Using `for` loops to bootstrap abundance.
+1. Obtain predicted values from GLM
+1. Calculate abundance
+1. Using `for` loop to bootstrap abundance.
 
 ## The lure trials
 
 The data provided in the response trials are:
 
-+ No. - trial number
+- No. - trial number
+- day - days from 1st January
+- time - hour of the day
+- habitat - habitat type (1=plantation, 2= native pinewood)
+- dist - distance of the bird when the lure was played (m)
+- behavcode - behaviour code (1=perching and feeding, 2= giving excitement calls, 3=singing)
+- numbirds - flock size
+- response - response of bird to lure (0=no response, 1=response). 
 
-+ day - days from 1st January
-
-+ time - hour of the day
-
-+ habitat - habitat type (1=plantation, 2= native pinewood)
-
-+ dist - distance of the bird when the lure was played (m)
-
-+ behavcode - behaviour code (1=perching and feeding, 2= giving excitement calls, 3=singing)
-
-+ numbirds - flock size
-
-+ response - response of bird to lure (0=no response, 1=response). 
-
-The trials data are in file `lure trials.csv`.  We first import the data and check that it has been read in correctly:
+The trials data are in file `lure-trials.csv`.  Import the data and check that it has been read correctly:
 ```{r, echo=TRUE, eval=TRUE}
-xbill <- read.csv("lure-trials.csv",header=T)
+xbill <- read.csv(file="datasets/lure-trials.csv", header=TRUE)
 ```
-\color{blue}
+
 ```{r, echo=TRUE, eval=answer}
-head(xbill)
+head(xbill, n=2)
 ```
-\color{black}
 
 ## Summarising the data
 
 We can see how many birds did, or did not, respond to the lure:
 
-\color{blue}
 ```{r, echo=TRUE, eval=answer}
 table(xbill$response)
 ```
-\color{black}
 
-To add totals to the table:
-\color{blue}
-```{r, echo=TRUE, eval=answer}
-addmargins(table(xbill$response))
-```
-\color{black}
+There are six potential covariates that might affect the probability that a bird responds to the lure (`day`, `time`, `dist`, `numbirds`, `habitat`, and `behavcode`): the latter two are factor type variables and so we need to treat them as factors in models:
 
-There are six potential covariates that might affect the probability that a bird responds to the lure (`day`, `time`, `dist`, `numbirds`, `habitat`, and `behavcode`): the latter two are factor type variables and so we need to indicate to R to treat them as factors:
-
-```{r, echo=T}
-# Specify variables as factors
+```{r, echo=TRUE}
 xbill$habitat <- factor(xbill$habitat)
 xbill$behavcode <- factor(xbill$behavcode)
 ```
 
 To look at the response in each factor level we can obtain a two-way table, for example: 
 
-\color{blue}
 ```{r, echo=TRUE, eval=answer}
 addmargins(table(xbill$response, xbill$habitat))
 ```
-\color{black}
 
-A boxplot could be used to look at the distribution of distances for each response level - refer to Practical 1.3 if you are not sure how to do this. 
+A boxplot could be used to look at the distribution of distances for each response level. 
 
-\color{blue}
-```{r, echo=answer, eval=answer, fig.width=6, fig.height=6}
+```{r, echo=TRUE, eval=answer, fig.width=6, fig.height=6, fig.margin=TRUE}
 # Divide plot window into 4
 par(mfrow=c(2,2))
 # Boxplots for each covariate
@@ -105,7 +83,10 @@ boxplot(xbill$numbirds~xbill$response, xlab="Response", ylab="Flock size")
 boxplot(xbill$day~xbill$response, xlab="Response", ylab="Days from 1 Jan")
 boxplot(xbill$time~xbill$response, xlab="Response", ylab="Hour of day")
 ```
-\color{black}
+
+```{marginfigure, echo=answer}
+__Answer:__ Qualitatively, these boxplots suggest little difference in crossbill behaviour in response to the lure attributable to flock size or time of day.  There may be more influence of distance and date upon response to lure.  Models will be fitted to make stronger inference.
+```
 
 ## Fitting a GLM
 
@@ -113,7 +94,7 @@ We want to explain the probability of response in terms of the potential covaria
 
 We can include all the covariates in a model as follows.
 
-```{r, echo=T, eval=TRUE, comment=NA}
+```{r, echo=TRUE, eval=TRUE, comment=NA}
 # Fit a model with all potential covars
 model1 <- glm(response~dist+numbirds+day+time+habitat+behavcode, family=binomial,
               data=xbill)
@@ -121,11 +102,9 @@ model1 <- glm(response~dist+numbirds+day+time+habitat+behavcode, family=binomial
 
 As usual, the `summary` function can be used to display details of the model object. 
 
-\color{blue}
 ```{r, echo=TRUE, eval=answer}
 summary(model1)
 ```
-\color{black}
 
 We see that only `dist` has a coefficient that is significantly different from zero. Experiment with dropping non-significant terms. Using a backwards stepping procedure, you should find that other covariates remain non-significant, so we can use the simple model:
 
@@ -134,19 +113,17 @@ We see that only `dist` has a coefficient that is significantly different from z
 model2 <- glm(response~dist, family=binomial, data=xbill)
 ```
 
-\color{blue}
 ```{r, echo=TRUE, eval=answer}
 summary(model2)
 ```
-\color{black}
 
-(Degrees of freedom change a little between models because some covariates have a few missing values and so these observations are excluded.)
+(Degrees of freedom change a little between models because some covariates in the first model have missing values and so these observations are excluded.)
 
 ## Prediction
 
 Having fitted a model, we now want to see how the predicted probability of response changes with distance (similar to a detection function model). We assume that the maximum distance that a crossbill will respond to a lure is 850m. Here we create a 'prediction' data frame that has one column called `dist` and this ranges from 0 to 850 (in unit intervals). (Prediction data needs to contain objects with the same names as the explanatory variables in the fitted model.)   
 
-```{r, echo=T, eval=T}
+```{r, echo=TRUE, eval=TRUE}
 # Specify maximum distance
 w <- 850
 # Create data frame containing distances
@@ -157,7 +134,7 @@ phat <- predict.glm(model2, newdata=preddata, type="response")
 
 Now we have the estimated probabilities, we can overlay this as a red line onto a plot of the observed responses (black circles). The `xlim` argument specifies the limits of the $x$-axis:
 
-```{r, echo=TRUE, eval=answer, fig.height=3.5, fig.width=3.5}
+```{r, echo=TRUE, eval=answer, fig.height=6, fig.width=6, fig.margin=TRUE}
 plot(xbill$dist, xbill$response, xlim=c(0, w), xlab="Distance from lure (m)",
      ylab="Probability of response") 
 lines(preddata$dist, phat, col="red")
@@ -165,158 +142,128 @@ lines(preddata$dist, phat, col="red")
 
 ## Estimating abundance
 
-This section gets a bit technical and so don't worry too much about the details if you are not familiar with point transects. 
+This section is technical and require understanding of abundance estimation with point transects. 
 
 Abundance is obtained from 
 
-$$\hat N = \frac {n.A}{P_a .a}$$
+$$\hat N = \frac {n \cdot A}{P_a \cdot a}$$
 where 
 
-+ $n$ is the number of detections
-
-+ $A$ is the area of the study region (i.e. 3505.8 km$^2$)
-
-+ $P_a$ is the probability of response (or detection) in the covered area, and
-
-+ $a$ is the area of the covered region (i.e. $a=k\pi w^2$ where $k$ is the number of points)
+- $n$ is the number of detections
+- $A$ is the area of the study region (i.e. 3505.8 km$^2$)
+- $P_a$ is the probability of response (or detection) in the covered area, and
+- $a$ is the area of the covered region (i.e. $a=k\pi w^2$ where $k$ is the number of points)
 
 First we calculate $P_a$. To do this we need to specify the function $\pi(r),r \le w$, which represents the probability density function (pdf) of distances of animals from the point. If we make some assumptions, we can think of the pdf as triangular:
 
 ```{r, echo=TRUE, eval=TRUE, fig.width=3.5, fig.height=3.5}
 # Create pdf
 pi.r <- preddata$dist/sum(preddata$dist)
-
-# Plot pdf
 plot(preddata$dist, pi.r, xlab="Distance from lure")
 ```
 
 Then we multiply $\pi(r)$ with the probability of response and (numerically) integrate from 0 to $w$. 
 
-\color{blue}
-```{r, echo=T, eval=TRUE, fig.width=3.5, fig.height=3.5}
+```{r, echo=TRUE, eval=TRUE}
 # Calculate Pa
 Pa <- sum(phat * pi.r) 
-Pa
+print(Pa)
 ```
-\color{black}
 
-Assuming that the probability of response is a function of distance only (as in `model2`), then $P_a$ is just less than 10\% (i.e. <10\% of birds within 850m of a point are detected).  
+Assuming that the probability of response is a function of distance only (as in `model2`), then $P_a$ is just less than 10% (i.e. <10% of birds within 850m of a point are detected).  
 
 Now we need to calculate the other parameters; for this we need to read in data from the point transect survey. These data consist of:
 
-+ point - point transect identifier
-
-+ nscottish - the number of Scottish crossbills detected at the point
+- point - point transect identifier
+- nscottish - the number of Scottish crossbills detected at the point
 
 Note that detection distances are unknown in the main survey: instead, we have used the trials data to estimate the detection function, and hence the proportion of birds within 850m that are detected.
 
-```{r, echo=T, eval=TRUE}
-# Read in detections 
-detections <- read.csv("mainsurveydetections.csv", header=T)
-
+```{r, echo=TRUE, eval=TRUE}
+detections <- read.csv("datasets/mainsurveydetections.csv", header=TRUE)
 # Total number of Scottish crossbills detected
 n <- sum(detections$nscottish)
 ```
 
 We now calculate the number of points ($k$) in the main survey, and hence, the total covered area within 850m of a point, converting from m$^2$ to km$^2$. Note that `pi` is a reserved word to represent $\pi$ (i.e. 3.141593). 
 
-```{r, echo=T}
-# Number of points
+```{r, echo=TRUE}
 k <- length(detections$point)
-
 # Covered area (km2)
 a <- k * pi * (w/1000)^2
-
 # Size of the study region (km2)
 A <- 3505.8  
 ```
 
 We can now estimate the size of the population as:
-```{r, echo=T}
+```{r, echo=TRUE}
 Nscot <- (n*A)/(Pa*a)
 ```
 
 What is your estimate of the population of Scottish crossbills? 
 
-\color{blue}
 ```{r, echo=FALSE, eval=answer}
-cat('Estimate is ',format(Nscot))
+print(Nscot)
 ```
-\color{black}
 
-## Confidence intervals
+## Measure of precision in abundance estimate
 
 We can calculate 95% confidence interval for true abundance by bootstrapping both trials and points. The steps involved are
 
 1. randomly generate (with replacement) a new set of response data 
-
-2. estimate $P_a$ for the new data
-
-3. generate (with replacement) a new set of point transect data
-
-4. estimate abundance
-
-5. repeat steps 1-4 many times to build a distribution of abundances
-
-6. take the 2.5 and 97.5 percentiles of the distribution.
+1. estimate $P_a$ for the new data
+1. generate (with replacement) a new set of point transect data
+1. estimate abundance
+1. repeat steps 1-4 many times to build a distribution of abundances
+1. take the 2.5 and 97.5 percentiles of the distribution.
 
 The following code does this:
 
-```{r, echo=T}
+```{r, echo=TRUE, eval=TRUE}
 # Initialise parameters
 # Number of bootstraps 
 nboot <- 1000
 # Number of trials
 m <- length(xbill$dist)
 # Create empty vectors to store new sample
-bdist <- vector(length=m)
+bdistances <- vector(length=m)
 bresponse <- vector(length=m)
 # Create empty vector to store bootstrap abundances
 bNscot <- vector(length=nboot)
-# Create prediction data
+# Create prediction data (w is truncation distance defined earlier)
 pred <- data.frame(bdist=0:w)
-  
-# Start bootstrap loop
+# A loop for the bootstraps
 for (i in 1:nboot) {
   # Bootstrap trials
   # Generate index of sample 
   btindex <- sample(1:m, size=m, replace=TRUE)
   for (j in 1:m) {
-    bdist[j] <- xbill$dist[btindex[j]]
+    bdistances[j] <- xbill$dist[btindex[j]]
     bresponse[j] <- xbill$response[btindex[j]]
   }
   # Fit GLM 
-  bmodel <- glm(bresponse ~ bdist, family=binomial)
+  bmodel <- glm(bresponse ~ bdistances, family=binomial)
   # Predict probability of response
   bphat <- predict.glm(bmodel, newdata=pred, type="response")
   # Calculate Pa
   bPa <- sum(bphat * pi.r)
-  
   # Bootstrap points
   rindex <- sample(1:k, k, replace=TRUE)
   n <- sum(detections$nscottish[rindex])
-  
   # Calculate abundance
   bNscot[i] <- (n*A)/(bPa*a)
 } # End of bootstrap loop
 
 ```
 
-Having obtained a distribution of abundances, the 2.5 and 97.5 percentiles can be obtained easily:
+Having obtained a distribution of abundances, the 2.5 and 97.5 percentiles can be obtained:
 
-\color{blue}
 ```{r, echo=TRUE, eval=answer}
-# Obtain percentiles
 quantile(bNscot, probs=c(0.025, 0.975))
 ```
-\color{black}
 
-## References
 
-Buckland ST, Rexstad EA, Marques TA and Oedekoven CS (2015) Distance Sampling: Methods and Applications. Springer 277 pp. ISBN: 978-3-319-19218-5 (Print) 978-3-319-19219-2 (Online) 
+**Distribution of estimates**
 
-Buckland ST, Summers RW, Borchers DL and Thomas L (2006) Point transect sampling with traps or lures. Journal of Applied Ecology 43: 377-384
-
-R Core Team (2017) R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL   https://www.R-project.org/
-
-Summer RW and Buckland ST (2011) A first survey of the global population size and distribution of the Scottish Crossbill \textit{loxia scotia}. Bird Conservation International 21: 186-198
+<!-- Buckland et al. (2006) not referenced in text, but add it to bibliography -->
+\nocite{Buckland2006b}
