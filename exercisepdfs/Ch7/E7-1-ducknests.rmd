@@ -133,7 +133,7 @@ plot(nest.model1, nc=12)
 To fit different detection functions, change the `key` and `adjustment` arguments. For example to fit a half-normal key function with cosine adjustment terms, use the command:
 
 ```{r, echo=TRUE, eval=answer, message=FALSE}
-nest.model2 <- ds(nests, key="hn", adjustment="cos")
+nest.model2 <- ds(nests, key="hn", adjustment="cos", convert.units = 0.001)
 ```
 
 By default, AIC selection will be used to fit adjustment terms of up to order 5. 
@@ -153,7 +153,12 @@ __Answer:__ No adjustment terms have been included in the preferred model, becau
 To fit a hazard rate key function with Hermite polynomial adjustment terms, then use the command:
 
 ```{r, echo=TRUE, eval=answer, message=FALSE}
-nest.model3 <- ds(nests, key="hr", adjustment="herm")
+nest.model3 <- ds(nests, key="hr", adjustment="herm", convert.units = 0.001)
+```
+
+```{r, echo=FALSE, message=FALSE}
+# used for the final question, executed under all situations
+hr.model <- ds(nests, key="hr", adjustment="herm")
 ```
 
 ```{r, echo=TRUE, eval=answer, message=FALSE}
@@ -259,6 +264,14 @@ nest.model1$dht$individuals$D
 
 ```{r fig.margin=TRUE, eval=answer, echo=FALSE}
 knitr::kable(nest.model1$dht$individuals$D)
+```
+
+```{marginfigure}
+__Question:__ Compute (by hand) the density estimate resulting from the estimated probability of detection arising from the hazard rate detection function: $\hat{P_A}$= 0.8891.
+```
+
+```{marginfigure, echo=answer}
+__Answer:__ $\hat{P_A} = \frac{534}{12.36 \cdot 0.8891} =$ 48.59 nests$\cdot \text{km}^{-2}$ compared to 49.70 nests$\cdot \text{km}^{-2}$ (a difference of 2.3%).  In other words, the difference in estimated density is quite small; particularly when uncertainty is considered.
 ```
 
 <!-- the 2015 book is not cited in the narrative, but I want it in the bibliography -->
