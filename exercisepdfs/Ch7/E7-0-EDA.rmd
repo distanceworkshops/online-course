@@ -5,6 +5,7 @@ date: "CREEM, Univ of St Andrews -- `r format(Sys.Date(), '%B %Y')`"
 output:  
   tint::tintPdf:
     number_sections: true
+classoption: a4paper
 bibliography: biblio/workshopreprints.bib
 link-citations: yes
 biblio-style: biblio/ecology    # bst rather than csl finally worked
@@ -30,6 +31,7 @@ set.seed(321)
 
 ```{marginfigure}
 \includegraphics []{images/bigeyes.jpg}
+Bigeye binoculars used in a cetacean survey.
 ```
 This tutorial is the first in a series that were created as an introduction for those wishing to undertake distance sampling and related methods in R \citep{r_language}. The basics of R and RStudio are explored in this tutorial. Data are generated resembling a set of perpendicular distances collected from a track line and basic R commands are used to summarise and analysis it.
 
@@ -101,7 +103,6 @@ The description of the function will appear on the Help tab (bottom right). Help
 To get started, we will generate some data, pretending it is a set of perpendicular distances, and analyse it using basic commands. Below is a command to generate some data - this is fairly complicated but, for now, just copy and paste, or type, the command into the console window.
 
 ```{r, echo=TRUE, eval=TRUE}
-# Generate values from a normal distribution
 dists <- rnorm(n=50, mean=0, sd=3)
 ```
 
@@ -119,7 +120,6 @@ Having generated some data, the first thing to do is summarise and plot it.
 Typing the name of an object (in this case `dists`) will list the object on the screen i.e.
 
 ```{r, echo=TRUE, eval=answer}
-# Display the numbers in object dists
 dists
 ```
 Listing all the data is not very helpful, especially if there is a lot of data, but there are ways to display a subset of it.
@@ -145,12 +145,10 @@ mean(dists)
 The mean should be zero, or very close to zero, since we specified a mean of zero to generate the data. Other useful functions are given below.
 
 ```{r, echo=TRUE, eval=answer}
-# Minimum value (remember negative values are on the left of the trackline)
 min(dists)
 ```
 
 ```{r, echo=TRUE, eval=answer}
-# Maximum value (positive values on the right of the trackline)
 max(dists)
 ```
 
@@ -165,7 +163,6 @@ summary(dists)
 A key component of distance sampling is the histogram and we can plot our data using the `hist` function:
 
 ```{r, echo=TRUE, eval=answer, fig.margin=TRUE, fig.height=3.5, fig.width=3.5}
-# Plot a histogram
 hist(dists)
 ```
 
@@ -176,9 +173,7 @@ Note if we provide a number of intervals for the `breaks` argument, it doesn't a
 We can add a vertical (`v=`), red line to the histogram to indicate the transect centre line:
 
 ```{r, echo=TRUE, eval=answer, fig.margin=TRUE, fig.height=3.5, fig.width=3.5}
-# Plot a histogram with more intervals (but not always the number specified)
 hist(dists, breaks=15)
-# Add a centre line
 abline(v=0, col="red")
 ```
 
@@ -195,17 +190,14 @@ The command can be broken down as follows
 Plot a histogram of the new object and also specify a label for the $x$-axis using the `xlab` argument:
 
 ```{r, echo=TRUE, eval=answer, fig.margin=TRUE, fig.height=3.5, fig.width=3.5}
-# Plot a histogram of the new object
 hist(posdists, xlab="Distance")
 ```
 
 To specify the bin intervals, first we create the required intervals by generating a sequence of numbers (i.e. 0, 0.5, 1, ..., 8) and then using them in the `hist` command:
 
 ```{r, echo=TRUE, eval=answer, fig.margin=TRUE, fig.height=3.5, fig.width=3.5}
-# Create break points for bin intervals
-setbrks <- seq(from=0, to=8, by=0.5)
-# Histogram of distances with set bin intervals
-hist(posdists, breaks=setbrks, xlab="Distance")
+setbreaks <- seq(from=0, to=8, by=0.5)
+hist(posdists, breaks=setbreaks, xlab="Distance")
 ```
 
 <!--
@@ -308,7 +300,6 @@ We can use the `Distance` package \citep{distance_pkg} to fit a detection functi
 There are hundreds of R packages and so for efficiency the more specialised packages are not installed as standard when R is downloaded onto your computer. To check whether the `Distance` package is installed, click on the 'Packages' tab (lower right pane) and see if it is listed. If so, then either click in the tick box or load it using the command
 
 ```{r, echo=TRUE, message=FALSE}
-# Load R library for distance sampling
 library(Distance)
 ```
 
@@ -317,50 +308,40 @@ If it is not listed, then it can easily be downloaded using the 'Install' tool. 
 The function `ds` fits a detection function and calculates abundance from both line or point transects. In this example, we don't have any areas required to calculate density and abundance and just want to estimate the probability of detection. The distances were generated from a Normal distribution and so a half-normal key function is specified (with the argument (`key="hn"`) with no adjustment terms (`adjustment=NULL`).
 
 ```{r, echo=TRUE, eval=FALSE}
-# Fit HN model, no adjustments terms
 ds(posdists, key="hn", adjustment=NULL)
 ```
 If we want to save the output so that we can interrogate it later, then we can assign the output to an object (`dsmodel`) as follows (the `quiet=TRUE` suppresses any message being printed):
 
 ```{r, echo=TRUE, eval=answer, warning=FALSE, message=FALSE}
-# Fit a half-normal detection function
 dsmodel <- ds(posdists, key="hn", adjustment=NULL, quiet=TRUE)
 ```
 
 To examine the detection function, use the `summary` function. The `summary` function is a generic function and selects a relevant 'summary' based on the type of the object, in this case a distance sampling model object.
 
 ```{r, echo=TRUE, eval=answer}
-# Summary of detection function
 summary(dsmodel)
 ```
 
 
 The function `plot` is a generic function which can be used to plot the detection function:
 
-```{r, echo=TRUE, eval=answer, fig.margin=TRUE, fig.height=3.5, fig.width=3.5}
-# Plot detection function
+```{r, echo=TRUE, eval=answer, fig.margin=TRUE, fig.height=3.5, fig.width=3.5, fig.cap="Half normal detection function fitted to all simulated data."}
 plot(dsmodel)
 ```
 
 To truncate the distances, the `truncation` argument in `ds` can be used:
 
 ```{r, echo=TRUE, eval=answer, message=FALSE}
-# Fit HN model with truncation at 6
 dstrunc <- ds(posdists, key="hn", adjustment=NULL, truncation=6)
 ```
 
 ```{r, echo=TRUE, eval=FALSE}
-# Summary of model
 summary(dstrunc)
 ```
 
-```{r, echo=FALSE, eval=answer, message=FALSE, fig.margin=TRUE, fig.height=3.5, fig.width=3.5}
-# Summary of model and plot
+```{r, echo=FALSE, eval=answer, message=FALSE, fig.margin=TRUE, fig.height=3.5, fig.width=3.5, fig.cap="Half normal detection function fitted to simulated data truncated at distance=6."}
 summary(dstrunc)
 plot(dstrunc)
 ```
 
-Is this similar to your crude estimate when you used truncation?
-
 ***
-
