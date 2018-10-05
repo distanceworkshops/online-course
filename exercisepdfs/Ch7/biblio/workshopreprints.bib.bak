@@ -1277,7 +1277,6 @@ Tenho IMPRESSO},
   url       = {https://www.springer.com/gb/book/9783319192185}
 }
 
-@Comment{jabref-meta: databaseType:bibtex;}
 
 @Manual{distance_pkg,
 title = {Distance: Distance Sampling Detection Function and Abundance Estimation},
@@ -1296,17 +1295,19 @@ year = {2018},
 url = {https://www.R-project.org/},
 }
 
-@article{anderson_posphala,
- ISSN = {0022541X, 19372817},
- URL = {http://www.jstor.org/stable/3799501},
- abstract = {Unless a correction is made, population estimates derived from a sample of belt transects will be biased if a fraction of the individuals on the sample transects are not counted. An approach, useful for correcting this bias when sampling immotile populations using transects of a fixed width, is presented. The method assumes that a searcher's ability to find objects near the center of the transect is nearly perfect. The method utilizes a mathematical equation, estimated from the data, to represent the searcher's inability to find all objects at increasing distances from the center of the transect. An example of the analysis of data, formation of the equation, and application is presented using waterfowl nesting data collected in Colorado.},
- author = {D. R. Anderson and R. S. Pospahala},
- journal = {The Journal of Wildlife Management},
- number = {1},
- pages = {141--146},
- publisher = {[Wiley, Wildlife Society]},
- title = {Correction of bias in belt transect studies of immotile objects},
- volume = {34},
- year = {1970}
+@Article{anderson_posphala,
+  author    = {D. R. Anderson and R. S. Pospahala},
+  title     = {Correction of bias in belt transect studies of immotile objects},
+  journal   = {The Journal of Wildlife Management},
+  year      = {1970},
+  volume    = {34},
+  number    = {1},
+  pages     = {141--146},
+  issn      = {0022541X, 19372817},
+  abstract  = {Unless a correction is made, population estimates derived from a sample of belt transects will be biased if a fraction of the individuals on the sample transects are not counted. An approach, useful for correcting this bias when sampling immotile populations using transects of a fixed width, is presented. The method assumes that a searcher's ability to find objects near the center of the transect is nearly perfect. The method utilizes a mathematical equation, estimated from the data, to represent the searcher's inability to find all objects at increasing distances from the center of the transect. An example of the analysis of data, formation of the equation, and application is presented using waterfowl nesting data collected in Colorado.},
+  doi       = {10.2307/3799501},
+  publisher = {[Wiley, Wildlife Society]},
+  url       = {http://www.jstor.org/stable/3799501},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
