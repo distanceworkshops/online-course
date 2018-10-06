@@ -150,7 +150,7 @@ This section is technical and require understanding of abundance estimation with
 
 Abundance is obtained from 
 
-$$\hat N = \frac {n \cdot A}{P_a \cdot a}$$
+$$\hat N = \frac {n \cdot A}{\hat{P}_a \cdot a}$$
 where 
 
 - $n$ is the number of detections
