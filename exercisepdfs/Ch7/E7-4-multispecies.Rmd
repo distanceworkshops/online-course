@@ -25,7 +25,7 @@ answer <- TRUE
 European robin _(Erithacus rubecula)_; one of the species in the Montrave study of \citet{Buckland_2006}.
 ```
 
-This practical is based on the Montrave songbird case study in \citet[Ch. 5]{buckland_distance_2015}, with computer code under [Montrave songbird case study](https://synergy.st-andrews.ac.uk/ds-manda/#montrave-songbird-case-study). Both point and line transect surveys were conducted and here we use the data from the __line transect__ data, although the issues (and solutions) will be similar. 
+This practical is based on the Montrave songbird case study in \citet{buckland_distance_2015}, with computer code under [Montrave songbird case study](https://synergy.st-andrews.ac.uk/ds-manda/#montrave-songbird-case-study). Both point and line transect surveys were conducted and here we use the data from the __line transect__ data, although the issues (and solutions) will be similar. 
 
 These data are provided in a 'flat file' format (i.e. it contains all the necessary columns to estimate a detection function, density and abundance). While both formats are equally valid, the 'flat file' approach has a particular idiosyncrasy which we exploit here to introduce more functions and data manipulation.  
 
@@ -99,7 +99,7 @@ birds$Effort <- birds$Effort * birds$repeats
 
 ## Manipulating the robin data
 
-For the purposes of this practical, we are interested in estimating the density of robins and so we select only these records:
+For the purposes of this practical, we are interested in estimating the density of robins and so we select only these records: 
 
 ```{r, echo=TRUE}
 robins <- birds[birds$species=="r", ]
@@ -291,7 +291,7 @@ plot(robin.uni.cos)
 
 However, the plot can be customised for reporting:
 
-```{r, echo=TRUE, eval=answer, message=F, fig.height=3.5, fig.width=3.5, fig.margin=TRUE}
+```{r, echo=TRUE, eval=answer, message=FALSE, fig.height=3.5, fig.width=3.5, fig.margin=TRUE}
 plot(robin.uni.cos, showpoints=FALSE, black.white=TRUE, pl.den=50, lwd=2, breaks=robin.brks,
      main="Uniform-cosine", xlab="Distance (m)")
 ```
@@ -304,5 +304,91 @@ The arguments are:
 
 For other options see `help(plot.ds)` (Note `plot` is a generic function which selects a relevant type of plot based the object). 
 
+## Advanced:  modularising R code to work with multiple species
 
+When analysing a multi-species survey, it is likely that the invesigator will want to analyse all (or at least many) of the species encountered during the survey.  This will necessitate some repetitive calculation, such as accounting for transects without detections and fitting multiple detection functions for each species.
+
+To facilitate the repetitive nature of such analyses, it is useful to take advantage of the programmatic nature of the R language to create _functions_ that can be called repeatedly with arguments to accommodate changing circumstances.  The code below demonstrates such a modular approach whereby two functions `augment.empty.transects()` and `fit.hn.uni.haz()` are defined to aide in the repeated analyses.
+
+The first function `augment.empty.transects()` performs the data manipulation described in Section \@ref{Manipulating-the-robin-data}, with two arguments: the data frame containing the full survey data and the species code on which to subset the data.
+
+```{r emptytrans, echo=TRUE, eval=TRUE}
+augment.empty.transects <- function(surveydata, species) {
+  #  Purpose: find transects on which species not detected
+  #           adjust data file accordingly such that effort is correct
+  #  Input: raw data file, species on which to subset data
+  #  Output: data frame ready to have detection function fitted (with correct effort)
+  #  Rexstad August 2018
+
+  num.transects <- length(unique(surveydata$Sample.Label))
+  holes <- which(as.matrix(table(surveydata$species, surveydata$Sample.Label))==0, 
+                 arr.ind = TRUE)  # row & col of transects without spec detect
+  if (length(holes[rownames(holes)==species])==0) {    # species detected on all transects
+    species.detects <- surveydata[surveydata$species==species, ]  
+  } else {
+    alltranlen <- vector(mode="numeric", length=num.transects)
+    for (i in 1:num.transects) alltranlen[i] <- surveydata$Effort[surveydata$Sample.Label==i][1]
+    empty.transects <- NULL
+    for (i in 1:length(holes[rownames(holes)==species,2])) {
+      empty.label <- holes[rownames(holes)==species,2][i]
+      empty.length <- alltranlen[holes[rownames(holes)==species,2]][i]
+      empty.record <- cbind(surveydata[1,1:3], empty.label, empty.length)
+      empty.transects <- rbind(empty.transects, empty.record)
+    }
+    empty.transects[ ,c("a", "b", "c")] <- NA
+    names(empty.transects) <- names(surveydata)
+    
+    species.detects <- surveydata[surveydata$species==species, ]
+    species.detects <- rbind(species.detects, empty.transects)
+    species.detects <- species.detects[order(species.detects$Sample.Label), ]
+  }
+  return(species.detects)
+}
+```
+
+The second function, `fit.hn.uni.haz()` fits three candidate models to a dataset provided as the first argument.  The second argument is the truncation distance.  The final argument determines whether the `summarize_ds_models()` table is printed.
+
+```{r fitfn, echo=TRUE, eval=TRUE}
+fit.hn.uni.haz <- function(data, trunc, print=TRUE) {
+  #  Purpose:  fit three key functions to transect data, perform model selection
+  #            print model selection table
+  #  Input: data to analyse, truncation distance, print model selection table
+  #  Output: fitted model object (class `dsmodel`)
+  #  Rexstad August 2018
+  hn.herm <- ds(data, truncation=trunc, transect="line", 
+                      key="hn", adjustment="herm", convert.units=.1)
+  uni.cos <- ds(data, truncation=trunc, transect="line",
+                      key="unif", adjustment="cos", convert.units=.1)
+  haz.simp <- ds(data, truncation=trunc, transect="line",
+                      key="hr", adjustment="poly", convert.units=.1)
+  mods <- summarize_ds_models(hn.herm, uni.cos, haz.simp, output="plain")
+  if(print) print(knitr::kable(mods))
+  names(mods) <- c("mod","key","form","fit","pa","sepa","daic")
+  if(mods[1,1]=="hn.herm") {
+    result <- hn.herm
+  } else {
+    if(mods[1,1]=="uni.cos") {
+    result <- uni.cos
+  } else {
+    result <- haz.simp
+  }
+  }  
+  return(result)
+}
+```
+
+The two functions are used in tandem in the calling code below.  Note the `for` loop that iterates through three of the four species detected in the Montrave survey.
+
+```{r usefunct, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, fig.margin=TRUE, results='hold', message=FALSE}
+for(species in c("r", "c", "w")) {
+  best.model <- fit.hn.uni.haz(
+                               augment.empty.transects(birds, species),
+                               100,
+                               print=FALSE)
+  plot(best.model, 
+       main=paste("Montrave lines, species ", species,
+       "\nD-hat=", round(best.model$dht$individuals$D$Estimate,4), 
+       "SE=", round(best.model$dht$individuals$D$se, 4)))
+}
+```
 
