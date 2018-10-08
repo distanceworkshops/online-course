@@ -16,7 +16,7 @@ fontsize: 10pt
 knitr::opts_chunk$set(echo = TRUE)
 
 # Specify whether answers are shown 
-answer <- TRUE
+answer <- FALSE
 
 # Load libraries
 library(Distance)
@@ -32,13 +32,13 @@ Hawaii amakihi *(Hemignathus virens)*
 
 We illustrate fitting multiple covariate distance sampling (MCDS) models to point transect data using a bird survey in Hawaii; data on an abundant species, the Hawaii amakihi *(Hemignathus virens)* is used. This practical is based on the case study shown in Section 5.3.2 of \citet{buckland_distance_2015} which duplicates the analysis presented in \citet{Marques_2007}. This set of data is included in 'Distance for Windows' as one of the Sample Projects: you can open this project (entitled `amakihi.zip`) in the 'Sample projects' directory in the 'My Distance projects' directory residing under 'My Documents'. We describe the analysis of these data using Distance in R.
 
-## Objectives of this practical
+# Objectives of this practical
 
 1. Introduce different types of plots to explore covariates
 1. Add covariates to the detection function
 1. Plot the detection functions. 
 
-## Importing the data 
+# Importing the data 
 
 Analysis begins by importing the data from a comma-delimited file (this file was created by copying the data from the amakihi Distance project). 
 
@@ -78,7 +78,7 @@ In this command,
 - `amakihi` is a data frame and so selection can be performed on either rows or columns i.e. `[rows, columns]`. In this case, the selection is performed on the rows (because the selection criteria is before the comma) and all columns will be retained
 - the rows selected as those where the distances (stored in `amakihi$distance`) are not missing. The function `is.na` selects elements that are missing; the symbol `!` means 'not', and so `!is.na` selects elements that are not missing.
 
-## Exploratory data analysis
+# Exploratory data analysis
 
 It is important to gain an understanding of the data prior to fitting detection functions \citep{buckland_distance_2015}. With this in mind, preliminary analysis of distance sampling data involves:
 
@@ -137,7 +137,7 @@ plot(amakihi$MAS, amakihi$distance, xlab="Minutes after sunrise",
      ylab="Distance (m)", pch=20, cex=0.5)
 ```
 
-## Colinearity
+# Colinearity
 
 Estimating the parameters of a detection function when covariates are involved is complex.  You will recall from multiple linear regression that problems in estimation arise when two covariates in the model are highly correlated.  In the exploratory data analysis, it is useful to look for colinearity in potential covariates.
 
@@ -152,7 +152,7 @@ cor(amakihi$MAS, amakihi$HAS, use = "complete.obs")
 
 To alleviate the potential colinearity difficulty, hours after sunrise could be transformed to a discrete, rather than a continuous variable.
 
-## Adjusting the raw covariates
+# Adjusting the raw covariates
 
 We would like to treat OBS and HAS as factor variables as in the original analysis; OBS is, by default, treated as a factor variable because it consists of characters rather than numbers. `HAS`, on the other hand, consists of numbers and so by default would be treated as a continuous variable (i.e. non-factor). That is fine if we want the effect of `HAS` to be monotonic (i.e. detectability either increases or decreases as a function of `HAS`). If we want `HAS` to have a non-linear effect on detectability, then we need to indicate to R to treat it as a factor as shown below.  
 
@@ -181,7 +181,7 @@ Check what this command has done by looking at the range of the adjusted MAS:
 range(amakihi$MAS)
 ```
 
-## Candidate models
+# Candidate models
 
 With three potential covariates, there are 8 possible combinations for including them in the detection function:
 
@@ -269,7 +269,7 @@ knitr::kable(summarize_ds_models(hr.model0, hr.obs, hr.has, hr.mas,
 ```
 
 
-## Plotting the detection functions
+# Plotting the detection functions
 
 The detection functions can be investigated using the `plot` function as shown below. A few different plotting options are illustrated.
 

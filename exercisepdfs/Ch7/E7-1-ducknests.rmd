@@ -19,7 +19,7 @@ fontsize: 10pt
 
 The Monte Vista National Wildlife Refuge.
 ```
-In this practical, we use some real data to fit different detection function models and estimate density and abundance. The data were collected during line transect surveys of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA in 1967 and 1968. Twenty transects, each 25.75km in length were walked 5 times over the two years.  Total transect length of 128.75km (25.75 $\times$ 5) and a distance out to 2.4m was searched.  Consult \citet{anderson_posphala} for a description of the survey.  Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
+In this practical, we use field data to fit different detection function models and estimate density and abundance. The data were collected during line transect surveys of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA in 1967 and 1968. Twenty transects, each 25.75km in length were walked 5 times over the two years.  Total transect length of 128.75km (25.75 $\times$ 5) and a distance out to 2.4m was searched.  Consult \citet{anderson_posphala} for a description of the survey.  Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
 
 - Study.Area - name of the study region (Monte Vista NWR)
 - Region.Label - identifier of regions or strata (in this case there is only one region and it is set to 'Default')
@@ -34,12 +34,12 @@ The distances allow different key functions/adjustments to be fitted in the dete
 knitr::opts_chunk$set(echo = TRUE)
 
 # Specify whether answers are shown
-answer <- TRUE
+answer <- FALSE
 
 # Load library
 library(Distance)
 ```
-## Objectives of the practical
+# Objectives of the practical
 
 1. Import a text file
 1. Understand the structure of a data frame
@@ -48,7 +48,7 @@ library(Distance)
 1. Create a data frame
 1. Estimate density and abundance using `ds`.
 
-## Importing the data
+# Importing the data
 
 To let R \citep{r_language} know where to look for files (and also where to save the R workspace and '.Rmd' files) we can set the 'working directory'; from the menu along the top of the `RStudio` window click on 'Session > Set Working Directory > Choose Directory' and select your chosen directory, for example 'C:/workshop'.  
 
@@ -92,7 +92,7 @@ dim(nests)
 
 Another way to look at a data frame is to move to the 'Environment tab' in R-Studio and click on the rectangle (with the grid); this opens a new tab showing the data.
 
-## Summarising the perpendicular distances
+# Summarising the perpendicular distances
 
 To access an individual column within a data frame use the `$` symbol, for example to summarise the distances:
 
@@ -106,13 +106,13 @@ Similarly to plot the histogram of distances, the command is:
 hist(nests$distance, xlab="Distance (m)")
 ```
 
-## Fitting different models
+# Fitting different models
 
 To use the `ds` function, load the `Distance` package \citep{distance_pkg}.
 
 The function `ds` requires a data frame to have a column called `distance`, we   specify the name of the data frame as follows:
 
-```{r, echo=TRUE, eval=answer}
+```{r, echo=TRUE, eval=TRUE}
 nest.model1 <- ds(nests, key="hn", adjustment=NULL, convert.units = 0.001)
 ```
 
@@ -175,7 +175,7 @@ __Question:__ Is there much difference in the probability of detecting a nest gi
 __Answer:__ No, there is barely any difference between the estimated probability of detection.  For the first two models, P_a= 0.869 and for the hazard rate model, P_a = 0.889.
 ```
 
-## The `ds` object
+# The `ds` object
 
 The objects created with `ds` (e.g. `nest.model1`) are made up of two parts. We can list them using the `names` function as below:
 
@@ -189,7 +189,7 @@ The detection function information is in the `ddf` part and the density and abun
 names(nest.model1$ddf)
 ```
 
-## Goodness of fit
+# Goodness of fit
 
 Before making inference from the detection function we have fitted, we should evaluate the model.  First assessment is goodness of fit, accomplished using the function `gof_ds`:
 
@@ -207,7 +207,7 @@ __Question:__ Interpret the q-q plot and CvM test results for the duck nest data
 __Answer:__ The half-normal detection function fits the duck nest data very well.  All points of the q-q plot fall on the diagonal line and the p-value associated with the CvM test statisic is very large (>> 0.05) indicating a good fit of the model to the data.
 ```
 
-## Estimating density and abundance
+# Estimating density and abundance
 
 So far, we have concentrated on the detection function but, with more information such as transect lengths and the area of the region, we can estimate density and abundance.  The second component of a `ds` object, contains this additional information.  This information can be viewed with:
 
@@ -217,7 +217,7 @@ str(nest.model1$dht$individuals, max=1)
 
 This `dht` object contains considerable information.  However, focus upon three tables generated by the `summary()` function: summary, abundance and density.  Dig more deeply into the content of these tables.
 
-__Summary information__
+## Summary information
 
 This provides information about the survey:
 
@@ -236,7 +236,7 @@ nest.model1$dht$individuals$summary
 knitr::kable(nest.model1$dht$individuals$summary)
 ```
 
-__Abundance estimates__
+## Abundance estimates
 
 Estimated density multiplied by the size of the study area.
 
@@ -248,7 +248,7 @@ nest.model1$dht$individuals$N
 knitr::kable(nest.model1$dht$individuals$N)
 ```
 
-__Density estimates__
+## Density estimates
 
 Density estimated using the formula
 

@@ -15,7 +15,7 @@ fontsize: 10pt
 ```{r, echo=FALSE, warning=FALSE}
 library(knitr)
 library(ggplot2)
-answer <- TRUE
+answer <- FALSE
 ```
 # Conducting dual surveys: fitting GLMs and bootstrapping
 
@@ -28,14 +28,14 @@ This practical is based on the lure point transect case study in \citet{buckland
 
 The Scottish crossbill _(Loxia scotica)_ is Britain's only endemic bird species. A point transect study was conducted to obtain the number of birds within each point after responding to an audible lure. The probability of responding to the lure was estimated by recording the response of previously detected birds to the lure at different distances \citet{SUMMERS_2010}. 
 
-## Objectives of the practical
+# Objectives of the practical
 
 1. Fit a GLM
 1. Obtain predicted values from GLM
 1. Calculate abundance
 1. Using `for` loop to bootstrap abundance.
 
-## The lure trials
+# The lure trials
 
 The data provided in the response trials are:
 
@@ -57,7 +57,7 @@ xbill <- read.csv(file="datasets/lure-trials.csv", header=TRUE)
 head(xbill, n=2)
 ```
 
-## Summarising the data
+# Summarising the data
 
 Examine how many birds did, or did not, respond to the lure:
 
@@ -96,7 +96,7 @@ par(mfrow=c(1,1))
 __Answer:__ Qualitatively, these boxplots suggest little difference in crossbill behaviour in response to the lure attributable to flock size or time of day.  There may be more influence of distance and date upon response to lure.  Models will be fitted to make stronger inference.
 ```
 
-## Fitting a GLM
+# Fitting a GLM
 
 Building a model to explain the probability of response in terms of the potential covariates. The dependent variable, `response`, can only take two values (0 and 1) and so rather than fit a linear regression model to these data we fit a GLM. The `glm` function allows us to specify a distribution for the dependent variable in the model with the `family` argument.  In effect, this performs a logistic regression, with _success_ (animal responding) modelled as a function of explanatory covariates.
 
@@ -125,7 +125,7 @@ summary(model2)
 
 (Degrees of freedom change a little between models because some covariates in the first model have missing values and so these observations are excluded.)
 
-## Prediction
+# Prediction
 
 Having fitted a model, we now want to see how the predicted probability of response changes with distance (similar to a detection function model). We assume that the maximum distance that a crossbill will respond to a lure is 850m. Here we create a 'prediction' data frame that has one column called `dist` and this ranges from 0 to 850 (in unit intervals). (Prediction data needs to contain objects with the same names as the explanatory variables in the fitted model.)   
 
@@ -144,7 +144,7 @@ ggplot(data=xbill, aes(x=dist, y=response)) + geom_point(shape=1) +
   labs(x="Distance from lure (m)", y="Pr(responding)")   
 ```
 
-## Estimating abundance
+# Estimating abundance
 
 This section is technical and require understanding of abundance estimation with point transects. 
 
@@ -208,12 +208,13 @@ Nscot <- (n*A)/(Pa*a)
 
 ```{marginfigure}
 __Question__: What is your estimate of the population of Scottish crossbills? 
+```
 
 ```{r, echo=FALSE, eval=answer}
 print(Nscot)
 ```
 
-## Measure of precision in abundance estimate
+# Measure of precision in abundance estimate
 
 We can calculate $1-\alpha$ confidence interval for true abundance by bootstrapping both trials and points. The steps involved are
 
