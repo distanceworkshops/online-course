@@ -22,22 +22,23 @@ answer <- TRUE
 
 ```{marginfigure}
 \includegraphics[]{images/robin-300x256.jpg}
-European robin _(Erithacus rubecula)_; one of the species in the Montrave study of \citet{Buckland_2006}.
+European robin _(Erithacus rubecula)_; one of the species in the Montrave study \citep{Buckland_2006}.
 ```
 
-This practical is based on the Montrave songbird case study in \citet{buckland_distance_2015}, with computer code under [Montrave songbird case study](https://synergy.st-andrews.ac.uk/ds-manda/#montrave-songbird-case-study). Both point and line transect surveys were conducted and here we use the data from the __line transect__ data, although the issues (and solutions) will be similar. 
+This practical is based on the Montrave songbird case study  repeated in \citet{buckland_distance_2015}, with computer code under [Montrave songbird case study](https://synergy.st-andrews.ac.uk/ds-manda/#montrave-songbird-case-study). Both point and line transect surveys were conducted and here we use the data from the __line transect__ data, although the issues (and solutions) will be similar. 
 
 These data are provided in a 'flat file' format (i.e. it contains all the necessary columns to estimate a detection function, density and abundance). While both formats are equally valid, the 'flat file' approach has a particular idiosyncrasy which we exploit here to introduce more functions and data manipulation.  
 
-Several species of birds were identified but not all species were detected on all transects. If a simple data selection is performed to select records for a particular species, then not all of the transects will be included in the resulting data (because that species may not have been seen). This doesn't matter if we are only interested in fitting detection functions, but will matter if we wish to estimate density and abundance because the effort will be too low since some of the transects are missing. To correct for this, some data frame manipulation is required. There is generally more than one way to do something in R \citep{r_language} - for an alternative way see the computer code 'Montrave song bird case study' associated with \citet{buckland_distance_2015}. 
+Several species of birds were identified but not all species were detected on all transects. If a simple data selection is performed to select records for a particular species, then not all of the transects will be included in the resulting data (because that species may not have been seen). This doesn't matter if we are only interested in fitting detection functions, but will matter if we wish to estimate density and abundance because the effort will be too low since some of the transects are missing. To correct for this, some data frame manipulation is required. There is generally more than one way to do something in R \citep{r_language} - for an alternative way see the computer code 'Montrave song bird case study' associated with \citet{buckland_distance_2015}, as well as Section \ref{functions} below. 
 
-## Objectives of the practical
+# Objectives of the practical
 
 1. Data frame selection and manipulation
 1. Extracting estimates from `dht` object
 1. Customising detection function plots
+1. Improve re-usability of code with functions
 
-## Importing the data
+# Importing the data
 
 The data is in a 'flat file' format and contains the following columns:
 
@@ -97,7 +98,7 @@ Each of the line transects was visited twice which is not taken into account at 
 birds$Effort <- birds$Effort * birds$repeats
 ```
 
-## Manipulating the robin data
+# Manipulating the robin data {#manip}
 
 For the purposes of this practical, we are interested in estimating the density of robins and so we select only these records: 
 
@@ -163,9 +164,9 @@ This command has selected the records from `miss.data` for which the transect la
 We only want to keep the information about search effort and so data in the `distance`, `species` and `visit` columns are set to missing:
 
 ```{r, echo=TRUE}
-miss.data$distance <- rep(NA, 3)
-miss.data$species <- rep("NA", 3)
-miss.data$visit <- rep(NA, 3)
+miss.data$distance <- rep(NA, length(miss.lab))
+miss.data$species <- rep("NA", length(miss.lab))
+miss.data$visit <- rep(NA, length(miss.lab))
 ```
 
 Examine `miss.data`.
@@ -192,7 +193,7 @@ If we wanted to be very tidy, then the data frame could be sorted so that the tr
 robins <- robins[order(robins$Sample.Label), ]
 ```
 
-## Analysis
+# Analysis
 
 Before we fit any models, have a quick look at the histogram of distances:
 
@@ -220,7 +221,8 @@ summarize_ds_models(robin.hn.herm, robin.uni.cos, robin.haz.simp)
 ```
 
 ```{r modselprint, echo=FALSE, eval=answer}
-kable(summarize_ds_models(robin.hn.herm, robin.uni.cos, robin.haz.simp)[,c(1,4,5,6,7)],
+kable(summarize_ds_models(robin.hn.herm, robin.uni.cos, robin.haz.simp)[,c(1,4,5,6,7)], 
+      digits = c(rep(x = 3, 4)), row.names = FALSE,
       caption="Model selection for robin data from Montrave line transect survey.")
 ```
 
@@ -228,7 +230,7 @@ kable(summarize_ds_models(robin.hn.herm, robin.uni.cos, robin.haz.simp)[,c(1,4,5
 __Note:__  All three detection function fit the data (based upon the C-vM test of exact distances).  The estimated detection probability is very similar for all models, and the $\Delta$AIC values of all models is $<$ 1.  Hence all models will give very similar estimates of density.
 ```
 
-## Examining the `dht` object
+# Examining the `dht` object
 
 The fitted model object (e.g. `robin.uni.cos`) is made up of two parts; the detection function in the `ddf` part and the estimates in the `dht` part. In this section, we look at the `dht` part. 
 
@@ -249,7 +251,6 @@ names(robin.uni.cos$dht$individuals)
 To collect together the density estimates (and estimates of precision) from all the fitted models, we can use the following command:
 
 ```{r, echo=TRUE}
-# Collect together results
 model.results <- rbind(robin.uni.cos$dht$individuals$D,
                        robin.haz.simp$dht$individuals$D, 
                        robin.hn.herm$dht$individuals$D)
@@ -259,11 +260,16 @@ model.results <- rbind(robin.uni.cos$dht$individuals$D,
 __Question:__ Examine the three sets of density estimates to see if the previous suggestion (that the density estimates are similar) is confirmed.
 ```
 
-```{r, echo=answer, eval=answer}
+```{r, echo=answer, eval=FALSE}
 model.results
 ```
 
-## Goodness of fit
+```{r dentable, echo=FALSE, eval=answer}
+kable(model.results, row.names = FALSE,
+      caption = "Density estimates for Montrave robins under three fitted detection functions.")
+```
+
+# Goodness of fit
 
 Here we look at goodness of fit test with unequal bin intervals and just consider one of the fitted models. First we specify the required bin intervals.
 
@@ -274,14 +280,14 @@ robin.brks <- c(0, 12.5, 22.5, 32.5, 42.5, 52.5, 62.5, 77.5, 95.0)
 Perform the tests using both exact distance data for the Cramer-von Mises test and specified breakpoints for $\chi^2$ test for the uniform-cosine model that had the (slightly) smallest AIC score.
 
 ```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, fig.margin=TRUE}
-gof_ds(robin.uni.cos, breaks=robin.brks, chisq = TRUE)
+gof_ds(robin.uni.cos, breaks=robin.brks, chisq = TRUE, main="QQ plot unif-cos for robins")
 ```
 
 ```{marginfigure, echo=answer}
 __Note:__ The detections fall close to the diagonal line of the qq plot, suggesting an adquate fit for the uniform cosine model.  The _p-value_ of the Cramer-von Mises test (at bottom of printout) confirms this.  Similarly the _p-value_ for the $\chi^2$ test also suggests an adequate fit.
 ```
 
-## Customising the detection function plot
+# Customising the detection function plot
 
 The `plot` function provides a basic plot of the fitted detection function overlaid onto the scaled distribution of distances:
 
@@ -304,63 +310,71 @@ The arguments are:
 
 For other options see `help(plot.ds)` (Note `plot` is a generic function which selects a relevant type of plot based the object). 
 
-## Advanced:  modularising R code to work with multiple species
+# Advanced:  modularising R code to work with multiple species {#functions}
 
 When analysing a multi-species survey, it is likely that the invesigator will want to analyse all (or at least many) of the species encountered during the survey.  This will necessitate some repetitive calculation, such as accounting for transects without detections and fitting multiple detection functions for each species.
 
 To facilitate the repetitive nature of such analyses, it is useful to take advantage of the programmatic nature of the R language to create _functions_ that can be called repeatedly with arguments to accommodate changing circumstances.  The code below demonstrates such a modular approach whereby two functions `augment.empty.transects()` and `fit.hn.uni.haz()` are defined to aide in the repeated analyses.
 
-The first function `augment.empty.transects()` performs the data manipulation described in Section \@ref{Manipulating-the-robin-data}, with two arguments: the data frame containing the full survey data and the species code on which to subset the data.
+```{r empty, echo=FALSE, eval=TRUE, ref.label="emptytrans"}
+```
 
-```{r emptytrans, echo=TRUE, eval=TRUE}
-augment.empty.transects <- function(surveydata, species) {
+```{r callfitfn, echo=FALSE, eval=TRUE, ref.label="fitfn"}
+```
+
+```{r makeplots, echo=FALSE, eval=answer, ref.label="usefunct",fig.width=3.5, fig.height=3.5, fig.margin=TRUE, results='hold', message=FALSE}
+```
+
+
+The first function `augment.empty.transects()` performs the data manipulation described in Section \ref{manip}, with two arguments: the data frame containing the full survey data and the species code on which to subset the data.
+
+```{r emptytrans, echo=TRUE, eval=TRUE, tidy=FALSE}
+augment.empty.transects <- function(survey, species) {
   #  Purpose: find transects on which species not detected
-  #           adjust data file accordingly such that effort is correct
+  #           adjust data file to correct effort
   #  Input: raw data file, species on which to subset data
-  #  Output: data frame ready to have detection function fitted (with correct effort)
+  #  Output: data frame with correct effort for model fitting
   #  Rexstad August 2018
-
-  num.transects <- length(unique(surveydata$Sample.Label))
-  holes <- which(as.matrix(table(surveydata$species, surveydata$Sample.Label))==0, 
-                 arr.ind = TRUE)  # row & col of transects without spec detect
-  if (length(holes[rownames(holes)==species])==0) {    # species detected on all transects
-    species.detects <- surveydata[surveydata$species==species, ]  
+  num.transects <- length(unique(survey$Sample.Label))
+  holetab <- as.matrix(table(survey$species, survey$Sample.Label))==0
+  holes <- which(holetab, arr.ind = TRUE)  
+  if (length(holes[rownames(holes)==species])==0) {    
+    adj.survey <- survey[survey$species==species, ]  
   } else {
     alltranlen <- vector(mode="numeric", length=num.transects)
-    for (i in 1:num.transects) alltranlen[i] <- surveydata$Effort[surveydata$Sample.Label==i][1]
+    for (i in 1:num.transects) {
+      alltranlen[i] <- survey$Effort[survey$Sample.Label==i][1]
+    }
     empty.transects <- NULL
     for (i in 1:length(holes[rownames(holes)==species,2])) {
       empty.label <- holes[rownames(holes)==species,2][i]
       empty.length <- alltranlen[holes[rownames(holes)==species,2]][i]
-      empty.record <- cbind(surveydata[1,1:3], empty.label, empty.length)
+      empty.record <- cbind(survey[1,1:3], empty.label, empty.length)
       empty.transects <- rbind(empty.transects, empty.record)
     }
     empty.transects[ ,c("a", "b", "c")] <- NA
-    names(empty.transects) <- names(surveydata)
-    
-    species.detects <- surveydata[surveydata$species==species, ]
-    species.detects <- rbind(species.detects, empty.transects)
-    species.detects <- species.detects[order(species.detects$Sample.Label), ]
+    names(empty.transects) <- names(survey)
+    adj.survey <- survey[survey$species==species, ]
+    adj.survey <- rbind(adj.survey, empty.transects)
+    adj.survey <- adj.survey[order(adj.survey$Sample.Label), ]
   }
-  return(species.detects)
+  return(adj.survey)
 }
 ```
 
 The second function, `fit.hn.uni.haz()` fits three candidate models to a dataset provided as the first argument.  The second argument is the truncation distance.  The final argument determines whether the `summarize_ds_models()` table is printed.
 
-```{r fitfn, echo=TRUE, eval=TRUE}
+```{r fitfn, echo=TRUE, eval=TRUE, tidy=FALSE}
 fit.hn.uni.haz <- function(data, trunc, print=TRUE) {
-  #  Purpose:  fit three key functions to transect data, perform model selection
+  #  Purpose:  fit three key functions to transect data, 
+  #            perform model selection and
   #            print model selection table
-  #  Input: data to analyse, truncation distance, print model selection table
+  #  Input: data to analyse, truncation distance, print flag
   #  Output: fitted model object (class `dsmodel`)
   #  Rexstad August 2018
-  hn.herm <- ds(data, truncation=trunc, transect="line", 
-                      key="hn", adjustment="herm", convert.units=.1)
-  uni.cos <- ds(data, truncation=trunc, transect="line",
-                      key="unif", adjustment="cos", convert.units=.1)
-  haz.simp <- ds(data, truncation=trunc, transect="line",
-                      key="hr", adjustment="poly", convert.units=.1)
+  hn.herm <- ds(data, trun=trunc, key="hn", adj="herm", con=.1)
+  uni.cos <- ds(data, trun=trunc, key="unif", adj="cos", con=.1)
+  haz.simp <- ds(data, trun=trunc, key="hr", adj="poly", con=.1)
   mods <- summarize_ds_models(hn.herm, uni.cos, haz.simp, output="plain")
   if(print) print(knitr::kable(mods))
   names(mods) <- c("mod","key","form","fit","pa","sepa","daic")
@@ -379,12 +393,10 @@ fit.hn.uni.haz <- function(data, trunc, print=TRUE) {
 
 The two functions are used in tandem in the calling code below.  Note the `for` loop that iterates through three of the four species detected in the Montrave survey.
 
-```{r usefunct, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, fig.margin=TRUE, results='hold', message=FALSE}
+```{r usefunct, echo=TRUE, eval=FALSE, fig.width=2.5, fig.height=2.5, fig.margin=TRUE, results='hold', message=FALSE, tidy=FALSE}
 for(species in c("r", "c", "w")) {
-  best.model <- fit.hn.uni.haz(
-                               augment.empty.transects(birds, species),
-                               100,
-                               print=FALSE)
+  best.model <- fit.hn.uni.haz(augment.empty.transects(birds, species),
+                               100, print=FALSE)
   plot(best.model, 
        main=paste("Montrave lines, species ", species,
        "\nD-hat=", round(best.model$dht$individuals$D$Estimate,4), 
