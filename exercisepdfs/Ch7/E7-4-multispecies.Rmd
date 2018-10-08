@@ -25,7 +25,7 @@ answer <- TRUE
 European robin _(Erithacus rubecula)_; one of the species in the Montrave study \citep{Buckland_2006}.
 ```
 
-This practical is based on the Montrave songbird case study  repeated in \citet{buckland_distance_2015}, with computer code under [Montrave songbird case study](https://synergy.st-andrews.ac.uk/ds-manda/#montrave-songbird-case-study). Both point and line transect surveys were conducted and here we use the data from the __line transect__ data, although the issues (and solutions) will be similar. 
+This practical is based on the Montrave songbird case study in \citet[Section 5.2.2.3]{buckland_distance_2015}, with computer code under [Montrave songbird case study](https://synergy.st-andrews.ac.uk/ds-manda/#montrave-songbird-case-study). Both point and line transect surveys were conducted and here we use the data from the __line transect__ data, although the issues (and solutions) will be similar. 
 
 These data are provided in a 'flat file' format (i.e. it contains all the necessary columns to estimate a detection function, density and abundance). While both formats are equally valid, the 'flat file' approach has a particular idiosyncrasy which we exploit here to introduce more functions and data manipulation.  
 
