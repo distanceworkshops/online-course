@@ -19,7 +19,9 @@ answer <- FALSE
 ```
 
 # More complex analyses
-
+```{marginfigure, echo=answer}
+\huge{Solutions}
+```
 ```{marginfigure}
 \includegraphics[]{images/robin-300x256.jpg}
 European robin _(Erithacus rubecula)_; one of the species in the Montrave study \citep{Buckland_2006}.

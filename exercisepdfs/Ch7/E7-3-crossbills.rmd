@@ -17,8 +17,10 @@ library(knitr)
 library(ggplot2)
 answer <- FALSE
 ```
-# Conducting dual surveys: fitting GLMs and bootstrapping
-
+# Building detection function with supplemental surveys
+```{marginfigure, echo=answer}
+\huge{Solutions}
+```
 ```{marginfigure}
 \includegraphics []{images/crossbill_lure-300x247.jpg}
 A call station to lure Scottish crossbills _(Loxia scotica)_.
