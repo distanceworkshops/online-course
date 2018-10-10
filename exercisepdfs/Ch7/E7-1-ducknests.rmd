@@ -1,6 +1,6 @@
 ---
 title: "Distance sampling online workshop"
-author: "Analysis in R: Covariates in the detection function"
+author: "Analysis in R: Analysis of classic duck nest data"
 date: "CREEM, Univ of St Andrews -- `r format(Sys.Date(), '%B %Y')`"
 output:  
   tint::tintPdf:
@@ -12,14 +12,23 @@ biblio-style: biblio/ecology    # bst rather than csl finally worked
 fontsize: 10pt
 ---
 
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+answer <- TRUE
+library(Distance)
+```
+
 # Using survey data
 
+```{marginfigure, echo=answer}
+\huge{Solutions}
+```
 ```{marginfigure}
 \includegraphics [] {images/monte-vista-nwr02.jpg}
 
 The Monte Vista National Wildlife Refuge.
 ```
-In this practical, we use field data to fit different detection function models and estimate density and abundance. The data were collected during line transect surveys of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA in 1967 and 1968. Twenty transects, each 25.75km in length were walked 5 times over the two years.  Total transect length of 128.75km (25.75 $\times$ 5) and a distance out to 2.4m was searched.  Consult \citet{anderson_posphala} for a description of the survey.  Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
+We use field data to fit different detection function models and estimate density and abundance. The data were collected during line transect surveys of duck nests in Monte Vista National Wildlife Refuge, Colorado, USA in 1967 and 1968. Twenty transects, each 25.75km in length were walked 5 times over the two years.  Total transect length of 128.75km (25.75 $\times$ 5) and a distance out to 2.4m was searched.  Consult \citet{anderson_posphala} for a description of the survey.  Distances of detected nests have been provided in a 'csv' text file in a basic format required by 'Distance'. The columns in the the file are:
 
 - Study.Area - name of the study region (Monte Vista NWR)
 - Region.Label - identifier of regions or strata (in this case there is only one region and it is set to 'Default')
@@ -30,21 +39,12 @@ In this practical, we use field data to fit different detection function models 
 
 The distances allow different key functions/adjustments to be fitted in the detection function model and, by including the transect lengths and area of the region, density and abundance can be estimated.
 
-```{r setup, include=FALSE, message=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
-# Specify whether answers are shown
-answer <- FALSE
-
-# Load library
-library(Distance)
-```
 # Objectives of the practical
 
 1. Import a text file
 1. Understand the structure of a data frame
 1. Fit different key functions/adjustments in the detection function model
-1. Explore the model object i.e. `ddf` and `dht`  
+1. Examine the results of an analysis, i.e. `ddf` and `dht` components of a `dsmodel` object  
 1. Create a data frame
 1. Estimate density and abundance using `ds`.
 
@@ -172,7 +172,7 @@ __Question:__ Is there much difference in the probability of detecting a nest gi
 ```
 
 ```{marginfigure, echo=answer}
-__Answer:__ No, there is barely any difference between the estimated probability of detection.  For the first two models, P_a= 0.869 and for the hazard rate model, P_a = 0.889.
+__Answer:__ No, there is barely any difference between the estimated probability of detection.  For the first two models, $\hat{P}_a$ = 0.869 and for the hazard rate model, $\hat{P}_a$ = 0.889.
 ```
 
 # The `ds` object
@@ -253,7 +253,7 @@ knitr::kable(nest.model1$dht$individuals$N)
 Density estimated using the formula
 
 $$
-\hat{D} = \frac{n}{a \hat{P_a}}
+\hat{D} = \frac{n}{a \hat{P}_a}
 $$
 
 where n (number of nests)=`r nest.model1$dht$individuals$summary$n`, a (covered area)=`r nest.model1$dht$individuals$summary$CoveredArea` and $\hat{P_a}$ (probability of detection)=`r round(nest.model1$dht$individuals$average.p,4)`
@@ -267,11 +267,11 @@ knitr::kable(nest.model1$dht$individuals$D)
 ```
 
 ```{marginfigure}
-__Question:__ Compute (by hand) the density estimate resulting from the estimated probability of detection arising from the hazard rate detection function: $\hat{P_A}$= 0.8891.
+__Question:__ Compute (by hand) the density estimate resulting from the estimated probability of detection arising from the hazard rate detection function: $\hat{P}_a$= 0.8891.
 ```
 
 ```{marginfigure, echo=answer}
-__Answer:__ $\hat{P_A} = \frac{534}{12.36 \cdot 0.8891} =$ 48.59 nests$\cdot \text{km}^{-2}$ compared to 49.70 nests$\cdot \text{km}^{-2}$ (a difference of 2.3%).  In other words, the difference in estimated density is quite small; particularly when uncertainty is considered.
+__Answer:__ $\hat{P}_a = \frac{534}{12.36 \cdot 0.8891} =$ 48.59 nests$\cdot \text{km}^{-2}$ compared to 49.70 nests$\cdot \text{km}^{-2}$ (a difference of 2.3%).  In other words, the difference in estimated density is quite small; particularly when uncertainty is taken into account.
 ```
 
 <!-- the 2015 book is not cited in the narrative, but I want it in the bibliography -->
