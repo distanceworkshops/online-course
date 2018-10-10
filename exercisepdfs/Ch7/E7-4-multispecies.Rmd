@@ -15,7 +15,7 @@ fontsize: 10pt
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(knitr)
 library(Distance)
-answer <- FALSE
+answer <- TRUE
 ```
 
 # More complex analyses
@@ -25,6 +25,9 @@ answer <- FALSE
 ```{marginfigure}
 \includegraphics[]{images/robin-300x256.jpg}
 European robin _(Erithacus rubecula)_; one of the species in the Montrave study \citep{Buckland_2006}.
+
+\includegraphics[]{images/montrave-map.jpg}
+Aerial view of Montrave study area.  White diagonal lines represent transects walked for data analysed here.
 ```
 
 This practical is based on the Montrave songbird case study in \citet[Section 5.2.2.3]{buckland_distance_2015}, with computer code under [Montrave songbird case study](https://synergy.st-andrews.ac.uk/ds-manda/#montrave-songbird-case-study). Both point and line transect surveys were conducted and here we use the data from the __line transect__ data, although the issues (and solutions) will be similar. 
@@ -50,13 +53,13 @@ The data is in a 'flat file' format and contains the following columns:
 - Sample.Label - line transect identifier
 - Effort - length of transect (km)
 - distance - perpendicular distance (m)
-- species - species of bird (c=chaffinch, g=great tit, r=robin and w =wren)
+- species - species of bird (c=chaffinch, g=great tit, r=robin and w=wren)
 - visit - on which visit bird was detected.
 
-Use the following command to import the data and then use the `head` command to ensure it has been imported correctly. 
+Use the following command to import the data from the website associated with \citet{buckland_distance_2015} and then use the `head` command to examine it. 
 
 ```{r, echo=TRUE}
-birds <- read.csv("datasets/montrave-line.csv", header=TRUE)
+birds <- read.csv("https://synergy.st-andrews.ac.uk/ds-manda/files/2016/11/montrave-line.csv", header=TRUE)
 ```
 
 ```{r, echo=answer, eval=answer}
@@ -393,7 +396,7 @@ fit.hn.uni.haz <- function(data, trunc, print=TRUE) {
 }
 ```
 
-The two functions are used in tandem in the calling code below.  Note the `for` loop that iterates through three of the four species detected in the Montrave survey.
+The two functions are used in tandem in the calling code below.  Note the `for` loop that iterates through three of the four species detected in the Montrave survey (great tit not analysed).
 
 ```{r usefunct, echo=TRUE, eval=FALSE, fig.width=2.5, fig.height=2.5, fig.margin=TRUE, results='hold', message=FALSE, tidy=FALSE}
 for(species in c("r", "c", "w")) {

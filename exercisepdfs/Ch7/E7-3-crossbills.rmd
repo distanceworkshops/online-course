@@ -15,7 +15,7 @@ fontsize: 10pt
 ```{r, echo=FALSE, warning=FALSE}
 library(knitr)
 library(ggplot2)
-answer <- FALSE
+answer <- TRUE
 ```
 # Building detection function with supplemental surveys
 ```{marginfigure, echo=answer}
@@ -26,7 +26,7 @@ answer <- FALSE
 A call station to lure Scottish crossbills _(Loxia scotica)_.
 ```
 
-This practical is based on the lure point transect case study in \citet{buckland_distance_2015}, Section 10.2.1, which is a simplified version of the analysis in \citet{SUMMERS_2010}. Generalised linear models (GLMs) are used to model the response of Scottish crossbills to a lure in order to estimate their probability of response and hence estimate the density and abundance. To provide a measure of precision for the abundance estimate, 95% confidence intervals are obtained by bootstrapping. 
+This practical is based on the lure point transect case study in \citet[Section 10.2.1]{buckland_distance_2015}, a simplified version of the analysis in \citet{SUMMERS_2010}. Generalised linear models (GLMs) are used to model the response of Scottish crossbills to a lure in order to estimate their probability of response and hence estimate the density and abundance. To provide a measure of precision for the abundance estimate, 95% confidence intervals are obtained by bootstrapping. 
 
 The Scottish crossbill _(Loxia scotica)_ is Britain's only endemic bird species. A point transect study was conducted to obtain the number of birds within each point after responding to an audible lure. The probability of responding to the lure was estimated by recording the response of previously detected birds to the lure at different distances \citet{SUMMERS_2010}. 
 
@@ -50,9 +50,9 @@ The data provided in the response trials are:
 - numbirds - flock size
 - response - response of bird to lure (0=no response, 1=response). 
 
-The trials data are in file `lure-trials.csv`.  Import the data and check that it has been read correctly:
+The trials data are in file `lure-trials.csv`.  Import the data and check that it has been read correctly.  File is on the website associated with \citet{buckland_distance_2015}.
 ```{r, echo=TRUE, eval=TRUE}
-xbill <- read.csv(file="datasets/lure-trials.csv", header=TRUE)
+xbill <- read.csv(file="https://synergy.st-andrews.ac.uk/ds-manda/files/2016/11/lure-trials.csv", header=TRUE)
 ```
 
 ```{r, echo=TRUE, eval=answer}
@@ -179,7 +179,7 @@ print(Pa)
 
 Assuming that the probability of response is a function of distance only (as in `model2`), then $P_a$ is just less than 10% (i.e. <10% of birds within 850m of a point are detected).  
 
-__Analysis of main survey data__
+## Analysis of main survey data
 
 Read in data from the point transect survey. These data consist of:
 
@@ -189,7 +189,7 @@ Read in data from the point transect survey. These data consist of:
 Note that detection distances are unknown in the main survey: instead, we have used the trials data to estimate the detection function, and hence the proportion of birds within 850m that are detected.
 
 ```{r, echo=TRUE, eval=TRUE}
-detections <- read.csv("datasets/mainsurveydetections.csv", header=TRUE)
+detections <- read.csv("https://synergy.st-andrews.ac.uk/ds-manda/files/2016/11/mainsurveydetections.csv", header=TRUE)
 n <- sum(detections$nscottish)
 ```
 
@@ -268,14 +268,16 @@ for (i in 1:nboot) {
 
 Having obtained a distribution of abundances, the $\alpha/2$ and $1-\alpha/2$ percentiles can be obtained:
 
-```{r boothist, echo=TRUE, eval=answer, fig.margin=TRUE, fig.cap="Distribution of abundance estimates from bootstrap.", message=FALSE}
+```{r boothist, echo=TRUE, eval=answer, fig.margin=TRUE, fig.cap="Distribution of abundance estimates from bootstrap.", message=FALSE, tidy=FALSE}
 alpha <- 0.05
 bounds <- c(alpha/2, 1-(alpha/2))
 plot.this <- as.data.frame(bNscot)
-ggplot(data=plot.this, aes(bNscot)) + geom_histogram(fill="white", colour="black") + 
-  labs(title="Distribution of replicate abundance estimates") +
+ggplot(data=plot.this, aes(bNscot)) + 
+  geom_histogram(fill="white", colour="black") + 
+  labs(title="Distribution of abundance estimates") +
   labs(x=expression(hat(N)), y="Count") +
-  geom_vline(xintercept=quantile(bNscot, probs=bounds), size=1.5, linetype="dotted")
+  geom_vline(xintercept=quantile(bNscot, probs=bounds), 
+             size=1.5, linetype="dotted")
 ```
 
 ```{marginfigure, echo=answer}
@@ -285,9 +287,6 @@ __Note:__  The distribution of estimates is skewed-right; long tail of the distr
 ```{r, echo=TRUE, eval=answer}
 quantile(bNscot, probs=bounds)
 ```
-
-
-
 
 <!-- Buckland et al. (2006) not referenced in text, but add it to bibliography -->
 \nocite{Buckland2006b}
