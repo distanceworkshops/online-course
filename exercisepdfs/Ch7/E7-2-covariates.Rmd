@@ -14,17 +14,15 @@ fontsize: 10pt
 
 ```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
-# Specify whether answers are shown 
-answer <- FALSE
-
-# Load libraries
+answer <- TRUE
 library(Distance)
 library(ggplot2)
 ```
 
 # Covariates in the detection function
-
+```{marginfigure, echo=answer}
+\huge{Solutions}
+```
 ```{marginfigure}
 \includegraphics []{images/amakihi1121-300x270.jpg}
 Hawaii amakihi *(Hemignathus virens)*
@@ -40,10 +38,9 @@ We illustrate fitting multiple covariate distance sampling (MCDS) models to poin
 
 # Importing the data 
 
-Analysis begins by importing the data from a comma-delimited file (this file was created by copying the data from the amakihi Distance project). 
+Analysis begins by importing the data from a comma-delimited file. This file was created by copying the data from the amakihi Distance project. The file resides on a website associated with \citet{buckland_distance_2015} and it can be read directly from the website rather than downloaded to your computer.
 
 ```{r setup_and_read, echo=TRUE, message=FALSE, warning=FALSE}
-# Import Amakihi data
 amakihi <- read.csv(file="https://synergy.st-andrews.ac.uk/ds-manda/files/2016/11/amakihi.csv")
 ```
 
@@ -58,13 +55,13 @@ These data consist of eight columns:
 - Study.Area - name of the study area
 - Region.Label - survey dates which are used as 'strata'
 - Sample.Label - point transect identifier
-- Effort - survey effort (which is always 1 because point transects used)
+- Effort - survey effort (1 for all points because they are visited a single time)
 - distance - perpendicular distances
 - OBS - initials of the observer
 - MAS - minutes after sunrise
 - HAS - hour after sunrise
 
-The latter three columns are the covariates to be considered for possible inclusion into the detection function. 
+Note there is no `Area` field in the dataset.  The analysis can be conducted just fine, and bird density can be estimated, but bird abundance cannot be estimated. The latter three columns are the covariates to be considered for possible inclusion into the detection function. 
 
 There a couple of records with missing distances and so can be deleted with the following command:
 
@@ -79,15 +76,6 @@ In this command,
 - the rows selected as those where the distances (stored in `amakihi$distance`) are not missing. The function `is.na` selects elements that are missing; the symbol `!` means 'not', and so `!is.na` selects elements that are not missing.
 
 # Exploratory data analysis
-
-It is important to gain an understanding of the data prior to fitting detection functions \citep{buckland_distance_2015}. With this in mind, preliminary analysis of distance sampling data involves:
-
-- assessing the shape of the collected data,
-- considering the level of truncation of distances, and
-- exploring patterns in potential covariates. 
-
-We begin by assessing the distribution of distances by plotting histograms with different number of bins and different truncation. 
-
 ```{marginfigure}
 __Question:__  Examine the distribution of radial distances of the point transect data of the amakihi.
 
@@ -98,15 +86,21 @@ Basic syntax will be
 Examine the full dataset, then truncate the data to 82.5m.
 ```
 
-
-```{r, echo=FALSE, eval=answer, fig.width=2, fig.height=2, fig.margin=TRUE,results='hold',fig.cap="Three levels of detail examining distribution of detection distances.", warning=FALSE}
+```{r, echo=FALSE, eval=answer, fig.width=2, fig.height=2, fig.margin=TRUE,results='hold',fig.cap="Two levels of detail examining distribution of detection distances.", results='hide'}
 ggplot(amakihi, aes(x=distance)) + geom_histogram(binwidth=1, colour="black", fill="white")
-ggplot(amakihi[amakihi$distance<82.5,], aes(x=distance)) + 
+#ggplot(amakihi[amakihi$distance<82.5,], aes(x=distance)) + 
   geom_histogram(binwidth=2.5, colour="black", fill="white")
 ggplot(amakihi[amakihi$distance<82.5,], aes(x=distance)) + 
   geom_histogram(binwidth=8.25, colour="black", fill="white")
 ```
 
+It is important to gain an understanding of the data prior to fitting detection functions. With this in mind, preliminary analysis of distance sampling data involves:
+
+- assessing the shape of the collected data,
+- considering the level of truncation of distances, and
+- exploring patterns in potential covariates. 
+
+We begin by assessing the distribution of distances by plotting histograms with different number of bins and different truncation. 
 
 The components of the boxplot are:
 
@@ -217,8 +211,7 @@ __Question:__ Fit a hazard rate model with OBS as a covariate in the detection f
 ```
 
 ```{r, echo=TRUE, eval=answer, message=FALSE, warning=FALSE}
-hr.obs <- ds(amakihi, transect="point", key="hr", formula=~OBS,
-                truncation=82.5)
+hr.obs <- ds(amakihi, transect="point", key="hr", formula=~OBS, truncation=82.5)
 print(hr.obs$ddf$criterion)
 ```
 ```{marginfigure, echo=answer}
@@ -229,8 +222,7 @@ __Answer:__ Yes, AIC of the model with observer covariate is 30 AIC units smalle
 Fit a hazard rate model with OBS and HAS in the detection function:
 
 ```{r, echo=TRUE, eval=answer, message=FALSE, warning=FALSE}
-hr.obshas <- ds(amakihi, transect="point", key="hr", formula=~OBS+HAS,
-                truncation=82.5)
+hr.obshas <- ds(amakihi, transect="point", key="hr", formula=~OBS+HAS, truncation=82.5)
 print(hr.obshas$ddf$criterion)
 ```
 
@@ -265,7 +257,8 @@ summarize_ds_models(hr.model0, hr.obs, hr.has, hr.mas,
 ```{r summkable, echo=FALSE, eval=answer}
 knitr::kable(summarize_ds_models(hr.model0, hr.obs, hr.has, hr.mas,
                     hr.obsmas, hr.hasmas, hr.hasmasobs), 
-             caption="Candidate model set for Hawaii amakihi covariate analysis")
+             caption="Candidate model set for Hawaii amakihi covariate analysis.",
+             row.names = FALSE, digits=4)
 ```
 
 
@@ -273,19 +266,23 @@ knitr::kable(summarize_ds_models(hr.model0, hr.obs, hr.has, hr.mas,
 
 The detection functions can be investigated using the `plot` function as shown below. A few different plotting options are illustrated.
 
-```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, fig.margin=TRUE, fig.cap="Detection function fit for model without covariates."}
+```{r detnone, echo=TRUE, eval=FALSE}
 # Plot simple model
 plot(hr.model0, nc=20, main="No covariates", pch=20, pdf=TRUE)
 ```
 
-```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, fig.margin=TRUE, fig.cap="Detection function fit for model with observer covariate."}
+```{r detobs, echo=TRUE, eval=FALSE}
 # Plot model with OBS
 plot(hr.obs, nc=10, main="Model with OBS covariate", pch=1, cex=0.5, pdf=TRUE)
 ```
 
 What does the detection function look like for your selected model? 
 
-```{r, echo=FALSE, eval=answer, fig.width=3.5, fig.height=3.5, message=FALSE, warning=FALSE, fig.margin=TRUE, fig.cap="Detection function fit for model with lowest AIC."}
+```{r, echo=FALSE, eval=answer, ref.label="detnone", fig.width=3.5, fig.height=3.5, fig.cap="Detection function fit for model without covariates.", fig.margin=TRUE}
+```
+```{r, echo=FALSE, eval=answer, ref.label="detobs", fig.width=3.5, fig.height=3.5, fig.cap="Detection function fit for model with observer covariate.", fig.margin=TRUE}
+```
+```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, message=FALSE, warning=FALSE, fig.margin=TRUE, fig.cap="Detection function fit for model with lowest AIC."}
 # Fit best model
 hr.best <- ds(amakihi, transect="point", key="hr", truncation=82.5, quiet=TRUE,
               formula=~OBS+MAS)
@@ -294,4 +291,3 @@ plot(hr.best, nc=10, main="Model with OBS and MAS covariates", pch=".", pdf=TRUE
 ```
 
 To see more sophisticated examples of plotting the detection function for the selected model, see the code accompanying \citep{buckland_distance_2015} [Hawaiian Amakihi case study](https://synergy.st-andrews.ac.uk/ds-manda/#hawaiian-amakihi-case-study).
-
