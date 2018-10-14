@@ -14,9 +14,7 @@ fontsize: 10pt
 
 ```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-answer <- TRUE
-library(Distance)
-library(ggplot2)
+answer <- FALSE
 ```
 
 # Covariates in the detection function
@@ -28,7 +26,7 @@ library(ggplot2)
 Hawaii amakihi *(Hemignathus virens)*
 ```
 
-We illustrate fitting multiple covariate distance sampling (MCDS) models to point transect data using a bird survey in Hawaii; data on an abundant species, the Hawaii amakihi *(Hemignathus virens)* is used. This practical is based on the case study shown in Section 5.3.2 of \citet{buckland_distance_2015} which duplicates the analysis presented in \citet{Marques_2007}. This set of data is included in 'Distance for Windows' as one of the Sample Projects: you can open this project (entitled `amakihi.zip`) in the 'Sample projects' directory in the 'My Distance projects' directory residing under 'My Documents'. We describe the analysis of these data using Distance in R.
+We illustrate fitting multiple covariate distance sampling (MCDS) models to point transect data using a bird survey in Hawaii; data on an abundant species, the Hawaii amakihi *(Hemignathus virens)* is used. This practical is based on the case study in \citet[Section 5.3.2]{buckland_distance_2015} which duplicates the analysis presented in \citet{Marques_2007}. This set of data is included in 'Distance for Windows' as one of the Sample Projects: you can open this project (entitled `amakihi.zip`) in the 'Sample projects' directory in the 'My Distance projects' directory residing under 'My Documents'. We describe the analysis of these data using Distance in R \citep{r_language}.
 
 # Objectives of this practical
 
@@ -86,7 +84,8 @@ Basic syntax will be
 Examine the full dataset, then truncate the data to 82.5m.
 ```
 
-```{r, echo=FALSE, eval=answer, fig.width=2, fig.height=2, fig.margin=TRUE,results='hold',fig.cap="Two levels of detail examining distribution of detection distances.", results='hide'}
+```{r, echo=FALSE, eval=answer, fig.width=2, fig.height=2, fig.margin=TRUE,results='hold',fig.cap="Two levels of detail examining distribution of detection distances.", results='hide', message=FALSE}
+library(ggplot2)
 ggplot(amakihi, aes(x=distance)) + geom_histogram(binwidth=1, colour="black", fill="white")
 #ggplot(amakihi[amakihi$distance<82.5,], aes(x=distance)) + 
   geom_histogram(binwidth=2.5, colour="black", fill="white")
@@ -115,20 +114,23 @@ This format is probably not as useful as a histogram in a distance sampling cont
 Boxplots of distances by observer: 
 
 ```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, fig.margin=TRUE, fig.cap="Detection distance distribution by Observer."}
-boxplot(amakihi$distance~amakihi$OBS, xlab="Observer", ylab="Distance (m)")
+ggplot(droplevels(amakihi), aes(x=OBS, y=distance)) +
+  geom_boxplot() + labs(x="Observer initials", y="Radial distance (m)")
 ```
 
 Boxplot of distances for each hour after sunrise:
 
 ```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, fig.margin=TRUE, fig.cap="Detection distance distribution by hours after sunrise."}
-boxplot(amakihi$distance~amakihi$HAS, xlab="Hour", ylab="Distance (m)")
+ggplot(amakihi, aes(x=factor(HAS), y=distance)) +
+  geom_boxplot() + labs(x="Hours after sunrise", y="Radial distance (m)")
 ```
 
-For minutes after sunrise (a continuous variable), we create a scatterplot of MAS (on the $x$-axis) against distances (on the $y$-axis). The plotting symbol (or character) is selected with the argument `pch`:
+For minutes after sunrise (a continuous variable), we create a scatterplot of MAS (on the $x$-axis) against distances (on the $y$-axis).
 
 ```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, fig.margin=TRUE, fig.cap="Detection distance distribution by minutes after sunrise."}
-plot(amakihi$MAS, amakihi$distance, xlab="Minutes after sunrise",
-     ylab="Distance (m)", pch=20, cex=0.5)
+ggplot(amakihi, aes(x=MAS, y=distance)) + 
+  geom_point(alpha=0.25, size=1.6) + 
+  labs(x="Hours after sunrise", y="Radial distance (m)")
 ```
 
 # Colinearity
@@ -140,15 +142,18 @@ __Question:__  Compute the correlation of minutes after sunrise and hours after 
 ```
 
 ```{r, echo=FALSE, eval=answer, fig.width=2, fig.height=2, fig.margin=TRUE,results='hold',fig.cap="Diagnostics for the presence of colinearity between HAS and MAS.", warning=FALSE}
-ggplot(amakihi, aes(x=MAS, y=HAS)) + geom_point(shape=19, alpha=0.25, size=0.5)
-cor(amakihi$MAS, amakihi$HAS, use = "complete.obs")
+correlat <- cor(amakihi$MAS, amakihi$HAS, use = "complete.obs")
+ggplot(amakihi, aes(x=MAS, y=HAS)) + geom_point(shape=19, alpha=0.25, size=0.5) +
+  labs(x="Minutes after sunrise", y="Hours after sunrise") +
+  annotate("text", x=70, y=4, label=paste0("Corr=",round(correlat,3)))
+
 ```
 
 To alleviate the potential colinearity difficulty, hours after sunrise could be transformed to a discrete, rather than a continuous variable.
 
 # Adjusting the raw covariates
 
-We would like to treat OBS and HAS as factor variables as in the original analysis; OBS is, by default, treated as a factor variable because it consists of characters rather than numbers. `HAS`, on the other hand, consists of numbers and so by default would be treated as a continuous variable (i.e. non-factor). That is fine if we want the effect of `HAS` to be monotonic (i.e. detectability either increases or decreases as a function of `HAS`). If we want `HAS` to have a non-linear effect on detectability, then we need to indicate to R to treat it as a factor as shown below.  
+We would like to treat OBS and HAS as factor variables as in the original analysis; OBS is, by default, treated as a factor variable because it consists of characters rather than numbers. `HAS`, on the other hand, consists of numbers and so by default would be treated as a continuous variable (i.e. non-factor). That is fine if we want the effect of `HAS` to be monotonic (i.e. detectability either increases or decreases as a function of `HAS`). If we want `HAS` to have a non-linear effect on detectability, indicate it is a factor:.  
 
 ```{r obsfact, echo=TRUE}
 amakihi$HAS <- factor(amakihi$HAS)
@@ -190,11 +195,12 @@ With three potential covariates, there are 8 possible combinations for including
 
 Even without considering covariates there are a number of possible key function/adjustment term combinations and if all key function/covariate combinations are considered the number of potential models is large. Note that covariates are not allowed if a uniform key function is chosen and if covariate terms are included, adjustment terms are not allowed. Even with these restrictions, it is not best practice to take a scatter gun approach to detection function model fitting. \citet{buckland_distance_2015} considered 13 combinations of key function/covariates. Here, we look at a subset of these as an illustration of how to incorporate covariates in the detection function.
 
-If it is not already loaded, then first load the `Distance` package. 
+If it is not already loaded, load the `Distance` package \citep{distance_pkg}. 
 
 Fit a hazard rate model with no covariates or adjustment terms. By default, line transects are assumed and because our data are point transects, the argument `transect="point"` is specified:
 
 ```{r, echo=TRUE, eval=answer, message=FALSE, warning=FALSE}
+library(Distance)
 hr.model0 <- ds(amakihi, transect="point", key="hr", truncation=82.5,
                 adjustment=NULL, order=0)
 ```
