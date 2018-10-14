@@ -14,7 +14,7 @@ fontsize: 10pt
 
 ```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-answer <- FALSE
+answer <- TRUE
 ```
 
 # Covariates in the detection function
@@ -54,12 +54,12 @@ These data consist of eight columns:
 - Region.Label - survey dates which are used as 'strata'
 - Sample.Label - point transect identifier
 - Effort - survey effort (1 for all points because they are visited a single time)
-- distance - perpendicular distances
+- distance - radial distance of detection from observer
 - OBS - initials of the observer
 - MAS - minutes after sunrise
 - HAS - hour after sunrise
 
-Note there is no `Area` field in the dataset.  The analysis can be conducted just fine, and bird density can be estimated, but bird abundance cannot be estimated. The latter three columns are the covariates to be considered for possible inclusion into the detection function. 
+Note there is no `Area` field in the dataset.  Detection functions can be fitted to the data, but bird density and abundance cannot be estimated. The latter three columns are the covariates to be considered for possible inclusion into the detection function. 
 
 There a couple of records with missing distances and so can be deleted with the following command:
 
@@ -84,7 +84,7 @@ Basic syntax will be
 Examine the full dataset, then truncate the data to 82.5m.
 ```
 
-```{r, echo=FALSE, eval=answer, fig.width=2, fig.height=2, fig.margin=TRUE,results='hold',fig.cap="Two levels of detail examining distribution of detection distances.", results='hide', message=FALSE}
+```{r, echo=FALSE, eval=answer, fig.width=2, fig.height=2, fig.margin=TRUE,results='hold',fig.cap="Two levels of detail examining distribution of detection distances.", results='hide', warning=FALSE}
 library(ggplot2)
 ggplot(amakihi, aes(x=distance)) + geom_histogram(binwidth=1, colour="black", fill="white")
 #ggplot(amakihi[amakihi$distance<82.5,], aes(x=distance)) + 
@@ -211,7 +211,6 @@ The fitted model can be investigated using the `summary` function. Make a note o
 summary(hr.model0)
 ```
 
-
 ```{marginfigure}
 __Question:__ Fit a hazard rate model with OBS as a covariate in the detection function and make a note of the AIC. Has the AIC reduced by including a covariate? 
 ```
@@ -224,7 +223,6 @@ print(hr.obs$ddf$criterion)
 __Answer:__ Yes, AIC of the model with observer covariate is 30 AIC units smaller than the model without this covariate.
 ```
 
-
 Fit a hazard rate model with OBS and HAS in the detection function:
 
 ```{r, echo=TRUE, eval=answer, message=FALSE, warning=FALSE}
@@ -233,7 +231,7 @@ print(hr.obshas$ddf$criterion)
 ```
 
 ```{marginfigure, echo=answer}
-__Answer__: The model with both observer and hours after sunrise had a smaller AIC that the model with observer alone, however, the reduction in AIC was only 1 AIC unit.
+__Answer__: The model with both observer and hours after sunrise had an AIC score 5 AIC units larger than the model with observer alone; suggesting the inclusion of HAS along with OBS is not a better model than the model with OBS alone.
 ```
 
 ```{marginfigure}
@@ -266,7 +264,6 @@ knitr::kable(summarize_ds_models(hr.model0, hr.obs, hr.has, hr.mas,
              caption="Candidate model set for Hawaii amakihi covariate analysis.",
              row.names = FALSE, digits=4)
 ```
-
 
 # Plotting the detection functions
 
