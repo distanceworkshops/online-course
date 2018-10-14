@@ -15,7 +15,6 @@ fontsize: 10pt
 ```{r setup, include=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 answer <- TRUE
-library(Distance)
 ```
 
 # Using survey data
@@ -43,10 +42,8 @@ The distances allow different key functions/adjustments to be fitted in the dete
 
 1. Import a text file
 1. Understand the structure of a data frame
-1. Fit different key functions/adjustments in the detection function model
+1. Fit different key functions/adjustments in the detection function model using `ds`
 1. Examine the results of an analysis, i.e. `ddf` and `dht` components of a `dsmodel` object  
-1. Create a data frame
-1. Estimate density and abundance using `ds`.
 
 # Importing the data
 
@@ -113,6 +110,7 @@ To use the `ds` function, load the `Distance` package \citep{distance_pkg}.
 The function `ds` requires a data frame to have a column called `distance`, we   specify the name of the data frame as follows:
 
 ```{r, echo=TRUE, eval=TRUE}
+library(Distance)
 nest.model1 <- ds(nests, key="hn", adjustment=NULL, convert.units = 0.001)
 ```
 
@@ -271,7 +269,7 @@ __Question:__ Compute (by hand) the density estimate resulting from the estimate
 ```
 
 ```{marginfigure, echo=answer}
-__Answer:__ $\hat{P}_a = \frac{534}{12.36 \cdot 0.8891} =$ 48.59 nests$\cdot \text{km}^{-2}$ compared to 49.70 nests$\cdot \text{km}^{-2}$ (a difference of 2.3%).  In other words, the difference in estimated density is quite small; particularly when uncertainty is taken into account.
+__Answer:__ $\hat{D} = \frac{534}{12.36 \cdot 0.8891} =$ 48.59 nests$\cdot \text{km}^{-2}$ compared to 49.70 nests$\cdot \text{km}^{-2}$ (a difference of 2.3%).  In other words, the difference in estimated density is quite small; particularly when uncertainty is taken into account.
 ```
 
 <!-- the 2015 book is not cited in the narrative, but I want it in the bibliography -->
