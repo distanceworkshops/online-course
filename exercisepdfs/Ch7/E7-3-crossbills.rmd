@@ -166,7 +166,7 @@ First we calculate $P_a$. To do this we need to specify the function $\pi(r),r \
 pi.r <- preddata$dist/sum(preddata$dist)
 preddata$pi <- pi.r
 ggplot(data=preddata, aes(x=dist, y=pi.r)) + geom_point(size=0.6) +
-  labs(title="Assumed density of birds") +
+  labs(title="Assumed abundance of birds") +
   labs(x="Distance from lure (m)", y=expression(pi[r])) 
 ```
 
