@@ -14,7 +14,7 @@ fontsize: 10pt
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(knitr)
-answer <- FALSE
+answer <- TRUE
 ```
 
 # More complex analyses
@@ -125,14 +125,14 @@ If we were to use the `robins` data as it is at present to estimate density, the
 1. get the missing information in the correct format,
 1. add the missing information to the `robins` data. 
 
-The following commands identifies the missing commands. After each command, type the name of the object which has been created to see what each command has done.
+The following commands identifies the missing transects. After each command, type the name of the object which has been created to see what each command has done.
 
 ```{r, echo=TRUE}
 robin.lab <- unique(robins$Sample.Label)
 miss.lab <- tran.lab[!is.element(el=tran.lab, set=robin.lab)]
 ```
 
-To understand what this latter command has done, it can be broken down into several elements:
+To understand what the second command has done, unpeel it starting at its centre:
 
 - elements of `tran.lab` are selected using `[]`
 - the `is.element` function (without the `!` symbol) selects the elements in `tran.lab`, which are also in the `set` argument (i.e. `robin.lab`)
