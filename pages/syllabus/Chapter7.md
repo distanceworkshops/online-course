@@ -18,7 +18,7 @@ This chapter guides you through analyses of data sets you have already seen in e
 
 You will also analyse data from a lure survey of Scottish crossbills.  Data from this type of survey, described in the [lecture on multipliers]({{site.baseurl}}/lecturepdfs/Ch6/L6-2 Multipliers.pdf) (Slide 21), cannot be analysed in Distance for Windows; and demonstrates the flexibility available for distance sampling analysis using R.
 
-***
+--------
 
 ### Introductory lecture
 * <a href="#" data-reveal-id="L1">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
@@ -29,17 +29,32 @@ You will also analyse data from a lure survey of Scottish crossbills.  Data from
 #### Conventional distance sampling with Monte Verde duck nest line transects
 * <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - [Duck nest line transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/ducks-area-effort.csv) <img src="{{site.baseurl}}/images/txt32.png">
+  - [Duck nest line transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/ducks-area-effort.csv) <img src="{{site.baseurl}}/images/file-csv.svg">
 * <a href="#" data-reveal-id="E1soln">Narrative solution for duck nest analysis in R <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+* [R markdown file creating this exercise]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests.rmd)<img src="{{site.baseurl}}/images/pdf32.png">
 
 #### Fitting detection function with covariates - Hawaiian amakihi point transects
 * <a href="#" data-reveal-id="E2">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - [Amakihi point transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/amakihi.csv) <img src="{{site.baseurl}}/images/txt32.png">
+  - [Amakihi point transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/amakihi.csv) <img src="{{site.baseurl}}/images/txt32.png">
 * <a href="#" data-reveal-id="E2soln">Narrative solution for amakihi point transects in R <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
+#### Lure point transects: dual surveys - Scottish crossbills
+* <a href="#" data-reveal-id="E3">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-3-crossbills-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+  - [Crossbill lure trials csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/lure-trials.csv) <img src="{{site.baseurl}}/images/txt32.png">
+  - [Crossbill main survey csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/mainsurveydetections.csv) <img src="{{site.baseurl}}/images/txt32.png">
+* <a href="#" data-reveal-id="E3soln">Narrative solution for lure point transects in R <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-3-crossbills-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+
+#### Multi-species survey - Montrave line transects
+* <a href="#" data-reveal-id="E4">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-4-multispecies-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+  - [Amakihi point transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/amakihi.csv) <img src="{{site.baseurl}}/images/txt32.png">
+* <a href="#" data-reveal-id="E4soln">Narrative solution for Montrave line transects in R <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-4-multispecies-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
 {% comment %}
 
