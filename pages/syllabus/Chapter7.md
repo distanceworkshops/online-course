@@ -17,33 +17,29 @@ This chapter guides you through analyses of data sets you have already seen in e
 - [Montrave point count data]({{site.baseurl}}/exercisepdfs/Ch3/E3.1 point transects.pdf) (Question 2).
 
 You will also analyse data from a lure survey of Scottish crossbills.  Data from this type of survey, described in the [lecture on multipliers]({{site.baseurl}}/lecturepdfs/Ch6/L6-2 Multipliers.pdf) (Slide 21), cannot be analysed in Distance for Windows; and demonstrates the flexibility available for distance sampling analysis using R.
+
 ***
 
-##### Demonstration of data import to Distance
-* <a href="#" data-reveal-id="L1">Demonstration video <img src="{{site.baseurl}}/images/video32.png"></a>
-  - Text files containing data used in demonstration
-    - [SimpleData.txt]({{site.baseurl}}/distance projects/Ch6/SimpleData.txt) <img src="{{site.baseurl}}/images/txt32.png">
-    - [SimpleDataSpp.txt]({{site.baseurl}}/distance projects/Ch6/SimpleDataSpp.txt) <img src="{{site.baseurl}}/images/txt32.png">
-    - [SimpleDataSppLabel.txt]({{site.baseurl}}/distance projects/Ch6/SimpleDataSppLabel.txt) <img src="{{site.baseurl}}/images/txt32.png">	
-    - [Stratum.txt]({{site.baseurl}}/distance projects/Ch6/Stratum.txt) <img src="{{site.baseurl}}/images/txt32.png">
-    - [transect.txt]({{site.baseurl}}/distance projects/Ch6/transect.txt) <img src="{{site.baseurl}}/images/txt32.png">
-    - [Observation.txt]({{site.baseurl}}/distance projects/Ch6/Observation.txt) <img src="{{site.baseurl}}/images/txt32.png">	
-	
-##### Introductory lecture
+### Introductory lecture
 * <a href="#" data-reveal-id="L1">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch7/L7-1 R version.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
-##### Exercise using multipliers: deer density estimation from faecal pellets
-* <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch6/E6.1 multipliers.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - Deer pellet data from southern Scotland [Distance project zip file]({{site.baseurl}}/distance projects/Ch6/Deer pellets.zip) <img src="{{site.baseurl}}/images/zip32.png">
-* <a href="#" data-reveal-id="E1soln">Narrative solution for deer pellet exercise <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch6/E6.1 multipliers SOLUTION_DH_adjusted.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
-  - Completed deer pellet project [Distance project zip file]({{site.baseurl}}/distance projects/Ch6/Deer pellets solution.zip) <img src="{{site.baseurl}}/images/zip32.png">
+### Exercises
 
-##### Where to go next?  
-* <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch6/L6-3 whats next-ER.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+#### Conventional distance sampling with Monte Verde duck nest line transects
+* <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+  - [Duck nest line transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/ducks-area-effort.csv) <img src="{{site.baseurl}}/images/txt32.png">
+* <a href="#" data-reveal-id="E1soln">Narrative solution for duck nest analysis in R <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+
+#### Fitting detection function with covariates - Hawaiian amakihi point transects
+* <a href="#" data-reveal-id="E2">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+  - [Amakihi point transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/amakihi.csv) <img src="{{site.baseurl}}/images/txt32.png">
+* <a href="#" data-reveal-id="E2soln">Narrative solution for amakihi point transects in R <img src="{{site.baseurl}}/images/video32.png"></a>
+* [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+
 
 {% comment %}
 
@@ -72,35 +68,66 @@ You will also analyse data from a lure survey of Scottish crossbills.  Data from
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
-<div id="L2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
-  <h3 id="modalTitle">Lecture 2 - multipliers</h3>
-  <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/wMI-F6qsi30?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
 <div id="E1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
-  <h3 id="modalTitle">Exercise 1 - multipliers for deer pellet analysis</h3>
+  <h3 id="modalTitle">Exercise 1 - conventional distance sampling</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/F71J2cRnAlk?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/KizkMRuNnfE?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
 <div id="E1soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
-  <h3 id="modalTitle">Solution to Exercise 1 - multipliers for deer pellet analysis</h3>
+  <h3 id="modalTitle">Solution to Exercise 1 - conventional distance sampling</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/RnEAHnAl5aY?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/s5HXvFN6Avc?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
-<div id="L3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
-  <h3 id="modalTitle">Lecture 3 - advance distance sampling analysis methods</h3>
+<div id="E2" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Exercise 2 - covariates in detection function</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/8KWHu2Hj7Ys?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/igKEHILGYQg?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
+<div id="E2soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Solution to Exercise 2 - covariates in detection function</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/apBPl86OjB4?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E3" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Exercise 3 - lure point transects</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/QMOehuEs_Yw?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E3soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Solution to Exercise 3 - lure point transects</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/-AovikGwrNc?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E4" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Exercise 4 - analysis of multi-species surveys</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/A0J7b5B62D0?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="E4soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Solution to Exercise 4 - analysis of multi-species surveys</h3>
+  <div class="flex-video widescreen" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/A8fMzjgLyDw?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
