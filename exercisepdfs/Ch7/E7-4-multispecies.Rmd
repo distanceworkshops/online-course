@@ -1,7 +1,7 @@
 ---
 title: "Distance sampling online workshop"
 author: "Analysis in R: Analysis of multi-species surveys"
-date: "CREEM, Univ of St Andrews -- `r format(Sys.Date(), '%B %Y')`"
+date: "CREEM, Univ of St Andrews -- October 2018"
 output:  
   tint::tintPdf:
     number_sections: true
