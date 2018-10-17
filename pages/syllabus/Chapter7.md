@@ -32,7 +32,7 @@ You will also analyse data from a lure survey of Scottish crossbills.  Data from
   - [Duck nest line transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/ducks-area-effort.csv) <img src="{{site.baseurl}}/images/csv32b.png">
 * <a href="#" data-reveal-id="E1soln">Narrative solution for duck nest analysis in R <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
-* [R markdown file creating this exercise]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests.rmd)<img src="{{site.baseurl}}/images/pdf32.png">
+* [R markdown file creating this exercise]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests.rmd)<img src="{{site.baseurl}}/images/md48.png">
 
 #### Fitting detection function with covariates - Hawaiian amakihi point transects
 * <a href="#" data-reveal-id="E2">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
