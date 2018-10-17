@@ -20,16 +20,16 @@ You will also analyse data from a lure survey of Scottish crossbills.  Data from
 
 --------
 
-### Introductory lecture
+### Lecture on using R for distance sampling analysis
 * <a href="#" data-reveal-id="L1">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch7/L7-1 R version.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
 
 ### Exercises
 
-#### Conventional distance sampling with Monte Verde duck nest line transects
+#### Conventional distance sampling - Monte Verde duck nest line transects
 * <a href="#" data-reveal-id="E1">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - [Duck nest line transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/ducks-area-effort.csv) <img src="{{site.baseurl}}/images/csv32b.png">
+  - [Duck nest line transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/ducks-area-effort.csv) <img src="{{site.baseurl}}/images/csv32.png"> <img src="{{site.baseurl}}/images/csv32same.png"> <img src="{{site.baseurl}}/images/csv32b.png">
 * <a href="#" data-reveal-id="E1soln">Narrative solution for duck nest analysis in R <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 * [R markdown file creating this exercise]({{site.baseurl}}/exercisepdfs/Ch7/E7-1-ducknests.rmd) <img src="{{site.baseurl}}/images/md32.png">
