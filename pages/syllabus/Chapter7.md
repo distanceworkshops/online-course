@@ -5,7 +5,7 @@ subheadline: An alternative analysis workflow
 title: Chapter 7 Analysis using R
 permalink: /syllabus/Chapter7/
 header:
-  image_fullwidth: rawpixel-983726-unsplash.jpg
+  image_fullwidth: ray-hennessy-cardinal-unsplash.jpg
 ---
 
 Previous chapters have described analysis of distance sampling data using the Distance software.  Much of the code that underlies the graphical interface of the Distance software is written in the programming language __R__.  Some people use the [R software](https://www.r-project.org/about.html) for data management and exploratory data analysis.  Use of __R__ has been made easier with the advent of a development environment [_R-Studio_](https://www.rstudio.com/products/RStudio/).  Both pieces of software are free of charge and can be easily downloaded and installed.  Please install both of those pieces of software before beginning these exercises.  In addition, software for analysing distance sampling data in __R__ resides in a package called [_Distance_](https://cran.r-project.org/web/packages/Distance/index.html).  Install that package as well.  There are several demonstrations of the process of installing __R__, _R-Studio_ and __R__ packages on the web.  One such description [can be found here](http://web.cs.ucla.edu/~gulzar/rstudio/).
