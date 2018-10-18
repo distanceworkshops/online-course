@@ -47,13 +47,18 @@ The distances allow different key functions/adjustments to be fitted in the dete
 
 # Importing the data
 
-To let R \citep{r_language} know where to look for files (and also where to save the R workspace and '.Rmd' files) we can set the 'working directory'; from the menu along the top of the `RStudio` window click on 'Session > Set Working Directory > Choose Directory' and select your chosen directory, for example 'C:/workshop'.  
-
-Load the data into `R` with the following command:
+The file containing the duck nest survey data is located on the online workshop website.  Either download the file following [this link](https://workshops.distancesampling.org/online-course/exercisepdfs/Ch7/datasets/ducks-area-effort.csv) or the content of the data file can be read directly from the web into an R \citep{r_language} data frame named `nests` via the following command 
 
 ```{r, echo=TRUE}
-nests <- read.csv(file="datasets/ducks-area-effort.csv", header=TRUE)
+nests <- read.csv(file="https://workshops.distancesampling.org/online-course/exercisepdfs/Ch7/datasets/ducks-area-effort.csv",
+                  header=TRUE)
 ```
+
+The URL of the file location is quite long, we repeat it here so it is more legible.
+
+\scriptsize{https://workshops.distancesampling.org/online-course/exercisepdfs/Ch7/datasets/ducks-area-effort.csv}
+
+\normalsize
 
 This command is made up of several components:
 
