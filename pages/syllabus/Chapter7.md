@@ -36,7 +36,7 @@ You will also analyse data from a lure survey of Scottish crossbills.  Data from
 
 #### Fitting detection function with covariates - Hawaiian amakihi point transects
 * <a href="#" data-reveal-id="E2">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png"><img src="{{site.baseurl}}/images/R_logo32.png">
   - [Amakihi point transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/amakihi.csv) <img src="{{site.baseurl}}/images/csv32b.png">
 * <a href="#" data-reveal-id="E2soln">Narrative solution for amakihi point transects in R <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
