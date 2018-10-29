@@ -34,6 +34,10 @@ In this chapter we provide an extended demonstration of importing data in progra
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch6/E6.1 multipliers SOLUTION_DH_adjusted.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
   - Completed deer pellet project [Distance project zip file]({{site.baseurl}}/distance projects/Ch6/Deer pellets solution.zip) <img src="{{site.baseurl}}/images/zip32.png">
 
+##### Multipliers in conjunction with lure survey (advanced)
+- Lure surveys cannot be analysed using Distance for Windows.  An example of analysing such data from a survey of Scottish crossbills (described in the multipliers lecture slide 21) 
+  - [Description of analyses of Scottish crossbill data using R]({{site.baseurl}}/syllabus/Chapter7/#lure-point-transects-dual-surveys---scottish-crossbills) <img src="{{site.baseurl}}/images/R_logo32.png">
+
 ##### Where to go next?  
 * <a href="#" data-reveal-id="L3">Lecture video <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Lecture slides]({{site.baseurl}}/lecturepdfs/Ch6/L6-3 whats next-ER.pdf) <img src="{{site.baseurl}}/images/pdf32.png">

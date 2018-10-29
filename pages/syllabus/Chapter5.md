@@ -67,6 +67,8 @@ In this chapter we introduce more challenging designs and analyses.  The study a
       - Eastern tropical Pacific dolphin survey [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/Dolphin.zip) <img src="{{site.baseurl}}/images/zip32.png">
   - Exercise section 4
       - Hawaiian amakihi point transect survey [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/fTAMAUK07.zip) <img src="{{site.baseurl}}/images/zip32.png">
+      - Alternative method of analysing amakihi data
+        - [Description of analysis of these data using R]({{site.baseurl}}/syllabus/Chapter7/#multi-species-survey---montrave-line-transects)) <img src="{{site.baseurl}}/images/R_logo32.png">
 * <a href="#" data-reveal-id="E4soln">Narrative solution to covariates in detection functions <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch5/E5.4 covariates in the detection function SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
   - Completed project for simulated whale survey [Distance project zip file]({{site.baseurl}}/distance projects/Ch5/CovarWhaleSim-solutions.zip) <img src="{{site.baseurl}}/images/zip32.png">

@@ -2,7 +2,7 @@
 layout: page
 sidebar: right
 title: "Chapter 1 - Introduction"
-subheadline: "Analysing line transect data three times"
+subheadline: "Analysing line transect data at least three ways"
 permalink: /syllabus/Chapter1/
 header:
   image_fullwidth: dolphins-unsplash.jpg

@@ -6,7 +6,7 @@ header:
   image_fullwidth: header_unsplash_5.jpg
 ---
 
-The course is composed of six sections.  Each icon below takes you to one of the sections; they build upon previous sections, so it is best if you take them in order.
+The course is composed of seven sections.  Each icon below takes you to one of the sections; they build upon previous sections.  The final section presents an alternative suite of software (R) for conducting distance sampling analysis.  That section is supplemental to the remainder of the course.
 
 <div class="row">
     <div class="small-6 columns">
@@ -64,5 +64,18 @@ The course is composed of six sections.  Each icon below takes you to one of the
             <img src="{{site.baseurl}}/images/hare-unsplash-smaller.jpg" alt="hare"  />
             </a>
         </figure>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-6 columns">
+        <a href="{{site.baseurl}}/syllabus/Chapter7/"><h3>7--Using R for distance sampling analysis</h3></a>
+        <figure>
+            <a href="{{site.baseurl}}/syllabus/Chapter7/">
+            <img src="{{site.baseurl}}/images/ricardo-gomez-angel-201269-unsplash.jpg" alt="mtns" />
+            </a>
+        </figure>
+    </div>
+    <div class="small-6 columns">
     </div>
 </div>

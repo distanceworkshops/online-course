@@ -29,6 +29,8 @@ This chapter describes methods associated with point transect sampling.  Analyse
     - Montrave wrens snapshot  [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Wren2.zip) <img src="{{site.baseurl}}/images/zip32.png">
     - Montrave wrens cue count (5 minutes)  [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Wren3.zip) <img src="{{site.baseurl}}/images/zip32.png">
     - Montrave wrens line transect method  [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Wren4.zip) <img src="{{site.baseurl}}/images/zip32.png">
+    - Alternative analysis of Montrave data
+      - [Description of analysis of these data using R]({{site.baseurl}}/syllabus/Chapter7/#multi-species-survey---montrave-line-transects)  <img src="{{site.baseurl}}/images/R_logo32.png">
   - Question 3 Savannah sparrows, Arapaho National Wildlife Refuge, Colorado
     - Song sparrow 1980 [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Savannah sparrow 1980.zip) <img src="{{site.baseurl}}/images/zip32.png">
     - Song sparrow 1981 [Distance project zip file]({{site.baseurl}}/distance projects/Ch3/Savannah sparrow 1981.zip) <img src="{{site.baseurl}}/images/zip32.png">

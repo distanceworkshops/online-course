@@ -3,7 +3,7 @@
   side: left
 
 - title: "Preparing for course"
-  url: "/prep/"
+  url: "/alt-prep/"
   side: left
 
 - title: "Course material"
@@ -22,6 +22,8 @@
     url: "/syllabus/Chapter5"
   - title: "Additional topics"
     url: "/syllabus/Chapter6"
+  - title: "Analysis using R"
+    url: "/syllabus/Chapter7"
  
 - title: "Additional resources"
   url: "/more-resources/"
