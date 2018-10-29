@@ -56,7 +56,7 @@ To perform all of the exercises, except the first two, you will need to use the 
     <div class="small-6 columns">
       <h3>Welcome video</h3>
 			<figure>
-            <img src="{{site.baseurl}}/images/road-sunrise-tube.png" alt="welcome video" />
+            <img src="{{site.baseurl}}/images/road-sunrise-tube.jpg" alt="welcome video" />
       </figure>
 			<a href="#" data-reveal-id="welcome">Welcome video <img src="{{site.baseurl}}/images/video32.png"></a>
 
