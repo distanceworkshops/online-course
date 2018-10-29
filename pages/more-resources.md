@@ -30,15 +30,15 @@ There is an vast amount of printed material about distance sampling. We did not 
 
 ####  Papers mentioned in specific lectures
 
-* Lecture 3 of Chapter 2 Point transect case studies  
-  - Buckland, S.T. 2006. Point-transect surveys for songbirds: robust methodologies. The Auk 123:345-357.
+* Lecture 3 of Chapter 2 Point transect case studies and Chapter 7 <img src="{{site.baseurl}}/images/R_logo32.png">
+  - [Buckland, S.T. 2006](https://doi.org/10.1642/0004-8038(2006)123[345:psfsrm]2.0.co;2). Point-transect surveys for songbirds: robust methodologies. The Auk 123:345-357.
 * Lecture 1 of Chapter 5 Variance estimation of systematic surveys 
-  - Fewster, R.M., S.T. Buckland, K.P. Burnham,  D.L. Borchers, P.E. Jupp, J.L. Laake and L. Thomas. 2009. Estimating the encounter rate in distance sampling. Biometrics 65:225-236.
-* Lecture 4 of Chapter 5 Covariates in detection function
-  - Marques, T.A., L. Thomas, S.G. Fancy and S.T. Buckland. 2007. Improving estimates of bird density using multiple covariate distance sampling. The Auk 127:1229-1243.
-* Lecture 2 of Chapter 6 Use of multipliers 
-  - Buckland, S.T., R.W. Summers, D.L. Borchers and L. Thomas. 2006. Point transect sampling with traps or lures. Journal of Applied Ecology 43:377-384
-  - Potts, J.M., S.T. Buckland, L. Thomas and A. Savage. 2012. Estimating abundance of cryptic but trappable animals using trapping point transects: a case study for Key Largo woodrats. Methods in Ecology and Evolution 3:695-703.
+  - [Fewster, R.M., S.T. Buckland, K.P. Burnham,  D.L. Borchers, P.E. Jupp, J.L. Laake and L. Thomas. 2009](https://doi.org/10.1111/j.1541-0420.2008.01018.x). Estimating the encounter rate in distance sampling. Biometrics 65:225-236.
+* Lecture 4 of Chapter 5 Covariates in detection function and Chapter 7 <img src="{{site.baseurl}}/images/R_logo32.png">
+  - [Marques, T.A., L. Thomas, S.G. Fancy and S.T. Buckland. 2007](https://doi.org/10.1642/0004-8038(2007)124[1229:ieobdu]2.0.co;2). Improving estimates of bird density using multiple covariate distance sampling. The Auk 127:1229-1243.
+* Lecture 2 of Chapter 6 Use of multipliers and Chapter 7 <img src="{{site.baseurl}}/images/R_logo32.png">
+  - [Buckland, S.T., R.W. Summers, D.L. Borchers and L. Thomas. 2006](https://doi.org/10.1111/j.1365-2664.2006.01135.x). Point transect sampling with traps or lures. Journal of Applied Ecology 43:377-384
+  - [Potts, J.M., S.T. Buckland, L. Thomas and A. Savage. 2012](http://dx.doi.org/10.1111/j.2041-210X.2012.00205.x). Estimating abundance of cryptic but trappable animals using trapping point transects: a case study for Key Largo woodrats. Methods in Ecology and Evolution 3:695-703.
 
 #### Example line transect application
 

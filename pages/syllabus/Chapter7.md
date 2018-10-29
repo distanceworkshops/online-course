@@ -26,7 +26,7 @@ This chapter guides you through analyses of data sets you have already seen in e
 
 You will also analyse data from a lure survey of Scottish crossbills.  Data from this type of survey, described in the [lecture on multipliers]({{site.baseurl}}/lecturepdfs/Ch6/L6-2 Multipliers.pdf) (Slide 21), cannot be analysed in Distance for Windows; and demonstrates the flexibility available for distance sampling analysis using R.
 
-The last of the files associated with each exercise is a `markdown` file.  These files were used to create the exercises and their solutions.  `markdown` files contain both text as well as __R__ code.  When `markdown` files are compiled, the code is executed and the results are inserted into the resulting document.  At St Andrews, we often use `markdown` files as a way to combine our analysis and interpretation of distance sampling data in a single document.  More information about `Rmarkdown` documents and their use with __R-Studio__ can be found [here](https://rmarkdown.rstudio.com/)
+The last of the files associated with each exercise is a `markdown` file.  These files were used to create the exercises and their solutions.  `markdown` files contain both text as well as __R__ code.  When `markdown` files are compiled, the code is executed and the results are inserted into the resulting document.  At St Andrews, we often use `markdown` files as a way to combine our analysis and interpretation of distance sampling data in a single document.  More information about `Rmarkdown` documents and their use with __R-Studio__ can be found [here](https://rmarkdown.rstudio.com/).
 
 --------
 
