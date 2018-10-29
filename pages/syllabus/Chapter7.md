@@ -8,7 +8,15 @@ header:
   image_fullwidth: ray-hennessy-cardinal-unsplash.jpg
 ---
 
-Previous chapters have described analysis of distance sampling data using the Distance software.  Much of the code that underlies the graphical interface of the Distance software is written in the programming language __R__.  Some people use the [R software](https://www.r-project.org/about.html) for data management and exploratory data analysis.  Use of __R__ has been made easier with the advent of a development environment [_R-Studio_](https://www.rstudio.com/products/RStudio/).  Both pieces of software are free of charge and can be easily downloaded and installed.  Please install both of those pieces of software before beginning these exercises.  In addition, software for analysing distance sampling data in __R__ resides in a package called [_Distance_](https://cran.r-project.org/web/packages/Distance/index.html).  Install that package as well.  There are several demonstrations of the process of installing __R__, _R-Studio_ and __R__ packages on the web.  One such description [can be found here](http://web.cs.ucla.edu/~gulzar/rstudio/).
+Previous chapters have described analysis of distance sampling data using the Distance software.  Much of the code that underlies the graphical interface of the Distance software is written in the programming language __R__.  Some people use the [R software](https://www.r-project.org/about.html) for data management and exploratory data analysis.  Use of __R__ has been made easier with the advent of a development environment [_R-Studio_](https://www.rstudio.com/products/RStudio/).  Both pieces of software are free of charge and can be easily downloaded and installed.  Please install both of those pieces of software  as well as the package [_Distance_](https://cran.r-project.org/web/packages/Distance/index.html) before beginning these exercises.   There are demonstrations of the process of installing __R__, _R-Studio_ and __R__ packages on the web.  One such description [can be found here](http://web.cs.ucla.edu/~gulzar/rstudio/).
+
+### Expectations before you begin this chapter
+
+You have __R__, __R-Studio__ and the __Distance__ package installed on your computer.  You have sufficient knowledge of  __R__ to
+- read a file containing data,
+  - exercises here use the function `read.csv()`.  If your data uses the comma `,` to separate decimals, then you will likely use `read.csv2()` for reading your data into R
+- how to call functions and
+- examine elements inside objects using the `$` operator
 
 This chapter guides you through analyses of data sets you have already seen in earlier sections of this workshop.  Specifically, you will re-visit the 
 
@@ -17,6 +25,8 @@ This chapter guides you through analyses of data sets you have already seen in e
 - [Montrave point count data]({{site.baseurl}}/exercisepdfs/Ch3/E3.1 point transects.pdf) (Question 2).
 
 You will also analyse data from a lure survey of Scottish crossbills.  Data from this type of survey, described in the [lecture on multipliers]({{site.baseurl}}/lecturepdfs/Ch6/L6-2 Multipliers.pdf) (Slide 21), cannot be analysed in Distance for Windows; and demonstrates the flexibility available for distance sampling analysis using R.
+
+The last of the files associated with each exercise is a `markdown` file.  These files were used to create the exercises and their solutions.  `markdown` files contain both text as well as __R__ code.  When `markdown` files are compiled, the code is executed and the results are inserted into the resulting document.  At St Andrews, we often use `markdown` files as a way to combine our analysis and interpretation of distance sampling data in a single document.  More information about `Rmarkdown` documents and their use with __R-Studio__ can be found [here](https://rmarkdown.rstudio.com/)
 
 --------
 
@@ -36,7 +46,7 @@ You will also analyse data from a lure survey of Scottish crossbills.  Data from
 
 #### Fitting detection function with covariates - Hawaiian amakihi point transects
 * <a href="#" data-reveal-id="E2">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
-* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png"><img src="{{site.baseurl}}/images/R_logo32.png">
+* [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
   - [Amakihi point transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/amakihi.csv) <img src="{{site.baseurl}}/images/csv32b.png">
 * <a href="#" data-reveal-id="E2soln">Narrative solution for amakihi point transects in R <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-2-covariates-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
