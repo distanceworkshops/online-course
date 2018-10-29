@@ -53,6 +53,8 @@ You should give a thorough read of the [preparation for course](../../alt-prep) 
   * Monte Vista Refuge ducknests [Distance project zip file]({{site.baseurl}}/distance projects/Ch1/Ducknest exercise.zip) <img src="{{site.baseurl}}/images/zip32.png">	
 * <a href="#" data-reveal-id="E3soln">Narrative solution to computer analysis of duck nests<img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch1/E1.4 ducknests in Distance SOLUTION.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
+* Alternative method of analysing these data
+  * [Description of analysis of these data using __R__]({{site.baseurl}}/syllabus/Chapter7/#conventional-distance-sampling---monte-verde-duck-nest-line-transects) <img src="{{site.baseurl}}/images/R_logo32.png">	
 
 ##### Reference guide of terms and notation for distance sampling
 * [Useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
