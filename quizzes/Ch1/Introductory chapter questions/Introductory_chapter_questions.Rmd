@@ -12,7 +12,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Comparison of plot sampling and distance sampling
 
-### Exercise 
+#### Just testing
+
+Watch this video and answer the following questions
+
+![](https://www.youtube.com/embed/8KWHu2Hj7Ys?rel=0){width=80%}
+
+### Your understanding of plot sampling 
 
 Distance sampling is an extension of plot sampling, so there are some similarities between the two.  These questions ask you to compare between the two methods.
 
