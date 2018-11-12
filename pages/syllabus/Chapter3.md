@@ -70,17 +70,17 @@ This chapter describes methods associated with point transect sampling.  Analyse
 </div>
 
 <div id="E1" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
-  <h3 id="modalTitle">Exercise 1 - histogram of ducknest data</h3>
+  <h3 id="modalTitle">Exercise 1 - point transect analyses</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/d072L2Go15M?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/2v8g5K9eWmk?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
 <div id="E1soln" class="reveal-modal large" data-reveal="" aria-labelledby="modalTitle">
-  <h3 id="modalTitle">Solution to Exercise 1 - histogram of ducknest data</h3>
+  <h3 id="modalTitle">Solution to Exercise 1 - point transect analyses</h3>
   <div class="flex-video widescreen" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/mSVPvLeGawU?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/-KKb7nJJ5b4?vq=hd720&amp;rel=0;showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
