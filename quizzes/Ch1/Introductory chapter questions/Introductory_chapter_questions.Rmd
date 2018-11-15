@@ -101,7 +101,7 @@ You can include any number of single or multiple choice questions as a quiz. Use
 
 ## Calculations of density and abundance
 
-To confirm computations made by program Distance, below are components from a line transect distance sampling survey and analysis needed to produce a density estimate.  Use these components to answer the following questions, along with these formulas from the [lecture in Chapter 1.](https://workshops.distancesampling.org/online-course/syllabus/Chapter1/#Additional_mathematical_ways_to_think_about_line_transects)
+To confirm computations made by program Distance, below are components from a line transect distance sampling survey and analysis needed to produce a density estimate.  Use these components to answer the following questions, along with these formulas from [slide 7 of lecture in Chapter 1.](https://workshops.distancesampling.org/online-course/lecturepdfs/Ch1/L1-5%20Three%20More%20Ways.pdf)
 
 $$
 \hat{D} = \frac{n}{2wL \hat{P}_a} \hspace{2cm} \hat{N} = \frac{nA}{2wL \hat{P}_a}
@@ -113,6 +113,10 @@ data(minke)
 out <- summary(ds(minke[minke$Region.Label=="North",]))
 knitr::kable(out$dht$individuals$summary[2:7])
 ```
+
+|   Area| CoveredArea|  Effort|  n|  k|Encounter Rate|
+|------:|-----------:|-------:|--:|--:|-------------:|
+| 630582|    5270.514| 1358.38| 51| 12|     0.0375447|
 
 The truncation distance ($w$) for the survey was `r round(out$ds$width, 2)`. From the fitting of a detection function, we also know that the probability of detection of animals within the covered area $(\hat{P}_a)$ is `r round(out$dht$individuals$average.p,4)`.
 
