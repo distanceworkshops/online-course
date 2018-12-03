@@ -12,12 +12,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Comparison of plot sampling and distance sampling
 
-#### Just testing
-
-Watch this video and answer the following questions
-
-![](https://www.youtube.com/embed/8KWHu2Hj7Ys?rel=0){width=80%}
-
 ### Your understanding of plot sampling 
 
 Distance sampling is an extension of plot sampling, so there are some similarities between the two.  These questions ask you to compare between the two methods.
@@ -44,6 +38,39 @@ quiz(caption="Questions about plot sampling",
   )
 )
 ```
+
+## Extending plot sampling to distance sampling
+
+These questions are from material [found in this lecture](https://workshops.distancesampling.org/online-course/lecturepdfs/Ch1/L1-2 Introduction to Distance Sampling.pdf).
+
+```{r covered-area}
+quiz(caption="Some definitions",
+  question("What is the *covered region* of a survey? more than one correct response",
+  correct="Yes, this region is coloured in aqua in our lecture notes.", 
+	random_answer_order = TRUE,
+    answer("portion of study region within distance *w* truncation distance of any line or point transect", correct=TRUE),
+	answer("portion of study area with vegetation cover", 
+	  message="Sorry, nothing to do with vegetation."),
+	answer("observers seek cover in some portions of the study area", 
+	  message="This is a nonsensical answer."),
+	answer("part of the study area on the shoulder of the detection function", 
+	  message="Animals can be detected beyond the shoulder, but with lower probability."),
+	answer("portion of study area where animals can be detected", correct=TRUE)
+	),
+  question("What are the two steps to abundance estimation using distance sampling surveys?",
+    correct="Yes, first a detection function *model* is used to determine animals missed in the covered region. From that estimate of density, that density estimate is extrapolated to the full study area.", 
+	random_answer_order = TRUE,
+    answer("estimation of animals in covered region, then extrapolation from covered region to study area.", correct=TRUE),
+    answer("extrapolation from covered region to study area, then estimation of animals in covered region",
+      message="You have reversed the order."),
+    answer("census animals in covered region, extrapolation from covered region to study area", 
+	    message="This is the definition of plot sampling."),	
+    answer("census animals in covered region, covered region equal to study area", 
+	    message="This survey has no sampling involved, every animal is counted.")
+    )
+)
+```
+
 
 ## Estimating probability of detection
 
@@ -141,5 +168,156 @@ quiz(caption="Perform calculations by hand to duplicate results produced by Dist
     answer("1128", 
            message="Abundance estimate off by an order of magnitude.")
   )
+)
+```
+
+<!--
+quiz(caption="Introductory Lecture",
+  question("What is the *covered region* of a survey? (more than one correct response)",
+    correct="", 
+	random_answer_order = TRUE,
+    answer=("portion of study region within distance *w* (truncation distance) of any line or point transect", correct=TRUE),
+	answer=("portion of study area with vegetation cover", 
+	  message="Sorry, nothing to do with vegetation."),
+	answer=("observers seek cover in some portions of the study area", 
+	  message="This is a nonsensical answer."),
+	answer=("part of the study area on the shoulder of the detection function", 
+	  message="Animals can be detected beyond the shoulder, but with lower probability."),
+	answer=("portion of study area where animals can be detected", correct=TRUE)
+	),
+  question("What are the two steps to abundance estimation using distance sampling surveys?",
+    correct="", 
+	random_answer_order = TRUE,
+    answer=("estimation of animals in covered region, then extrapolation from covered region to study area", correct=TRUE),
+    answer=("extrapolation from covered region to study area, then estimation of animals in covered region",
+      message="You have reversed the order."),
+    answer=("census animals in covered region, extrapolation from covered region to study area", 
+	  message="This is the definition of plot sampling."),	
+    answer=("census animals in covered region, covered region equal to study area", 
+	  message="This survey has no sampling involved, every animal is counted.")
+    )
+)
+
+
+The diagram below shows the result of a point transect survey.  The detected animals are indicated as red dots.  For the western-most two rows of point transects, we are given information of not only the animals detected, but also the animals within the detection range, but undetected, are shown in blue. 
+- The detection radius for each point is 5 units, you can see there are 32 sampling points
+- size of rectangular study area is 5000 units
+
+![](images/allonplot.png)
+
+> cat(" n", number.detected,
++     "\n undetected", number.onplot.not.detected,
++     "\n Pa", pa,
++     "\n Nc", Nc,
++     "\n a", little.a,
++     "\ ..." ... [TRUNCATED] 
+ n 72 
+ undetected 14 
+ Pa 0.8372093 
+ Nc 86 
+ a 2513.274 
+ A 5000 
+ Nhat 171.0916
+ 
+
+Use this information to answer the following questions.
+
+quiz(caption="Answer the following questions based upon the information given above",
+  question("How large is the covered region?",
+	random_answer_order = TRUE,
+    answer="", correct=TRUE),
+    answer="", message=""),
+    answer="", message=""),
+    answer="", message="")
+  ),
+  question("Based upon the information from the first two rows of point transects, what is P(a)?",
+	random_answer_order = TRUE,
+    answer="", correct=TRUE),
+    answer="", message=""),
+    answer="", message=""),
+    answer="", message="")
+  ),
+  question("Assuming P(a) is the same for the remaining point transects, estimate the abundance of animals in the covered region",
+	random_answer_order = TRUE,
+    answer="", correct=TRUE),
+    answer="", message=""),
+    answer="", message=""),
+    answer="", message="")
+  ),
+  question("Given the estimate of abundance in the covered region, estimate the abundance over the entire study area",
+	random_answer_order = TRUE,
+    answer="", correct=TRUE),
+    answer="", message=""),
+    answer="", message=""),
+    answer="", message="")
+	)
+)	
+-->
+
+```{r robust}
+quiz(caption="Questions related to Lecture 4 (not really 4) of Chapter 1",
+	question("Why is the hazard rate model more *model robust* than the half-normal model?",
+    answer("Hazard rate model has two parameters rather than one, making it more flexible.", 
+      correct=TRUE),
+    answer("Hazard rate model can resist violations of distance sampling assumptions.", 
+	    message="No, neither model is resistant to violation of method assumptions."),
+    answer("Actually, the half-normal model is more model robust than the hazard rate model.", 
+	    message="No, the question is stated correctly."),
+    answer("Hazard rate model has a more distinct *shoulder*", 
+	    message="Shoulder relates to the shape criterion of a good model, rather than the criterion of model robustness."),
+  correct="Know both definition of *model robust* and which model possesses that characteristic.",
+	random_answer_order = TRUE  
+),
+  question("Detections at large distances are often truncated from the data set prior to analysis.  Why?",
+    answer("shape of detection function (or probability density function) is most critical at small distances", 
+      correct=TRUE),
+    answer("difficult to determine the sex of animals at great distances", 
+	    message="While a true statement, not relevant for density estimation."),
+    answer("too many detections may overload the computer software", 
+	    message="Distance sampling software is capable of analysing very large data sets, this is not a problem."),
+    answer("detections at large distances violate the assumption of strip transects", 
+	    message="Statement is both false and irrelevant."),
+    correct="Recall that the parameter *f(0)* is estimated; it is the value the probability density function takes on at distance 0.  Detections at large distances contain little information about *f(0)*.",
+  	random_answer_order = TRUE
+	)
+)	
+```
+
+## The probability density function
+
+```{r pdf}
+quiz(caption="Probability density function used for estimating density",
+  question("What does the probability density function represent?",
+    correct="Given an animal is within the truncation distance, what is the probability it was detected within a small interval of distances from the transect.",
+	random_answer_order = TRUE,
+    answer("Distribution of observed detection distances", correct=TRUE),
+    answer("Probability of detecting animal given it is at distance *x*", 
+	    message="Sorry, that is the definition of the detection function *g(x)*."),
+    answer("Distribution of animals at various distances from the transect", 
+	    message="The distribution of animals is not observed, it is assumed."),
+    answer("Probability that animal density is a given value", 
+	    message="Unfortunately, the word *density* in probability density function has nothing to do with animal density that is being estimated by distance sampling.")
+  ),
+  question("How does the probability density function described above differ from a detection function?",
+    correct="Detection function does not take into account how animals distribute themselves with respect to the transect.  Detection function only considers the detection process, not the animal distribution process.",
+	random_answer_order = TRUE,	
+    answer("The conditional part of the probability with the PDF is given the detection was somewhere within the detection region (within distance *w* of the transect)", correct=TRUE),
+    answer("Probability of detecting an animal given it was at distance *x* of the transect", 
+	    message="This is the definition of a detection function."),
+    answer("There is no difference, they are the same", 
+	    message="No, the difference is in the conditional part of the probability statement."),
+    answer("A detection function is always larger than a probability density function", 
+	    message="Such a generalisation about the magnitude of the two functions cannot be drawn.")
+	),
+  question("Two processes give rise to detection of animals within the truncation distance; identify the two processes.",
+    correct="One process deals with how the animals are distributed, the other deals with how the observers perceive the animals.",
+	random_answer_order = TRUE,	
+    answer("Distribution of animals with respect to the transect", correct=TRUE),
+    answer("Probability of detecting an animal as a function of distance from transect", correct=TRUE),
+    answer("Distribution of survey effort with respect to time of day", 
+	    message="While this might affect animal distribution, if transects are placed at random in sufficient numbers, this should not affect distribution of detections."),
+    answer("Possibility of laser rangefinder malfunction", 
+	    message="Unrelated to either the distribution of animals or the detection process")
+	)
 )
 ```
