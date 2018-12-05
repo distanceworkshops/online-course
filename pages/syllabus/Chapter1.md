@@ -59,6 +59,15 @@ You should give a thorough read of the [preparation for course](../../alt-prep) 
 ##### Reference guide of terms and notation for distance sampling
 * [Useful notation and definitions]({{site.baseurl}}/exercisepdfs/Ch1/Notation - lines and points.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 
+#### A recreational [quiz to assess your understanding of this material](https://arts.st-andrews.ac.uk/shiny/er26/introch/)
+
+* The quiz is to help you determine how well you understand the material in this first chapter of the online workshop.  It is self-assessed; no information about your performance is transmitted over the internet.  The quiz is composed of several sections (seen down the left side of the page), each section related to a topic.  You can take the quiz as many times as you wish.  If you are already acquainted with distance sampling, you might take the quiz to assess your knowledge before you work through the lecture material.
+* We are very interested to know your reaction to this quiz. 
+  * Do you think the quiz is worthwhile?
+  * Do you think the questions are too easy or too difficult?
+  * Would you like more questions, if so, what types of questions would be useful?  
+* If you find errors in this quiz, please [let us know](mailto:distance.online.standrews@gmail.com?subject=Quizzes)
+
 
 {% comment %}
     below here are the links to video clips of lectures and exercise setup and solutions
