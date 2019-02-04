@@ -1,0 +1,37 @@
+quiz(caption="Quantile-quantile or QQ plots to assess model fit",
+	question("Why can QQ plots not be produced with binned distances?",
+	  correct="",
+	  random_answer_order = TRUE,
+	  answer("There will only be as many points in the plot as distance bins", correct=TRUE),
+	  answer("Graphics cannot support plotting such data", message="Nothing to do with software"),
+	  answer("The 45 degree line does not exist", message="This line is defined regardless of number of data points"),
+	  answer("Goodness of fit cannot be assessed for binned data", message="Fit can be assessed, but number of points of support will be small and uninformative")
+	  )
+	  
+	question("How large could departures be from the 45 degree line before concern about model fit?",
+	  correct="",
+	  random_answer_order = TRUE,
+	  answer("Computed via Kolomogorov-Smirnov or Cramer von Mises tests", correct=TRUE),
+	  answer("", message=""),
+	  answer("", message=""),
+	  answer("", message="")
+	  )  
+	  
+	question("What does the 45 degree line represent?",
+	  correct="",
+	  random_answer_order = TRUE,
+	  answer("Equality of rate at which empirical (data) and theoretical (model) distributions are traversed", correct=TRUE),
+	  answer("", message=""),
+	  answer("", message=""),
+	  answer("", message="")
+	  )  
+
+	question("What problem in data collection is depicted by this pattern in a QQ plot?",
+	  correct="",
+	  random_answer_order = TRUE,
+	  answer("", correct=TRUE),
+	  answer("", message=""),
+	  answer("", message=""),
+	  answer("", message="")
+	  )  
+)
