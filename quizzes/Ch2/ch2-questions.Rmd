@@ -8,13 +8,13 @@ quiz(caption="Quantile-quantile or QQ plots to assess model fit",
 	  answer("Goodness of fit cannot be assessed for binned data", message="Fit can be assessed, but number of points of support will be small and uninformative")
 	  )
 	  
-	question("How large could departures be from the 45 degree line before concern about model fit?",
-	  correct="",
+	question("What is the necessary magnitude of departures from the 45 degree line before concern about model fit?",
+	  correct="Visual inspection of the QQ plot is not sufficient to determine fit; departures are turned into number by tests",
 	  random_answer_order = TRUE,
 	  answer("Computed via Kolomogorov-Smirnov or Cramer von Mises tests", correct=TRUE),
-	  answer("", message=""),
-	  answer("", message=""),
-	  answer("", message="")
+	  answer("Slope of the line fit through the points is less than 45 degrees", message="A line is not fitted to the points of a QQ plot"),
+	  answer("If more than half the dots fall below the 45 degree line", message="Proportion of dots above/below line is not informative about fit"),
+	  answer("Any points not falling on the line indicate lack of fit", message="Not all points need to be on the 45 degree line for fit to be adequate")
 	  )  
 	  
 	question("What does the 45 degree line represent?",
