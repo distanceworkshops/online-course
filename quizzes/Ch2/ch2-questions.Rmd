@@ -27,7 +27,7 @@ quiz(caption="Quantile-quantile or QQ plots to assess model fit",
 	  answer("Graphics cannot support plotting such data", message="Nothing to do with software"),
 	  answer("The 45 degree line does not exist", message="This line is defined regardless of number of data points"),
 	  answer("Goodness of fit cannot be assessed for binned data", message="Fit can be assessed, but number of points of support will be small and uninformative")
-	  )
+	  ),
 	  
 	question("What is the necessary magnitude of departures from the 45 degree line before concern about model fit?",
 	  correct="Visual inspection of the QQ plot is not sufficient to determine fit; departures are turned into number by tests",
@@ -36,7 +36,7 @@ quiz(caption="Quantile-quantile or QQ plots to assess model fit",
 	  answer("Slope of the line fit through the points is less than 45 degrees", message="A line is not fitted to the points of a QQ plot"),
 	  answer("If more than half the dots fall below the 45 degree line", message="Proportion of dots above/below line is not informative about fit"),
 	  answer("Any points not falling on the line indicate lack of fit", message="Not all points need to be on the 45 degree line for fit to be adequate")
-	  )  
+	  ),  
 	  
 	question("What does the 45 degree line represent?",
 	  correct="",
@@ -45,7 +45,7 @@ quiz(caption="Quantile-quantile or QQ plots to assess model fit",
 	  answer("", message=""),
 	  answer("", message=""),
 	  answer("", message="")
-	  )  
+	  ),  
 
 	question("What problem in data collection is depicted by this pattern in a QQ plot?",
 	  correct="Fitted exceeds empirical (data) at small distances, then empirical catches up to fitted",
@@ -56,3 +56,4 @@ quiz(caption="Quantile-quantile or QQ plots to assess model fit",
 	  answer("Animals are being missed on the transect", message="Nothing in the collected data informs us whether animals are being missed on the trackline")
 	  )  
 )
+```
