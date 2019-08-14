@@ -65,7 +65,7 @@ The last of the files associated with each exercise is a `markdown` file.  These
 #### Multi-species survey - Montrave line transects
 * <a href="#" data-reveal-id="E4">Exercise description <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise instructions]({{site.baseurl}}/exercisepdfs/Ch7/E7-4-multispecies-q.pdf) <img src="{{site.baseurl}}/images/pdf32.png">
-  - [Montrave line transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/amakihi.csv) <img src="{{site.baseurl}}/images/csv32b.png">
+  - [Montrave line transect csv file]({{site.baseurl}}/exercisepdfs/Ch7/datasets/montrave-line.csv) <img src="{{site.baseurl}}/images/csv32b.png">
 * <a href="#" data-reveal-id="E4soln">Narrative solution for Montrave line transects in R <img src="{{site.baseurl}}/images/video32.png"></a>
 * [Exercise solution]({{site.baseurl}}/exercisepdfs/Ch7/E7-4-multispecies-sol.pdf)<img src="{{site.baseurl}}/images/pdf32.png">
 * [R markdown file creating Montrave exercise]({{site.baseurl}}/exercisepdfs/Ch7/E7-4-multispecies.rmd) <img src="{{site.baseurl}}/images/md32.png">
