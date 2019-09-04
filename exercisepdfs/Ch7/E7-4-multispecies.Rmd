@@ -1,7 +1,7 @@
 ---
 title: "Distance sampling online workshop"
 author: "Analysis in R: Analysis of multi-species surveys"
-date: "CREEM, Univ of St Andrews -- October 2018"
+date: "CREEM, Univ of St Andrews -- October 2018 (rev. Sep. 2019)"
 output:  
   tint::tintPdf:
     number_sections: true
@@ -14,7 +14,7 @@ fontsize: 10pt
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(knitr)
-answer <- TRUE
+answer <- FALSE
 ```
 
 # More complex analyses
@@ -47,7 +47,7 @@ Several species of birds were identified but not all species were detected on al
 The data is in a 'flat file' format and contains the following columns:
 
 - Region.Label - name of study
-- Area - size of study region (km$^2$)
+- Area - size of study region (hectares)
 - repeats - number of visits to transect
 - Sample.Label - line transect identifier
 - Effort - length of transect (km)
@@ -58,7 +58,8 @@ The data is in a 'flat file' format and contains the following columns:
 Use the following command to import the data from the website associated with \citet{buckland_distance_2015} and then use the `head` command to examine it. 
 
 ```{r, echo=TRUE}
-birds <- read.csv("https://synergy.st-andrews.ac.uk/ds-manda/files/2016/11/montrave-line.csv", header=TRUE)
+birds <- read.csv("https://synergy.st-andrews.ac.uk/ds-manda/files/2016/11/montrave-line.csv", 
+                  header=TRUE)
 ```
 
 ```{r, echo=answer, eval=answer}
@@ -285,7 +286,8 @@ robin.brks <- c(0, 12.5, 22.5, 32.5, 42.5, 52.5, 62.5, 77.5, 95.0)
 Perform the tests using both exact distance data for the Cramer-von Mises test and specified breakpoints for $\chi^2$ test for the uniform-cosine model that had the (slightly) smallest AIC score.
 
 ```{r, echo=TRUE, eval=answer, fig.width=3.5, fig.height=3.5, fig.margin=TRUE}
-gof_ds(robin.uni.cos, breaks=robin.brks, chisq = TRUE, main="QQ plot unif-cos for robins")
+gof_ds(robin.uni.cos, breaks=robin.brks, chisq = TRUE, 
+       main="QQ plot unif-cos for robins")
 ```
 
 ```{marginfigure, echo=answer}
@@ -303,8 +305,8 @@ plot(robin.uni.cos)
 However, the plot can be customised for reporting:
 
 ```{r, echo=TRUE, eval=answer, message=FALSE, fig.height=3.5, fig.width=3.5, fig.margin=TRUE}
-plot(robin.uni.cos, showpoints=FALSE, black.white=TRUE, pl.den=50, lwd=2, breaks=robin.brks,
-     main="Uniform-cosine", xlab="Distance (m)")
+plot(robin.uni.cos, showpoints=FALSE, black.white=TRUE, pl.den=50,
+     lwd=2, breaks=robin.brks, main="Uniform-cosine", xlab="Distance (m)")
 ```
 
 The arguments are:
